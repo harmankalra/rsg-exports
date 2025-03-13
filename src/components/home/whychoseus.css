@@ -1,0 +1,190 @@
+.rsg-container1 {
+  width: 80%; 
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'CustomFont1';
+  }
+  
+  .rsg-header {
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid #6B8958;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rsg-title-section {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .rsg-title1 {
+    color: #587944;
+    text-align: left;
+    font-family: "MPLUS1";
+    font-size: 2.50vw;
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .rsg-description {
+    color: #587944;
+    text-align: justify;
+    font-family: "CustomFont1";
+    font-size: 1.00vw;
+    padding: 2% 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144.539%; /* 34.689px */
+  }
+  
+  .rsg-features-grid {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    background-color: #DFE6DB;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .rsg-feature-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .rsg-feature-icon {
+padding: 19%;
+    margin-bottom: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .icon-quality {
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766281/culinary_mtpdf1.png');
+  }
+  
+  .icon-sustainability {
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766284/sustainability_f9rbv1.png');
+  }
+  
+  .icon-innovation {
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766282/idea_1_malncq.png');
+  }
+  
+  .icon-global {
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766282/earth_kd3zzg.png');
+  }
+  
+  .icon-health {
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766281/better-health_lrrhyl.png');
+  }
+  
+  .icon-culinary {
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766282/heritage_grtvmv.png');
+  }
+  
+  .rsg-feature-text {
+    color: #587944;
+    font-family: "CustomFont1";
+    font-size: 1.0vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144.539%; /* 34.689px */
+    text-transform: capitalize;
+  }
+  
+  .rsg-images-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-gap: 15px;
+  }
+  
+  .rsg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+  }
+  
+  .img1 {
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766196/pexels-dario-rawert-724203352-26443232_tyxtcy.png');
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .img2 {
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766197/pexels-tkirkgoz-11793785_jkcunr.png');
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  .img3 {
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766197/pexels-pixabay-257700_qmq3d2.png');
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+  }
+  
+  .img4 {
+    grid-column: 1 / 2;
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766196/pexels-dibakar-roy-2432543-20407290_pqipw7.png');
+    grid-row: 2 / 3;
+  }
+  
+  .img5 {
+    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741766196/pexels-mumtahina-tanni-1080117-5262428_li4pfe.png');
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  
+  @media (max-width: 768px) {
+    .rsg-header {
+      flex-direction: column;
+    }
+    
+    .rsg-features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .rsg-images-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 180px);
+    }
+    
+    .img3 {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rsg-features-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .rsg-images-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 180px);
+    }
+    
+    .img1, .img2, .img3, .img4, .img5 {
+      grid-column: 1;
+    }
+    
+    .img1 { grid-row: 1; }
+    .img2 { grid-row: 2; }
+    .img3 { grid-row: 3; }
+    .img4 { grid-row: 4; }
+    .img5 { grid-row: 5; }
+  }

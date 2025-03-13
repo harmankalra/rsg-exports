@@ -1,0 +1,151 @@
+/* frontproduct.css */
+.bsa-product-showcase-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5% 0;
+  }
+  
+  .bsa-carousel-container {
+    position: relative;
+ /* Add padding for navigation arrows */
+  }
+  
+  .bsa-product-card {
+    background: #92aa835c;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  .bsa-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bsa-product-image-container {
+    width: 100%;
+    display: flex;
+    padding: 0%;
+    background: #fff;
+    justify-content: center;
+  }
+  
+  .bsa-product-image {
+    max-width: 100%;
+    height: auto;
+    margin: 10%;
+    transition: transform 0.3s ease;
+  }
+  
+  .bsa-product-name {
+    color: #587944;
+    font-family: "CustomFont1";
+    font-size: 1.35vw;
+    padding: 3% 0;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  
+  .bsa-view-more-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .bsa-view-more-btn {
+    background-color: transparent;
+    color: #587944;
+    font-family: "CustomFont1";
+    border: 2px solid #587944;
+    padding: 12px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.35vw;
+    transition: all 0.3s ease;
+  }
+  
+  .bsa-view-more-btn:hover {
+    background-color: #587944;
+    color: #fff;
+  }
+  
+  /* Custom Owl Carousel Styling */
+  .bsa-rice-carousel {
+    position: relative;
+  }
+  
+  .bsa-carousel-item {
+    padding: 5px;
+  }
+  
+  .bsa-owl-prev,
+  .bsa-owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(88, 121, 68, 0.7) !important; /* Use brand color */
+    color: #fff !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px !important;
+    font-weight: bold;
+  }
+  
+  .bsa-owl-prev {
+    left: -20px;
+  }
+  
+  .bsa-owl-next {
+    right: -20px;
+  }
+  
+  .bsa-owl-dots {
+    text-align: center;
+    margin-top: 15px !important;
+  }
+  
+  .bsa-owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .bsa-owl-dot span {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 5px 7px !important;
+    background: #D6D6D6 !important;
+    display: block;
+    transition: opacity 200ms ease;
+    border-radius: 30px;
+  }
+  
+  .bsa-owl-dot.active span {
+    background: #587944 !important; /* Use brand color */
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .bsa-product-name {
+      font-size: 16px;
+    }
+    
+    .bsa-view-more-btn {
+      font-size: 14px;
+      padding: 8px 25px;
+    }
+    
+    .bsa-product-showcase-container {
+      width: 90%;
+    }
+  }

@@ -1,0 +1,273 @@
+/* Main container styles */
+.team-showcase {
+    width: 100%;
+    background: linear-gradient(104deg, #92AA83 22.45%, #587944 93.68%);
+    
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .team-container {
+    width: 80%;
+    padding: 5% 0;
+    margin: 0 auto;
+  }
+  .profileflex{
+display: flex;
+  }
+  
+  .team-title {
+    color: #FFF;
+    font-family: "MPLUS1";
+    font-size: 3.00vw;
+    font-style: normal;
+    margin: 0;
+    font-weight: 600;
+    line-height: 144.539%; /* 57.816px */
+  }
+  
+  .team-intro {
+    color: #FFF;
+    text-align: justify;
+    font-family: "CustomFont1";
+    font-size: 1.20vw;
+    padding: 3% 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144.539%; /* 34.689px */
+  }
+  
+  /* Team content layout - Split view */
+  .team-content-layout {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  @media (min-width: 768px) {
+    .team-content-layout {
+      flex-direction: row;
+      gap: 2rem;
+    }
+    
+    .profile-main {
+      width: 60%;
+      padding-right: 2rem;
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .profile-thumbnails {
+      width: 40%;
+    }
+  }
+  
+  /* Main profile section - Left side */
+  .profile-main {
+    position: relative;
+    padding-bottom: 2rem;
+  }
+  
+  .profile-image-main {
+    width: 40%;
+    height: auto;
+    background-color: #e9e2d9;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-image-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Profile text styles */
+  .profile-text-content {
+    padding: 0 5%;
+    width: 60%;
+  }
+  
+  .member-name-main {
+    color: #FFF;
+    font-family: "MPLUS1";
+    font-size: 3.00vw;
+    font-style: normal;
+    margin: 0;
+    font-weight: 600;
+    line-height: 144.539%; /* 57.816px */
+  }
+  
+  .member-title-main {
+    color: #FFF;
+    font-family: "MPLUS1";
+    font-size: 1.00vw;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 144.539%; /* 34.689px */
+  }
+  
+  .member-description-main {
+    color: #FFF;
+    text-align: justify;
+    font-family: "CustomFont1";
+    font-size: 1.20vw;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 144.539%; /* 34.689px */
+  }
+  
+  /* Navigation dots */
+  .nav-dots {
+    display: flex;
+    margin-top: 1.5rem;
+  }
+  
+  .dot {
+    width: 30px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dot:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .dot.active {
+    background-color: white;
+  }
+  
+  /* Thumbnails grid - Right side */
+  .thumbnails-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .thumbnail {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #e9e2d9;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  .thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  
+  .thumbnail.active {
+    border: 2px solid white;
+    opacity: 1;
+  }
+  
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Animation classes */
+  .fade-out {
+    animation: fadeOut 0.5s forwards;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Additional animations */
+  .profile-image-main::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .profile-image-main.fade-in::after {
+    animation: imageFade 1.5s forwards;
+  }
+  
+  @keyframes imageFade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Text fading animation for each line separately */
+  .member-name-main, .member-title-main, .member-description-main {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .fade-in .member-name-main {
+    animation: textReveal 0.6s forwards;
+  }
+  
+  .fade-in .member-title-main {
+    animation: textReveal 0.6s forwards;
+    animation-delay: 0.1s;
+  }
+  
+  .fade-in .member-description-main {
+    animation: textReveal 0.6s forwards;
+    animation-delay: 0.2s;
+  }
+  
+  @keyframes textReveal {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
