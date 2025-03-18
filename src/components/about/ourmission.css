@@ -10,8 +10,11 @@ display: flex;
 align-items: center;
 background-color: #fff;
 padding: 3%;
+width: 90%;
+margin: auto;
 justify-content: space-between;
 border-radius: 10px;
+margin-bottom: 15px;
 
 }
 .missionhead{
@@ -80,8 +83,9 @@ line-height: 40px; /* 166.667% */
     border-radius: 10px;
     
     }.resources {
-        display: flex
-        ;
+        display: flex;
+        width: 90%;
+        margin: auto;
             justify-content: space-between;
             gap: 20px;
             background: #fff;

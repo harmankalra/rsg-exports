@@ -5,7 +5,10 @@ import Footer from '../common/footer';
 import Expert from '../components/about/expert';
 import OurMission from '../components/about/ourmission';
 import InfrastructureShowcase from '../components/about/ourinfra';
+import Countries from '../components/about/exportcountry';
+import FoundersMess from '../components/about/foundermessage';
 function About() {
+
 
 
     return (
@@ -14,6 +17,8 @@ function About() {
  < Expert />
         <OurMission />   
         <InfrastructureShowcase />
+        <Countries />
+        < FoundersMess />
 < Footer />
             {/* Other content can go here */}
         </div>

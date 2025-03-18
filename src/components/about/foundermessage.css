@@ -1,0 +1,163 @@
+/* FoundersMessage.css */
+.founders-message-container {
+    width: 90%;
+    margin: 3% auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .founders-message-title {
+    color: #587944;
+    font-family: "MPLUS1";
+    font-size: 2.10vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 144.539%; /* 57.816px */
+  }
+  
+  .founders-message-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 8px;
+    overflow: hidden;
+    /* background-color: #f8f8f6; */
+    /* min-height: 400px; */
+  }
+  
+  .founders-image-background {
+   padding: 10%;
+    background-image: url('../../assets/team1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .founders-text-container {
+ 
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 1;
+  }
+  
+  .founders-quote {
+    color: #587944;
+    text-align: justify;
+    font-family: "CustomFont1";
+    font-size:1.25vw;
+    font-style: italic;
+    margin: 0;
+    /* font-weight: 700;
+    line-height: 144.539%; 34.689px */
+  }
+  
+  .founders-info {
+    margin-bottom: 0.5rem;
+  }
+  
+  .founders-name {
+    color: #587944;
+    font-family: "MPLUS1";
+    font-size: 2.10vw;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0;
+    line-height: 144.539%; /* 57.816px */
+  }
+  
+  .founders-title {
+    color: #587944;
+    font-family: "MPLUS1";
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 144.539%; /* 34.689px */
+  }
+  
+  .founders-bio {
+    color: #587944;
+    text-align: justify;
+    font-family: "CustomFont1";
+    font-size: 1.25vw;
+    font-style: normal;
+
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 900px) {
+    .founders-image-background {
+      width: 35%;
+    }
+    
+    .founders-text-container {
+      width: 65%;
+      margin-left: 35%;
+      padding: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .founders-message-content {
+      flex-direction: column;
+      min-height: auto;
+    }
+    
+    .founders-image-background {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+    
+    .founders-text-container {
+      width: 100%;
+      margin-left: 0;
+      padding: 2rem;
+    }
+    
+    .founders-message-title {
+      font-size: 1.8rem;
+    }
+    
+    .founders-quote {
+      font-size: 1.1rem;
+    }
+    
+    .founders-name {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .founders-message-container {
+      margin: 1rem auto;
+    }
+    
+    .founders-image-background {
+      height: 250px;
+    }
+    
+    .founders-text-container {
+      padding: 1.5rem;
+      gap: 1rem;
+    }
+    
+    .founders-message-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .founders-quote {
+      font-size: 1rem;
+    }
+    
+    .founders-name {
+      font-size: 1.2rem;
+    }
+    
+    .founders-title {
+      font-size: 1rem;
+    }
+  }
