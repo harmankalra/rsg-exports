@@ -76,7 +76,7 @@
   }
   
   .rice-field-bg {
-    background-image: url(https://res.cloudinary.com/dznnm9b1j/image/upload/v1741694053/Frame_97_myuqw2.png);
+    background-image: url('../../assets/Frame\ 97.png');
     background-size: cover;
     background-position: center;
     height: 97%;

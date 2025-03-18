@@ -8,55 +8,55 @@ const ProductShowcase = () => {
     {
       id: 1,
       name: 'Sughandh',
-      image: 'https://res.cloudinary.com/dznnm9b1j/image/upload/v1741765419/08_okwrnn.png',
+      image: require('../../assets/08.png'),
       color: 'red'
     },
     {
       id: 2,
       name: 'Kesar',
-      image: 'https://res.cloudinary.com/dznnm9b1j/image/upload/v1741763751/07_moje1q.png',
+      image: require('../../assets/07.png'),
       color: 'purple'
     },
     {
       id: 3,
       name: 'Silver',
-      image: 'https://res.cloudinary.com/dznnm9b1j/image/upload/v1741763722/10_x6gx30.png',
+      image: require('../../assets/05.png'),
       color: 'green'
     },
     {
       id: 4,
       name: 'Platinum',
-      image: 'https://res.cloudinary.com/dznnm9b1j/image/upload/v1741763696/12_whpbqt.png',
+      image: require('../../assets/03.png'),
       color: 'black'
     },
     {
       id: 5,
       name: 'Khushboo',
-      image: 'https://res.cloudinary.com/dznnm9b1j/image/upload/v1741765302/9_xlfnvq.png',
+      image: require('../../assets/04.png'),
       color: 'red'
     },
     {
       id: 6,
       name: 'Mehak',
-      image: 'https://res.cloudinary.com/dznnm9b1j/image/upload/v1741763536/13_uuoxco.png',
+      image: require('../../assets/06.png'),
       color: 'red'
     },
     {
       id: 7,
       name: 'Diamond',
-      image: 'https://res.cloudinary.com/dznnm9b1j/image/upload/v1741763489/6_zjdiij.png',
+      image: require('../../assets/02.png'),
       color: 'red'
     },
     {
       id: 8,
       name: 'Premium',
-      image: 'https://res.cloudinary.com/dznnm9b1j/image/upload/v1741765446/11_aumzwz.png',
+      image: require('../../assets/09.png'),
       color: 'red'
     },
     {
       id: 9,
       name: 'Gold',
-      image: 'https://res.cloudinary.com/dznnm9b1j/image/upload/v1741765064/7_t52ufo.png',
+      image: require('../../assets/01.png'),
       color: 'red'
     }
   ];

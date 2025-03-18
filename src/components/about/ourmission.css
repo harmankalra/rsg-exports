@@ -1,0 +1,109 @@
+.ourmission{
+    border-radius: 10px;
+    background: linear-gradient(104deg, #92AA83 22.45%, #587944 93.68%);
+    width: 90%;
+    margin:3% auto;
+    padding: 3% 2%;
+}
+.ourmission__container{
+display: flex;
+align-items: center;
+background-color: #fff;
+padding: 3%;
+justify-content: space-between;
+border-radius: 10px;
+
+}
+.missionhead{
+    color: #587944;
+    text-align: justify;
+    font-family: "CustomFont1";
+    font-size: 2.10vw;
+        font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 100% */
+}
+.mission p{
+    color: #587944;
+text-align: justify;
+font-family: "CustomFont1";
+font-size: 1.25vw;
+font-style: normal;
+font-weight: 700;
+line-height: 40px; /* 166.667% */
+}
+.mission{
+    width: 40%;
+
+}
+
+.ourvision{
+    width: 40%;
+}
+.ourvision p{
+    color: #587944;
+    text-align: justify;
+    font-family: "CustomFont1";
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 166.667% */
+}
+.Sustain{
+    color: #FFF;
+    text-align: justify;
+    font-family: "CustomFont1";
+    font-size: 2.83vw;
+    font-style: normal;
+    padding: 0 3%;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 40px; /* 100% */
+}
+.commit{
+    color: #FFF;
+text-align: justify;
+font-family: "CustomFont1";
+font-size: 1.25vw;
+padding: 0 3%;
+font-style: normal;
+font-weight:400;
+line-height: 40px; /* 166.667% */
+}
+
+.resouces{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 3%;
+    justify-content: space-between;
+    border-radius: 10px;
+    
+    }.resources {
+        display: flex
+        ;
+            justify-content: space-between;
+            gap: 20px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 2%;
+    }
+    
+    .resource-item {
+        text-align: center;
+    }
+    
+    .resource-item img {
+        width: 90%;
+        max-height: 180px;
+        height: auto;
+        border-radius: 8px;
+    }
+    .resource-item p{
+        color: #587944;
+        font-family: "CustomFont1";
+        font-size: 1.25vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px; /* 166.667% */
+    }

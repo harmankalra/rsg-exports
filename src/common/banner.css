@@ -1,6 +1,6 @@
 .banner-container {
 padding: 23%;
-    background-image: url('https://res.cloudinary.com/dznnm9b1j/image/upload/v1741679141/Group13_wl6wcd.png'); /* Add your banner image */
+    background-image: url('../assets/Group13.png'); /* Add your banner image */
     background-size: cover;
     background-position: center;
     display: flex;

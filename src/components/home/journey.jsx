@@ -26,28 +26,28 @@ const TimelineCarousel = () => {
     {
       year: "1999",
       description: "With humble beginnings, Our First Rice Production Unit was setup as RSG Foods Pvt. Ltd. and commenced operations under the guidance of our directors.",
-      image: "https://res.cloudinary.com/dznnm9b1j/image/upload/v1741691761/pexels-matreding-28588310_swwnj5.png" // Replace with actual image path
+      image: require('../../assets/pexel.png')
     },
     {
       year: "2008",
       description: "With support from our customers and our constant efforts, the RSG Group acquired another Production Unit to boost its production capacity to meet the growing demand.",
-      image: "https://res.cloudinary.com/dznnm9b1j/image/upload/v1741691761/pexels-matreding-28588310_swwnj5.png" // Replace with actual image path
+      image: require('../../assets/pexel.png')
     },
     {
       year: "2009",
       description: "To meet the rising  demand for Basmati Rice in the export markets, the RSG Group began bulk exports of rice to several countries in the Middle East.",
-      image: "https://res.cloudinary.com/dznnm9b1j/image/upload/v1741691761/pexels-matreding-28588310_swwnj5.png" // Replace with actual image path
+      image: require('../../assets/pexel.png')
     },
     {
       year: "2014",
       description: "Through support from our loyal clientele in the domestic and export markets, the RSG Group setup another export oriented Mega Rice Milling Unit as RSG Exports Pvt. Ltd. and was able to achieve a production milestone of 50 TPH. ",
-      image: "https://res.cloudinary.com/dznnm9b1j/image/upload/v1741691761/pexels-matreding-28588310_swwnj5.png" // Replace with actual image path
+      image: require('../../assets/pexel.png')
     }
     ,
     {
       year: "Present",
       description: "Today, RSG Exports Pvt. Ltd. is actively exporting rice to several destinations in the Middle East such as the Kingdom of Saudi Arabia, the UAE and is exploring several other markets abroad.",
-      image: "https://res.cloudinary.com/dznnm9b1j/image/upload/v1741691761/pexels-matreding-28588310_swwnj5.png" // Replace with actual image path
+      image: require('../../assets/pexel.png')
     }
   ];
 

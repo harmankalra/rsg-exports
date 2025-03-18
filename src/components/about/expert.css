@@ -1,0 +1,73 @@
+.expert{
+width: 90%;
+padding: 3%;
+margin: auto;
+}
+.expert__container{
+ display: flex;
+ align-items: center;
+
+}
+.expert_text{
+    width: 60%;
+    padding: 2%;
+}
+.expert__img{
+    width: 40%;
+    padding: 2%;
+border-radius: 10px;
+/* background-image: ; */
+}
+
+.eperthead{
+    color: #587944;
+    font-family: "MPLUS1";
+    font-size: 2.10vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 144.539%; /* 57.816px */
+    text-transform: capitalize;
+}
+.expert__description{
+    color: #587944;
+text-align: justify;
+font-family: "CustomFont1";
+font-size: 1.25vw;
+font-style: normal;
+font-weight: 700;
+width: 90%;
+line-height: 40px; /* 166.667% */
+}
+.bsa-view-more-btn1 {
+    background-color: transparent;
+    color: #587944;
+    font-family: "CustomFont1";
+    border: 2px solid #587944;
+    padding: 12px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.35vw;
+    transition: all 0.3s ease;
+    position: relative;
+    float: left;
+  }
+  
+  .bsa-view-more-btn1:hover {
+    background-color: #587944;
+    color: #fff;
+  }
+  .bsa-view-more-container1 {
+    display: flex
+;
+    /* justify-content: flex-end; */
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .expert__image{
+background-image: url(../../assets/Ric\ field.png);
+background-size: cover;
+padding: 15%;
+border-radius: 10px;
+
+  }

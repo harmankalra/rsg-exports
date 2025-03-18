@@ -1,0 +1,92 @@
+.infrastructure-container {
+    width: 100%;
+    background-color: rgba(106, 142, 106, 0.7);
+    padding: 32px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  .infrastructure-title {
+    color: #FFF;
+    font-family: "MPLUS1";
+    font-size: 2.83vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 144.539%; /* 57.816px */
+    text-transform: capitalize;
+  }
+  
+  .infrastructure-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .item {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 28%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .item:hover {
+    transform: scale(1.02);
+  }
+  
+  .title-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background-color: rgba(106, 142, 106, 0.7);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .item:hover .title-container {
+    transform: translateY(0);
+  }
+  
+  .title-container h3 {
+    color: #fff;
+    font-family: "CustomFont1";
+    font-size: 1.25vw;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  /* Responsive styles */
+  @media (min-width: 768px) {
+    .infrastructure-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "mill dryers"
+        "grading quality"
+        "packaging packaging";
+    }
+    
+    .mill { grid-area: mill; }
+    .dryers { grid-area: dryers; }
+    .packaging { grid-area: packaging; }
+    .grading { grid-area: grading; }
+    .quality { grid-area: quality; }
+  }
+  
+  @media (min-width: 1024px) {
+    .infrastructure-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "mill dryers packaging"
+        "grading quality packaging";
+    }
+    
+    .packaging {
+       /* Taller aspect ratio for the packaging item */
+    }
+  }
