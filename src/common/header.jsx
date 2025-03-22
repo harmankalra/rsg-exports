@@ -45,14 +45,14 @@ function Header() {
               <a href="/about" style={{ animationDelay: "0.2s" }}>
                 <span>About</span>
               </a>
-              <a href="/contact" style={{ animationDelay: "0.3s" }}>
-                <span>Contact</span>
-              </a>
               <a href="/products" style={{ animationDelay: "0.4s" }}>
                 <span>Products</span>
               </a>
               <a href="/gallery" style={{ animationDelay: "0.5s" }}>
                 <span>Gallery</span>
+              </a>
+              <a href="/contact" style={{ animationDelay: "0.3s" }}>
+                <span>Contact</span>
               </a>
               {/* <a href="/blog" style={{ animationDelay: "0.6s" }}>
                 <span>Blog</span>
