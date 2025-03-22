@@ -71,3 +71,35 @@ padding: 15%;
 border-radius: 10px;
 
   }
+
+  @media (max-width: 768px) {
+    .eperthead{
+font-size: 4.50vw;
+    }
+    .expert__container{
+      display: block;
+    }
+    .expert_text{
+      width: 100%;
+    }
+    .expert__description{
+      width: 100%;
+      font-size: 3.50vw;
+      line-height:20px;
+    }
+    .bsa-view-more-btn1{
+      font-size: 3.50vw;
+    }
+    .expert__image{
+      padding: 35%;
+    }
+    .ourmission__container{
+display: block;
+    }
+    .mission{
+      width: 100%;
+
+    }
+    
+  }
+  

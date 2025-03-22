@@ -131,7 +131,7 @@
     }
     
     .frontline-title {
-      font-size: 2rem;
+      font-size: 7vw;
     }
     
     .frontline-visual {
@@ -147,6 +147,9 @@
       max-width: 35%;
       right: 15%;
     }
+    .frontline-feature p{
+      font-size: 3.50vw;
+    }
   }
   
   @media (max-width: 480px) {
@@ -155,11 +158,11 @@
     }
     
     .frontline-title {
-      font-size: 1.8rem;
+      font-size: 7vw;
     }
     
     .frontline-subtitle {
-      font-size: 1rem;
+      font-size: 5vw;
     }
     
     .frontline-visual {

@@ -166,6 +166,17 @@ padding: 19%;
       grid-column: 1 / 3;
       grid-row: 3 / 4;
     }
+    .rsg-title1{
+      font-size: 4.5vw;
+    }
+    .rsg-description{
+      font-size: 3.50vw;
+    }
+    .rsg-feature-text {
+   font-size: 4.50vw;
+    }
+
+    
   }
   
   @media (max-width: 480px) {

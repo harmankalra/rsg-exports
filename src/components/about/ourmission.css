@@ -24,6 +24,7 @@ margin-bottom: 15px;
     font-size: 2.10vw;
         font-style: normal;
     font-weight: 700;
+    margin: 0;
     line-height: 40px; /* 100% */
 }
 .mission p{
@@ -45,10 +46,12 @@ line-height: 40px; /* 166.667% */
 }
 .ourvision p{
     color: #587944;
-    text-align: justify;
+    text-align: left;
+    padding: 1%;
     font-family: "CustomFont1";
     font-size: 1.25vw;
     font-style: normal;
+
     font-weight: 700;
     line-height: 40px; /* 166.667% */
 }
@@ -111,3 +114,47 @@ line-height: 40px; /* 166.667% */
         font-weight: 700;
         line-height: 40px; /* 166.667% */
     }
+
+
+    @media (max-width: 768px) {
+        .ourmission__container{
+            display: block;
+                }
+                .mission{
+                  width: 100%;
+            
+                }
+                .missionhead{
+                    font-size: 4.50vw;
+                    margin-top: 4%;
+                }
+                .mission p {
+                    font-size: 3.50vw;
+                    line-height:20px;
+                }
+                .ourvision{
+width: 100%;
+                }
+                .ourvision p{
+                    font-size: 3.50vw;
+                    line-height:20px;
+                }
+                .Sustain{
+                    font-size: 4.50vw;
+                    margin: 0;
+                }
+                .commit{    
+                    font-size: 3.50vw;
+                }
+                .resources{
+                flex-direction: column;
+                font-size: 3.5vw;
+                
+                }
+                .resource-item img{
+                    width: 50%;
+                }
+                .resource-item p{
+                    font-size: 3.5vw;
+                }
+            }

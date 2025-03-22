@@ -31,13 +31,14 @@
   
   .form-group input,
   .form-group textarea {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 16px;
     outline: none;
     transition: border-color 0.3s;
+
   }
   
   .form-group input:focus,
@@ -48,22 +49,28 @@
   .form-group textarea {
     resize: vertical;
     min-height: 120px;
+    resize: none;
   }
   
   .submit-button {
-    width: 100%;
+    width: 20%;
     padding: 12px;
-    background-color: #5a7d5a;
-    color: white;
-    border: none;
+    background-color: #fff;
+    
+    color: rgb(0, 0, 0);
+    border: 2px solid #587944;
+    border-radius: 10px;
+    /* border: none; */
     border-radius: 3px;
+    font-family: "MPLUS1";
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
   .submit-button:hover {
-    background-color: #496b49;
+    background-color: #587944;
+  color: #fff;
   }
   
   /* Responsive styles */
@@ -93,6 +100,8 @@
     .form-group textarea {
       padding: 8px;
       font-size: 14px;
+      width: 95%;
+      resize: none;
     }
     
     .submit-button {

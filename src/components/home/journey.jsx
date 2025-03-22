@@ -148,6 +148,13 @@ font-weight: 500;
           }
           
           @media (max-width: 768px) {
+
+.year{
+font-size:4.00vw;}
+.description{
+font-size:3.50vw;}
+
+
             .owl-dots .owl-dot span {
               width: 20px !important;
             }

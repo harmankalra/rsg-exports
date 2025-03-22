@@ -92,3 +92,13 @@
        /* Taller aspect ratio for the packaging item */
     }
   }
+
+  @media (max-width: 768px) {
+    .infrastructure-title{
+      font-size: 4.50vw;
+    }
+    .title-container h3{
+      font-size: 3.50vw;
+    }
+  
+  }

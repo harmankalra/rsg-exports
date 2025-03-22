@@ -161,10 +161,37 @@
   @media (max-width: 768px) {
     .rsg-text-container {
       grid-template-columns: 1fr;
+    gap: 15px;
     }
     
     .rsg-grid-container {
       grid-template-columns: 1fr;
+      margin-bottom: 15px;
+      gap: 25px;
+      
+    }
+    .rsg-container{
+      padding: 20px;
+    }
+    .rsg-container1{
+      padding: 10px;
+    }
+    
+    .rsg-header1{
+      font-size: 4.00vw;
+    }
+    .rsg-paragraph {
+    font-size: 3.50vw;
+    width: 100%;
+    }
+    .rsg-hover-main-text{
+      font-size: 4.00vw;
+    }
+    .rsg-hover-sub-text{
+font-size: 3.50vw;
+    }
+    .rsg-title{
+      font-size: 4.00vw;
     }
   }
   

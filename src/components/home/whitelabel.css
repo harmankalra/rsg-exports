@@ -1,196 +1,397 @@
 .rice-packaging-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 3% 0 4% 0;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-  }
-  
-  .rice-packaging-content {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: space-between;
-    padding: 30px 20px;
-    background-color: #fff;
-  }
-  
-  .rice-packaging-section {
-    flex: 1;
-    min-width: 300px;
-    padding: 0 20px;
-    margin-bottom: 30px;
-  }
-  
-  .rice-packaging-section h2 {
-    color: #5a7d54;
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-  
-  .tagline {
-    font-weight: 600;
-    margin-bottom: 12px;
-  }
-  
-  .description {
-    line-height: 1.6;
-  }
-  
-  .options-list {
-    padding-left: 20px;
-  }
-  
-  .options-list li {
-    line-height: 1.8;
-    position: relative;
-    list-style-type: none;
-    padding-left: 15px;
-  }
-  
-  .options-list li::before {
-    content: "•";
-    color: #5a7d54;
-    display: inline-block;
-    width: 15px;
-    position: absolute;
-    left: -5px;
-  }
-  
-  .showcase-container {
-    position: relative;
-    width: 100%;
-    margin-top: 60px;
-  }
-  
-  .rice-packaging-showcase {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    background-color: #8ba580;
-    /* padding: 0 5% 40px; */
-    text-align: center;
-    position: relative;
-    min-height: 100px;
-  }
-  
-  .package-item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin: 0 10px;
-    /* max-width: 200px; */
-  }
-  
-  .package-image {
-   
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: 40px;
-    /* transform: translateY(-40%); */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3% 0 4% 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.rice-packaging-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 30px 0px;
+  background-color: #fff;
+  margin-bottom: 4vw;
+  gap: 1.5vw;
+}
+
+.rice-packaging-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 0px;
+  margin-bottom: 30px;
+}
+
+.rice-packaging-section h2 {
+  color: #587944;
+  text-align: left;
+  font-family: "MPLUS1";
+  font-size: 2.25vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.tagline {
+  color: #587944;
+  text-align: justify;
+  font-family: "CustomFont1";
+  font-size: 1.20vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144.539%; /* 34.689px */
+}
+
+.description1 {
+  color: #587944;
+  text-align: justify;
+  font-family: "Customfont1";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 144.539%; /* 34.689px */
+}
+
+.options-list {
+  color: #587944;
+  text-align: justify;
+  font-family: "Customfont1";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 144.539%;
+}
+
+.options-list li {
+  line-height: 1.8;
+  position: relative;
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.options-list li::before {
+  content: "•";
+  color: #5a7d54;
+  display: inline-block;
+  width: 15px;
+  position: absolute;
+  left: -5px;
+}
+
+.showcase-container {
+  position: relative;
+  width: 100%;
+}
+
+.main-div {
+  width: 100%;
+  background-color: #8ba580;
+}
+
+@media (min-width: 1257px) {
+  .main-div {
+    margin-top: 5vw;
   }
 
-  
-  .package-1kg {
-    background-image: url('../../assets/RSGCA2.png');
-    margin: 0 auto;
-    padding: 15%;
+  .showcase-container {
+    padding: 2vw 0;
   }
-  
-  .package-5kg {
-    background-image: url('../../assets/RSGCA3.png');
-    margin: 0 auto;
-    padding: 18%;
-  }
-  
-  .package-10kg {
-    background-image: url('../../assets/RSGCA1.png');
-    margin: 0 auto;
-    padding: 20%;
-  }
-  
-  .package-30kg {
-    background-image: url('../../assets/RSGCA4.png');
-    margin: 0 auto;
-    padding: 25%;
-  }
-  
   .package-size {
     color: white;
     font-weight: 600;
-    font-size: 18px;
-    margin: 5px 0;
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 20px;
+  }
+}
+
+.rice-packaging-showcase {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  text-align: center;
+  position: relative;
+  min-height: 100px;
+  margin: auto;
+}
+
+.package-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 10px;
+  /* max-width: 200px; */
+}
+
+.package-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 40px;
+}
+
+.package-1kg {
+  margin: 0 auto;
+  padding: 40%;
+}
+
+.package-5kg {
+  margin: 0 auto;
+  padding: 45%;
+}
+
+.package-10kg {
+  margin: 0 auto;
+  padding: 50%;
+}
+
+.package-30kg {
+  margin: 0 auto;
+  padding: 55%;
+}
+
+.package-size {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 5px 0;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .package-1kg {
+    height: 10px;
+    max-width: 100px;
+  }
+  .package-5kg {
+    height: 15px;
+    max-width: 120px;
+  }
+  .package-10kg {
+    height: 20px;
+    max-width: 140px;
+  }
+  .package-30kg {
+    height: 35px;
+    max-width: 160px;
+  }
+
+  .main-div {
+    margin-top: 1vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .rice-packaging-content {
+    flex-direction: column;
     width: 100%;
-    text-align: center;
+  }
+
+  .rice-packaging-section {
+    width: 100%;
+  }
+
+  .package-item {
+    min-width: 80px;
+    margin: 0 5px;
+  }
+
+  .package-1kg {
+    height: 30px;
+    max-width: 90px;
+    bottom: 13px;
+  }
+  .package-5kg {
+    height: 50px;
+    max-width: 100px;
+    bottom: 10px;
+  }
+  .package-10kg {
+    height: 180px;
+    max-width: 120px;
+  }
+  .package-30kg {
+    height: 200px;
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .showcase-container {
+    height: 4vw;
+    margin-top: 10vw;
+  }
+  .rice-packaging-content {
+    width: 89%;
+  }
+
+  .rice-packaging-showcase {
+    padding-bottom: 60px;
+  }
+
+  .package-item {
+    transform: scale(0.85);
+  }
+}
+
+@media (max-width: 768px) {
+  .rice-packaging-section h2 {
+    margin-top: 0;
+  }
+
+  .rice-packaging-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rice-packaging-content {
+    order: 1;
+  }
+
+  .main-div {
+    order: 2;
+  }
+
+  .tagline,
+  .description1,
+  .options-list {
+    font-size: 14px;
+  }
+
+  .package-1kg {
+    height: 20px;
+    max-width: 90px;
+    bottom: 40px;
+  }
+  .package-5kg {
+    height: 25px;
+    max-width: 100px;
+    bottom: 40px;
+  }
+  .package-10kg {
+    height: 35px;
+    max-width: 120px;
+  }
+  .package-30kg {
+    height: 40px;
+    max-width: 140px;
+  }
+  .hidden {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Original mobile styles - will be overridden for the new mobile layout */
+  .rice-packaging-showcase .package-item:nth-child(3),
+  .rice-packaging-showcase .package-item:nth-child(4) {
+    display: none;
+  }
+
+  .rice-packaging-showcase .package-item:nth-child(1),
+  .rice-packaging-showcase .package-item:nth-child(2) {
+    flex-basis: 45%;
+    max-width: 45%;
+  }
+
+  .rice-packaging-showcase {
+    justify-content: center;
+    padding-bottom: 80px;
+  }
+
+  .main-div {
+    padding-bottom: 80px;
+  }
+
+  .package-1kg {
+    height: 60px;
+    max-width: 90px;
+    bottom: 58px;
+  }
+
+  .package-5kg {
+    height: 60px;
+    max-width: 90px;
+    bottom: 58px;
+  }
+}
+
+/* Mobile grid layout */
+.mobile-packaging-grid {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.mobile-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 576px) {
+  /* Override the previous styles that hide 3rd and 4th items */
+  .mobile-row .package-item:nth-child(1),
+  .mobile-row .package-item:nth-child(2) {
+    display: block;
+    flex-basis: 45%;
+    max-width: 45%;
   }
   
-  /* Responsive adjustments */
-  @media (max-width: 992px) {
-    .package-1kg { height: 160px; max-width: 100px; }
-    .package-5kg { height: 190px; max-width: 120px; }
-    .package-10kg { height: 210px; max-width: 140px; }
-    .package-30kg { height: 230px; max-width: 160px; }
+  /* Set proper positioning for the images */
+  .mobile-row .package-image {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 10px;
   }
   
-  @media (max-width: 768px) {
-    .rice-packaging-content {
-      flex-direction: column;
-      width: 90%;
-    }
-    
-    .rice-packaging-section {
-      width: 100%;
-      padding: 0 10px;
-    }
-    
-    .package-item {
-      min-width: 80px;
-      margin: 0 5px;
-    }
-    
-    .package-1kg { height: 140px; max-width: 90px; }
-    .package-5kg { height: 160px; max-width: 100px; }
-    .package-10kg { height: 180px; max-width: 120px; }
-    .package-30kg { height: 200px; max-width: 140px; }
+  .mobile-row .package-size {
+    position: relative;
+    bottom: 0;
+    transform: none;
+    left: auto;
   }
   
-  @media (max-width: 576px) {
-    .rice-packaging-content {
-      width: 95%;
-    }
-    
-    .rice-packaging-showcase {
-      padding-bottom: 60px;
-    }
-    
-    .package-item {
-      transform: scale(0.85);
-    }
+  /* Size adjustments for all packages */
+  .mobile-row .package-1kg,
+  .mobile-row .package-5kg,
+  .mobile-row .package-10kg,
+  .mobile-row .package-30kg {
+    height: 100px;
+    max-width: 100%;
+    bottom: auto;
+    padding: 50%;
   }
   
-  @media (max-width: 480px) {
-    .rice-packaging-showcase {
-      flex-wrap: wrap;
-      padding-bottom: 200px;
-    }
-    
-    .package-item {
-      width: 40%;
-      margin-bottom: 60px;
-    }
-    
-    .package-size {
-      bottom: -25px;
-    }
+  .mobile-packaging-grid {
+    padding-top: 20px;
+    padding-bottom: 0;
   }
+  
+  .mobile-row {
+    margin-bottom: 30px;
+  }
+  
+  .showcase-container {
+    height: auto;
+    min-height: 280px;
+  }
+  
+  /* Additional padding for main container */
+  .main-div {
+    padding-bottom: 20px;
+  }
+}

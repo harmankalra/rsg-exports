@@ -85,6 +85,9 @@ overflow: hidden;
     .destinations-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+    .destination-name{
+      font-size: 4.50vw;
+    }
   }
   
   @media screen and (max-width: 480px) {

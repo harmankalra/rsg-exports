@@ -151,7 +151,12 @@
       justify-content: center;
       margin-top: 20px;
     }
-    
+    .testimonial-text{
+      font-size: 3.50vw;
+    }
+    .testimonial-name{
+font-size: 3.90vw;
+    }
    
   }
   

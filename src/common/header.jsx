@@ -54,9 +54,9 @@ function Header() {
               <a href="/gallery" style={{ animationDelay: "0.5s" }}>
                 <span>Gallery</span>
               </a>
-              <a href="/blog" style={{ animationDelay: "0.6s" }}>
+              {/* <a href="/blog" style={{ animationDelay: "0.6s" }}>
                 <span>Blog</span>
-              </a>
+              </a> */}
             </div>
           </div>
           <a href="/">
@@ -69,7 +69,7 @@ function Header() {
           <a href="/about"><span>About</span></a>
           <a href="/contact"><span>Products</span></a>
           <a href="/gallery"><span>Gallery</span></a>
-          <a href="/blog"><span>Blog</span></a>
+          {/* <a href="/blog"><span>Blog</span></a> */}
           <a href="/contact"><span>Contact</span></a>
         </div>
         <div className="navbarContact">
