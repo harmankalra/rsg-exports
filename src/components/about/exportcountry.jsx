@@ -1,13 +1,7 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
 import './exportcountry.css';
 
 function ExportDestinations() {
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
-
   const destinations = [
     {
       name: 'Saudi Arabia',

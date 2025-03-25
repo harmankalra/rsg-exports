@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
+import React from "react";
 import "aos/dist/aos.css";
 import "./whitelabel.css";
 import rsgca1 from "../../assets/RSGCA1.png";
@@ -12,11 +11,6 @@ function RicePackaging() {
   const isMobile = useMediaQuery({
     query: "(max-width: 576px)",
   });
-
-  // Initialize AOS on component mount
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
 
   return (
     <div className="rice-packaging-container">

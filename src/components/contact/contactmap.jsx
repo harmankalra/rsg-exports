@@ -1,13 +1,7 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
 import './contactmap.css';
 
 const ContactSection = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1500 });
-  }, []);
-
   return (
     <div className="contact-container" data-aos="fade-up">
       <div className="contact-header" data-aos="fade-up">

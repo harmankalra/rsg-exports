@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState } from 'react';
 import './contactform.css';
 
 const ContactForm = () => {
@@ -10,10 +8,6 @@ const ContactForm = () => {
     phone: '',
     message: ''
   });
-
-  useEffect(() => {
-    AOS.init({ duration: 1500 });
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

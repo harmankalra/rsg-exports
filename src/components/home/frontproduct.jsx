@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './frontproduct.css';
 
 const ProductShowcase = () => {
@@ -14,47 +14,6 @@ const ProductShowcase = () => {
     { id: 9, name: 'Gold', image: require('../../assets/01.png'), color: 'red' }
   ];
 
-  useEffect(() => {
-    const $ = window.jQuery || window.$;
-
-    if (!$) {
-      console.error('jQuery is not loaded - Owl Carousel cannot be initialized');
-      return;
-    }
-
-    $(document).ready(function () {
-      $(".bsa-rice-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        navClass: ["bsa-owl-prev", "bsa-owl-next"],
-        navText: ["<", ">"],
-        dotsClass: "bsa-owl-dots",
-        dotClass: "bsa-owl-dot",
-        responsive: {
-          0: { items: 1 },
-          400: { items: 2 },
-          600: { items: 3 },
-          992: { items: 4 },
-          1200: { items: 5 }
-        }
-      });
-
-      // Refresh AOS when new content is added
-      setTimeout(() => {
-        if (window.AOS) window.AOS.refresh();
-      }, 500);
-    });
-
-    return () => {
-      if ($) $(".bsa-rice-carousel").trigger('destroy.owl.carousel');
-    };
-  }, []);
-
   const ProductCard = ({ product }) => (
     <div className="bsa-product-card">
       <div className="bsa-product-image-container">
@@ -65,9 +24,7 @@ const ProductShowcase = () => {
   );
 
   return (
-    <div className="bsa-product-showcase-container" data-aos="fade-down"
-    data-aos-easing="linear"
-    data-aos-duration="1500">
+    <div className="bsa-product-showcase-container"  data-aos="zoom-out-up">
       <div className="bsa-carousel-container">
         <div className="bsa-rice-carousel owl-carousel owl-theme">
           {products.map(product => (

@@ -1,16 +1,10 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import "./ourmission.css";
 import sustain from "../../assets/sustainable.png";
 import image2 from "../../assets/jigsaw.png"; 
 import image3 from "../../assets/process.png"; 
 
 function OurMission() {
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
-
   return (
     <div className="ourmission">
       <div className="ourmission__container">
