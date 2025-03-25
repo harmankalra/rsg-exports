@@ -1,41 +1,52 @@
-// ExportDestinations.jsx
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './exportcountry.css';
 
 function ExportDestinations() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   const destinations = [
     {
       name: 'Saudi Arabia',
       image: require('../../assets/expo1.png'),
+      animation: 'fade-up'
     },
     {
       name: 'UAE',
       image: require('../../assets/expo2.png'),
+      animation: 'fade-down'
     },
     {
       name: 'United Kingdom',
       image: require('../../assets/expo3.png'),
+      animation: 'fade-right'
     },
     {
       name: 'Germany',
       image: require('../../assets/expo4.png'),
+      animation: 'fade-left'
     },
     {
       name: 'Nigeria',
       image: require('../../assets/expo5.png'),
+      animation: 'zoom-in'
     },
     {
       name: 'Kenya',
       image: require('../../assets/expo6.png'),
+      animation: 'zoom-out'
     },
   ];
 
   return (
     <div className="export-container">
-      <h1 className="export-heading">We proudly export our rice to:</h1>
+      <h1 className="export-heading" data-aos="zoom-in">We proudly export our rice to:</h1>
       <div className="destinations-grid">
         {destinations.map((destination, index) => (
-          <div key={index} className="destination-wrapper">
+          <div key={index} className="destination-wrapper" data-aos={destination.animation}>
             <div className="destination-name">{destination.name}</div>
             <div className="destination-card">
               <div 
@@ -46,7 +57,7 @@ function ExportDestinations() {
           </div>
         ))}
       </div>
-      <div className="footer-text1">and other international destinations.</div>
+      <div className="footer-text1" data-aos="fade-up">and other international destinations.</div>
     </div>
   );
 }

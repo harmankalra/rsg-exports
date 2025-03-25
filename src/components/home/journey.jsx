@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const TimelineCarousel = () => {
   useEffect(() => {
@@ -17,7 +20,10 @@ const TimelineCarousel = () => {
           576: { items: 2 },
           992: { items: 3 },
           1200: { items: 4 } // Show 4 items on large screens
-        }
+        },
+        onInitialized: function () {
+          AOS.refresh(); // Refresh AOS after Owl Carousel loads
+      }
       });
     }
   }, []);
@@ -58,11 +64,12 @@ const TimelineCarousel = () => {
         {`
           .timeline-section {
             padding: 40px 0;
-            width: 90%;
+            width: 80%;
             margin: 0 auto;
           }
           
           .timeline-item {
+          width:95%;
             padding: 15px;
             transition: transform 0.3s ease;
           }
@@ -175,13 +182,13 @@ font-size:3.50vw;}
       <div className="owl-carousel owl-theme">
         {timelineData.map((item, index) => (
           <div key={index} className="timeline-item">
-            <div className="year">
+            <div className="year" data-aos="zoom-out-up">
               {item.year}
             </div>
-            <div className="description">
+            <div className="description"data-aos="zoom-out-up">
               {item.description}
             </div>
-            <div className="image-container">
+            <div className="image-container" data-aos="zoom-out-up">
               <img 
                 src={item.image} 
                 alt={`RSG Foods in ${item.year}`}

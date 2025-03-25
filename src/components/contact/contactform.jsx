@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './contactform.css';
 
 const ContactForm = () => {
@@ -8,6 +10,10 @@ const ContactForm = () => {
     phone: '',
     message: ''
   });
+
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,24 +25,21 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log('Form submitted:', formData);
-    // Reset form after submission if needed
     setFormData({
       name: '',
       email: '',
       phone: '',
       message: ''
     });
-    // You could add an alert or success message here
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container" data-aos="fade-up">
       <div className="form-content">
-        <h2 className="form-title">Have A Question? Let's Connect!</h2>
+        <h2 className="form-title" data-aos="fade-up">Have A Question? Let's Connect!</h2>
         
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} data-aos="fade-up">
           <div className="form-group">
             <input
               type="text"
@@ -48,7 +51,7 @@ const ContactForm = () => {
             />
           </div>
           
-          <div className="form-group">
+          <div className="form-group" data-aos="fade-up">
             <input
               type="email"
               name="email"
@@ -59,7 +62,7 @@ const ContactForm = () => {
             />
           </div>
           
-          <div className="form-group">
+          <div className="form-group" data-aos="fade-up">
             <input
               type="tel"
               name="phone"
@@ -69,7 +72,7 @@ const ContactForm = () => {
             />
           </div>
           
-          <div className="form-group">
+          <div className="form-group" data-aos="fade-up">
             <textarea
               name="message"
               value={formData.message}
@@ -80,7 +83,7 @@ const ContactForm = () => {
             ></textarea>
           </div>
           
-          <button type="submit" className="submit-button">
+          <button type="submit" className="submit-button" data-aos="fade-up">
             Submit
           </button>
         </form>

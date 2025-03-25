@@ -42,12 +42,12 @@ const RSGFoodsGrid = () => {
     <div className="rsg-container1">
     
       {/* Header Section */}
-      <h1 className="rsg-header1">Sowing The Seeds Of Ambition</h1>
+      <h1 className="rsg-header1"  >Sowing The Seeds Of Ambition</h1>
       
       {/* Two-column text section */}
       <div className="rsg-text-container">
         <div>
-          <p className="rsg-paragraph">
+          <p className="rsg-paragraph" data-aos="fade-up" >
             Starting as RSG Foods Pvt. Ltd., we embarked on a journey of growth guided 
             by visionary leadership. Built on customer trust and an unwavering 
             commitment to quality, the RSG Group expanded rapidly, adding a second 
@@ -56,7 +56,7 @@ const RSGFoodsGrid = () => {
           </p>
         </div>
         <div>
-          <p className="rsg-paragraph">
+          <p className="rsg-paragraph" data-aos="fade-up">
             To further elevate our capabilities, we established RSG Exports Pvt. 
             Ltd., a cutting-edge milling unit with an impressive 50 TPH capacity. 
             Today, we proudly bring the finest rice from our fields to tables across 
@@ -100,7 +100,7 @@ const GridItem = ({ item, isHovered, onMouseEnter, onMouseLeave }) => {
         {/* Hover overlay with separated text */}
         <div className={`rsg-overlay ${isHovered ? 'rsg-overlay-visible' : ''}`}>
           <div className="rsg-hover-box">
-            <div className="rsg-hover-text-container">
+            <div className="rsg-hover-text-container" >
               <p className="rsg-hover-main-text">{item.hoverMainText}</p>
               <p className="rsg-hover-sub-text">{item.hoverSubText}</p>
             </div>

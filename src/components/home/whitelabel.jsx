@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./whitelabel.css";
-import rsgca1 from "../../assets/RSGCA1.png"
+import rsgca1 from "../../assets/RSGCA1.png";
 import rsgca2 from "../../assets/RSGCA2.png";
 import rsgca3 from "../../assets/RSGCA3.png";
 import rsgca4 from "../../assets/RSGCA4.png";
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from "react-responsive";
 
-function App() {
+function RicePackaging() {
   const isMobile = useMediaQuery({
-    query: '(max-width: 576px)'
+    query: "(max-width: 576px)",
   });
-  
+
+  // Initialize AOS on component mount
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="rice-packaging-container">
       <div className="rice-packaging-content">
-        <div className="rice-packaging-section">
+        <div className="rice-packaging-section" data-aos="fade-up">
           <h2>Private Labelling Program</h2>
           <p className="tagline">Bring Your Brand to Life with RSG Exports</p>
           <p className="description1">
@@ -26,7 +33,7 @@ function App() {
           </p>
         </div>
 
-        <div className="rice-packaging-section">
+        <div className="rice-packaging-section" data-aos="fade-up">
           <h2>Packaging Options</h2>
           <p className="description1">
             We provide customizable packaging solutions to match your branding:
@@ -45,32 +52,32 @@ function App() {
       <div className="main-div">
         <div className="showcase-container">
           {!isMobile ? (
-            // Desktop view - original layout
-            <div className="rice-packaging-showcase">
+            // Desktop view
+            <div className="rice-packaging-showcase" data-aos="zoom-in">
               <div className="package-item">
-                <div 
-                  className="package-image package-1kg" 
+                <div
+                  className="package-image package-1kg"
                   style={{ backgroundImage: `url(${rsgca1})` }}
                 ></div>
                 <div className="package-size">1kg</div>
               </div>
               <div className="package-item">
-                <div 
-                  className="package-image package-5kg" 
+                <div
+                  className="package-image package-5kg"
                   style={{ backgroundImage: `url(${rsgca2})` }}
                 ></div>
                 <div className="package-size">5kg</div>
               </div>
               <div className="package-item">
-                <div 
-                  className="package-image package-10kg" 
+                <div
+                  className="package-image package-10kg"
                   style={{ backgroundImage: `url(${rsgca3})` }}
                 ></div>
                 <div className="package-size">10kg</div>
               </div>
               <div className="package-item">
-                <div 
-                  className="package-image package-30kg" 
+                <div
+                  className="package-image package-30kg"
                   style={{ backgroundImage: `url(${rsgca4})` }}
                 ></div>
                 <div className="package-size">30kg</div>
@@ -78,18 +85,18 @@ function App() {
             </div>
           ) : (
             // Mobile view - 2x2 grid layout
-            <div className="mobile-packaging-grid">
+            <div className="mobile-packaging-grid" data-aos="fade-up">
               <div className="mobile-row">
                 <div className="package-item">
-                  <div 
-                    className="package-image package-1kg" 
+                  <div
+                    className="package-image package-1kg"
                     style={{ backgroundImage: `url(${rsgca1})` }}
                   ></div>
                   <div className="package-size">1kg</div>
                 </div>
                 <div className="package-item">
-                  <div 
-                    className="package-image package-5kg" 
+                  <div
+                    className="package-image package-5kg"
                     style={{ backgroundImage: `url(${rsgca2})` }}
                   ></div>
                   <div className="package-size">5kg</div>
@@ -97,15 +104,15 @@ function App() {
               </div>
               <div className="mobile-row">
                 <div className="package-item">
-                  <div 
-                    className="package-image package-10kg" 
+                  <div
+                    className="package-image package-10kg"
                     style={{ backgroundImage: `url(${rsgca3})` }}
                   ></div>
                   <div className="package-size">10kg</div>
                 </div>
                 <div className="package-item">
-                  <div 
-                    className="package-image package-30kg" 
+                  <div
+                    className="package-image package-30kg"
                     style={{ backgroundImage: `url(${rsgca4})` }}
                   ></div>
                   <div className="package-size">30kg</div>
@@ -119,4 +126,4 @@ function App() {
   );
 }
 
-export default App;
+export default RicePackaging;

@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+ body {
+  overflow-x: hidden; /* Hides horizontal scrolling */
+  /* scrollbar-width: none; Hides scrollbar in Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome/Safari */
+}

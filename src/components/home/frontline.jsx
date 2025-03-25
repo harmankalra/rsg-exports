@@ -6,7 +6,7 @@ const FrontlineRice = () => {
     <div className="frontline-container">
       <div className="frontline-card">
         <div className="frontline-content">
-          <div className="frontline-text">
+          <div className="frontline-text" data-aos="zoom-in-right" data-aos-offset="300" >
             <h1 className="frontline-title">FRONTLINE</h1>
             <h2 className="frontline-subtitle">PREMIUM BASMATI RICE</h2>
             
@@ -31,7 +31,7 @@ const FrontlineRice = () => {
             </div>
           </div>
           
-          <div className="frontline-visual">
+          <div className="frontline-visual" data-aos="zoom-in-left" data-aos-offset="300">
             <div className="rice-field-bg">
               <div className="product-images">
                

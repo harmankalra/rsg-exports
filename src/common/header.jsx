@@ -67,7 +67,7 @@ function Header() {
         <div className="navbarItems">
           <a href="/"><span>Home</span></a>
           <a href="/about"><span>About</span></a>
-          <a href="/contact"><span>Products</span></a>
+          <a href="/product"><span>Products</span></a>
           <a href="/gallery"><span>Gallery</span></a>
           {/* <a href="/blog"><span>Blog</span></a> */}
           <a href="/contact"><span>Contact</span></a>
