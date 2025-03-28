@@ -1,0 +1,303 @@
+/* Main Styles for White Labeling Page */
+
+/* Global Styles */
+
+/* Container */
+.white-labeling-container {
+  /* width: 100%; */
+  /* min-height: 100vh; */
+}
+
+/* Banner Styles
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.banner-title {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: rgba(245, 158, 11, 0.8);
+  border-radius: 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Container */
+.content {
+width: 90%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Introduction Section */
+.intro-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.intro-section p {
+  color: #587944;
+  text-align: justify;
+  font-family: "CustomFont1";
+  font-size: 1.25vw;
+  font-style: normal;
+  line-height: 1.6
+}
+
+/* Section Styles */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  color: #587944;
+  font-family: "MPLUS1";
+  font-size: 2.10vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 144.539%;
+}
+
+.section-subtext {
+  color: #587944;
+  text-align: justify;
+  font-family: "CustomFont1";
+  font-size: 1.00vw;
+  margin-bottom: 2%;
+  font-style: normal;
+  line-height: 1.6
+}
+
+/* Packages Grid */
+.packages-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .packages-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Package Card */
+.package-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.package-image-container {
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.package-image1 {
+  width: 60%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover .package-image1 {
+  transform: scale(1.05);
+}
+
+.package-card h3 {
+  color: #587944;
+  font-family: "MPLUS1";
+  font-size: 1.50vw;
+  font-style: normal;
+  font-weight: 600;
+  /* line-height: 144.539%; */
+  margin-bottom: 2%;
+}
+
+.package-card p {
+  color: #587944;
+  text-align: justify;
+  font-family: "CustomFont1";
+  font-size: 1.00vw;
+  margin-bottom: 2%;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.package-size1 {
+  color: #000000;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Packaging Details */
+.packaging-details {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.packaging-details h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.packaging-details p {
+  margin-bottom: 0.5rem;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+/* Partner Section */
+.partner-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.benefits-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.check-icon {
+  background-color: #fef3c7;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d97706;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.benefit-item h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.benefit-item p {
+  color: #6b7280;
+}
+
+/* CTA Button */
+.cta-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f59e0b;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #d97706;
+  transform: translateY(-2px);
+}
+
+.arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.cta-button:hover .arrow-icon {
+  transform: translateX(4px);
+}
+.package-image1-container{
+display: flex;
+justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+  .intro-section p{
+    font-size: 2.50vw;
+  }
+  .section-header{
+    font-size:4.20vw;
+  }
+  .section-subtext{
+    font-size: 2.0vw;
+  }
+}

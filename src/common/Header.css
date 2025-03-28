@@ -139,6 +139,12 @@ h1 h2 h3 h4 h5 h6{
   display: block;
   opacity: 1;
 }
+.navbarItems a.active,
+.mobileNavItems a.active {
+  color: #000;
+  /* font-weight: 700; */
+  border-bottom: 2px solid #000;
+}
 
 @keyframes slideIn {
   to {

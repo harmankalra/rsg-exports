@@ -44,3 +44,15 @@
 ::-webkit-scrollbar {
   display: none; /* Hides scrollbar in Chrome/Safari */
 }
+.page-transition {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-transition.fadeIn {
+  opacity: 1;
+}
+
+.page-transition.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}

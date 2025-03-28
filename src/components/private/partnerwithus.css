@@ -1,0 +1,320 @@
+/* Base styles */
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
+    line-height: 1.5;
+  } */
+  
+  .section-container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 90%;
+  }
+  
+  /* Section styles */
+  .why-partner-section,
+  .cta-section {
+    padding: 3% 0;
+    /* padding: 5rem 0; */
+  }
+  
+  .section-header1 {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .section-title {
+      color: #000000;
+    font-family: "MPLUS1";
+    display: inline-block;
+    position: relative;
+    font-size: 2.10vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 144.539%;
+  }
+  
+  .section-title-underline {
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    height: 0.25rem;
+    width: 100%;
+    background-color: #facc15;
+  }
+  
+  .section-description {
+    font-size: 1.125rem;
+    color: #4b5563;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+  
+  /* Feature cards */
+  .feature-card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .feature-card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .feature-card-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .feature-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-description {
+    color: #4b5563;
+    text-align: center;
+  }
+  
+  /* Commitment container */
+  .commitment-container {
+    margin-top: 4rem;
+    background: linear-gradient(104deg, #92AA83 22.45%, #587944 93.68%);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .cta-info{
+    padding-right: 10%;
+  }
+  .commitment-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .commitment-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .commitment-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .commitment-description {
+    margin-bottom: 1rem;
+  }
+  
+  .commitment-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-container1 {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* CTA section */
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .cta-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .cta-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-description {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .cta-primary-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #d97706;
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cta-primary-button svg {
+    margin-right: 0.5rem;
+  }
+  
+  .cta-outline-button {
+    background-color: transparent;
+    color: #d97706;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    border: 2px solid #d97706;
+    cursor: pointer;
+  }
+  
+  .form-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  /* Form styles */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #374151;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    background-color: white;
+    color: #1f2937;
+  }
+  
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: #587944;
+    color: white;
+    font-weight: 500;
+    /* border-radius: 0.375rem; */
+    border: none;
+    cursor: pointer;
+
+   
+
+    /* background-color: #fff; */
+    /* color: rgb(0, 0, 0); */
+    /* border: 2px solid #587944; */
+    border-radius: 10px;
+    /* border: none; */
+    /* border-radius: 3px; */
+    font-family: "MPLUS1";
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button svg {
+    margin-right: 0.5rem;
+  }
+  
+  /* Success message */
+  .success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: #ecfdf5;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .success-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .success-description {
+    color: #6b7280;
+  }
+  

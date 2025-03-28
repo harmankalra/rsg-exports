@@ -1,7 +1,15 @@
 import React from 'react';
 import './frontproduct.css';
+import { useNavigate } from "react-router-dom";
+// const YourComponent = () => {
 
 const ProductShowcase = () => {
+  const navigate = useNavigate();
+
+  const handleRedirect = () => {
+    navigate("/product");  // Navigate within React Router
+    window.scrollTo(0, 0); // Ensure the page opens at the top
+  };
   const products = [
     { id: 1, name: 'Sughandh', image: require('../../assets/08.png'), color: 'red' },
     { id: 2, name: 'Kesar', image: require('../../assets/07.png'), color: 'purple' },
@@ -34,7 +42,9 @@ const ProductShowcase = () => {
           ))}
         </div>
         <div className="bsa-view-more-container">
-          <button className="bsa-view-more-btn">View More</button>
+        <button className="bsa-view-more-btn" onClick={handleRedirect}>
+      View More
+    </button>
         </div>
       </div>
     </div>
