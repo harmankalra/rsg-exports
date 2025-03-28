@@ -9,6 +9,8 @@ import aboutDesktop from '../assets/AboutUS.jpg';
 import contactDesktop from '../assets/ContactUs.jpg';
 import productDesktop1 from '../assets/Productbannner.jpg';
 import privateDesktop1 from '../assets/PrivateLabling.jpg';
+import GalleryDesktop1 from '../assets/Galery.jpg';
+
 
 // Mobile Backgrounds
 import homeMobile1 from '../assets/MobFront.jpg';
@@ -17,6 +19,8 @@ import aboutMobile from '../assets/mobAboutUs.jpg';
 import contactMobile from '../assets/MobContactUs.jpg';
 import productMobile1 from '../assets/MobProductRange.jpg';
 import privateMobile1 from '../assets/MobPrivateLabeling.jpg';
+import galleryMobile1 from '../assets/MobGallery.jpg';
+
 
 function Banner() {
     const location = useLocation();
@@ -54,7 +58,14 @@ function Banner() {
             desktopBackgrounds: [privateDesktop1],
             mobileBackgrounds: [privateMobile1],
             isSingleImage: true,
-            mobileClass: 'mobile-products'
+            mobileClass: 'mobile-private'
+        }
+        ,
+        '/gallery': {
+            desktopBackgrounds: [GalleryDesktop1],
+            mobileBackgrounds: [galleryMobile1],
+            isSingleImage: true,
+            mobileClass: 'mobile-gallery'
         }
     }), []);
 

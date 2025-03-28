@@ -15,6 +15,7 @@ import About from './pages/about.jsx';
 import Contact from './pages/contact.jsx';
 import Product from './pages/product.jsx';
 import Privatelabel from './pages/private.jsx';
+import Gallery from './pages/gallery.jsx'
 
 function App() {
   return (
@@ -53,6 +54,8 @@ function AppContent() {
           <Route path="/about" element={<About />} />
           <Route path="/product" element={<Product />} />
           <Route path="/private" element={<Privatelabel />} />
+          <Route path="/gallery" element={<Gallery />} />
+
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
