@@ -59,7 +59,8 @@ const Footer = () => {
       <div className="company-name">
         <h2>RSG EXPORTS</h2>
         <div className="copyright-bar">
-        <p>COPYRIGHT © 2025 RSG Exports, All Rights Reserved.</p>
+        <p>COPYRIGHT © {new Date().getFullYear()} RSG Exports, All Rights Reserved.</p>
+
         <p>Designed & Developed By PITAMAAS</p>
       </div>
       </div>
