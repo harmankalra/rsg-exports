@@ -292,12 +292,24 @@ justify-content: center;
 
 @media (max-width: 768px) {
   .intro-section p{
-    font-size: 2.50vw;
+    font-size: 3.00vw;
   }
   .section-header{
     font-size:4.20vw;
   }
   .section-subtext{
-    font-size: 2.0vw;
+    font-size: 3.00vw;
+  }
+  .package-card h3{
+    font-size: 4.00vw;
+  }
+  .package-card p{
+    font-size: 3.00vw;
+  }
+  .package-image1{
+    width: 80%;
+  }
+  .section-title{
+    font-size: 4.10vw;
   }
 }
