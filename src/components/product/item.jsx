@@ -16,7 +16,7 @@ const riceProducts = [
         ],
       
       
-    image: require('../../assets/01.png'),
+    image: require('../../assets/thumb1.png'),
     imageAlt: 'Frontline Premium Basmati Rice Packet'
   },
   {
@@ -33,7 +33,7 @@ const riceProducts = [
       ],
 
     
-    image: require('../../assets/02.png'),
+    image: require('../../assets/thumb2.png'),
     imageAlt: 'Frontline Premium Basmati Rice Packet'
   },
   {
@@ -48,7 +48,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/03.png'),
+    image:require('../../assets/thumb3.png'),
     imageAlt: 'Platinum Premium Basmati Rice Packet'
   },
   {
@@ -63,7 +63,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/04.png'),
+    image: require('../../assets/thumb4.png'),
     imageAlt: 'Khushboo Premium Basmati Rice Packet'
   },{
     id: 5,
@@ -77,7 +77,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/05.png'),
+    image:require('../../assets/thumb5.png'),
     imageAlt: 'Silver Premium Basmati Rice Packet'
   },
   {
@@ -92,7 +92,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/06.png'),
+    image: require('../../assets/thumb6.png'),
     imageAlt: 'Mehak Premium Basmati Rice Packet'
   },
   {
@@ -107,7 +107,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/07.png'),
+    image: require('../../assets/thumb7.png'),
     imageAlt: 'Kesar Premium Basmati Rice Packet'
   },
   {
@@ -122,7 +122,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/08.png'),
+    image: require('../../assets/thumb8.png'),
     imageAlt: 'Sughandh Premium Basmati Rice Packet'
   },
   {
@@ -137,7 +137,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/09.png'),
+    image: require('../../assets/thumb9.png'),
     imageAlt: 'Premium Basmati Rice Packet'
   }
   
