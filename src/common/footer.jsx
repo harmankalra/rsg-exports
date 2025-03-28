@@ -18,6 +18,7 @@ const Footer = () => {
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/product">Products</a></li>
+            <li><a href="/gallery">Private Labelling</a></li>
             <li><a href="/gallery">Gallery</a></li>
             {/* <li><a href="/blog">Blog</a></li> */}
             <li><a href="/contact">Contact</a></li>
@@ -45,11 +46,11 @@ const Footer = () => {
           <h3>Phone</h3>
           <a href="tel:+919056022232">+91 9056022232</a>
         </div>
-        
         <div className="social-block">
-          <a href="https://facebook.com/" className="social-link">Facebook</a>
-          <a href="https://instagram.com/" className="social-link">Instagram</a>
-        </div>
+  <a href="https://www.instagram.com/rsgexports/" className="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+  <a href="https://www.facebook.com/profile.php?id=100091896397617#" className="social-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+</div>
+
       </div>
       
       {/* Large RSG EXPORTS Text */}
