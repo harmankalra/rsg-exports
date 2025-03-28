@@ -61,7 +61,10 @@
       height: 70vh;
       padding: 0; /* Remove padding */
     }
+    .banner-wrapper.multi-image {
+        margin-bottom: 10%;
   }
+}
   
   @media screen and (max-width: 480px) {
     .banner-wrapper,
@@ -69,5 +72,8 @@
       height: 70vh;
       padding: 0; /* Remove padding */
     }
+    .banner-wrapper.multi-image {
+        margin-bottom: 12%;
   }
+}
   
