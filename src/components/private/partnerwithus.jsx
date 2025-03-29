@@ -125,7 +125,7 @@ function ContactForm() {
           </svg>
         </div>
         <h3 className="success-title">Thank You!</h3>
-        <p className="success-description">Your message has been sent successfully. We'll get back to you shortly.llll</p>
+        <p className="success-description">Your message has been sent successfully. We'll get back to you shortly.</p>
       </div>
     );
   }
@@ -138,7 +138,7 @@ function ContactForm() {
       </div>
 
       <div className="form-group" data-aos="fade-up" data-aos-delay="100">
-        <label htmlFor="email" className="form-label">Email</label>
+        <label htmlFor="email" className="form-label">Emaillllll</label>
         <input id="email" type="email" className="form-input" placeholder="Your email" required />
       </div>
 
