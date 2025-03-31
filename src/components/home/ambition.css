@@ -38,10 +38,11 @@
   /* Text section styles */
   .rsg-text-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     margin-bottom: 48px;
-  }
+}
+
   
   .rsg-paragraph {
     color: #FFF;
