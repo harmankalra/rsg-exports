@@ -18,30 +18,10 @@ export default function PartnerSection() {
           </div>
 
           <div className="feature-card-container">
-            <FeatureCard
-              icon={<AwardIcon />}
-              title="Decades of Expertise"
-              description="Trusted knowledge in rice production and private labelling."
-              aosDelay="0"
-            />
-            <FeatureCard
-              icon={<PackageIcon />}
-              title="Tailored Branding"
-              description="Custom packaging reflecting your brand identity."
-              aosDelay="200"
-            />
-            <FeatureCard
-              icon={<ChartIcon />}
-              title="Consistent Quality"
-              description="Meticulous quality control for every batch."
-              aosDelay="400"
-            />
-            <FeatureCard
-              icon={<FactoryIcon />}
-              title="Flexible Production"
-              description="Scalable solutions for small-scale and bulk orders."
-              aosDelay="600"
-            />
+            <FeatureCard icon={<AwardIcon />} title="Decades of Expertise" description="Trusted knowledge in rice production and private labelling." aosDelay="0" />
+            <FeatureCard icon={<PackageIcon />} title="Tailored Branding" description="Custom packaging reflecting your brand identity." aosDelay="200" />
+            <FeatureCard icon={<ChartIcon />} title="Consistent Quality" description="Meticulous quality control for every batch." aosDelay="400" />
+            <FeatureCard icon={<FactoryIcon />} title="Flexible Production" description="Scalable solutions for small-scale and bulk orders." aosDelay="600" />
           </div>
         </div>
       </section>
@@ -53,8 +33,7 @@ export default function PartnerSection() {
             <div className="cta-info" data-aos="fade-right" data-aos-duration="1200">
               <h2 className="cta-title">Get Started with Your Private Labelling Program Today!</h2>
               <p className="cta-description">
-                Contact us to discuss your custom packaging requirements and take your brand to the next level. Our team
-                is ready to help you create a product that stands out in the market.
+                Contact us to discuss your custom packaging requirements and take your brand to the next level. Our team is ready to help you create a product that stands out in the market.
               </p>
               <div className="cta-button-group">
                 <button className="cta-primary-button">
@@ -76,15 +55,9 @@ export default function PartnerSection() {
   );
 }
 
-// Feature Card Component
 function FeatureCard({ icon, title, description, aosDelay }) {
   return (
-    <div
-      className="feature-card"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay={aosDelay}
-    >
+    <div className="feature-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={aosDelay}>
       <div className="icon-container">{icon}</div>
       <h3 className="feature-title">{title}</h3>
       <p className="feature-description">{description}</p>
@@ -92,35 +65,55 @@ function FeatureCard({ icon, title, description, aosDelay }) {
   );
 }
 
-// Contact Form Component
 function ContactForm() {
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    company: "",
+    number: "",
+    message: "",
+  });
+  
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("https://dasmesh-mailer.ritaz.in/RSGExports", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", company: "", number: "", message: "" });
+      } else {
+        alert("Failed to submit the form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission Error:", error);
+      alert("Something went wrong. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
     return (
       <div className="success-message" data-aos="fade-up" data-aos-duration="1000">
         <div className="success-icon">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#10b981"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 13l4 4L19 7"></path>
           </svg>
         </div>
@@ -134,49 +127,44 @@ function ContactForm() {
     <form onSubmit={handleSubmit}>
       <div className="form-group" data-aos="fade-up" data-aos-delay="0">
         <label htmlFor="name" className="form-label">Name</label>
-        <input id="name" className="form-input" placeholder="Your name" required />
+        <input id="name" name="name" className="form-input" placeholder="Your name" value={formData.name} onChange={handleChange} required />
       </div>
 
       <div className="form-group" data-aos="fade-up" data-aos-delay="100">
-        <label htmlFor="email" className="form-label">Emaillllll</label>
-        <input id="email" type="email" className="form-input" placeholder="Your email" required />
+        <label htmlFor="email" className="form-label">Email</label>
+        <input id="email" name="email" type="email" className="form-input" placeholder="Your email" value={formData.email} onChange={handleChange} required />
       </div>
 
       <div className="form-group" data-aos="fade-up" data-aos-delay="200">
         <label htmlFor="company" className="form-label">Company</label>
-        <input id="company" className="form-input" placeholder="Your company" />
+        <input id="company" name="company" className="form-input" placeholder="Your company" value={formData.company} onChange={handleChange} />
       </div>
+      <div className="form-group" data-aos="fade-up" data-aos-delay="200">
+  <label htmlFor="number" className="form-label">Phone Number</label>
+  <input
+    id="number"
+    name="number"
+    type="tel"
+    className="form-input"
+    placeholder="Phone Number"
+    value={formData.phone}
+    onChange={handleChange}
+  />
+</div>
+
 
       <div className="form-group" data-aos="fade-up" data-aos-delay="300">
         <label htmlFor="message" className="form-label">Message</label>
-        <textarea
-          id="message"
-          className="form-input form-textarea"
-          placeholder="Tell us about your private labelling needs"
-          required
-        ></textarea>
+        <textarea id="message" name="message" className="form-input form-textarea" placeholder="Tell us about your private labelling needs" value={formData.message} onChange={handleChange} required></textarea>
       </div>
 
-      <button
-        type="submit"
-        className="submit-button"
-        disabled={isSubmitting}
-        data-aos="fade-up"
-        data-aos-delay="400"
-      >
-        {isSubmitting ? (
-          <span>Sending...</span>
-        ) : (
-          <>
-            <SendIcon /> Send Message
-          </>
-        )}
+      <button type="submit" className="submit-button" disabled={isSubmitting} data-aos="fade-up" data-aos-delay="400">
+        {isSubmitting ? "Sending..." : (<><SendIcon /> Send Message</>)}
       </button>
     </form>
   );
 }
 
-// Icon Components
 function AwardIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d97706" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
