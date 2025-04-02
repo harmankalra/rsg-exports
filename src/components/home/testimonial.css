@@ -27,7 +27,7 @@
     position: relative;
   }
   
-  .testimonial-item {
+.testimonial-item {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
@@ -35,7 +35,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 20px;
-    padding: 25% 0;
+    padding: 30% 0;
     aspect-ratio: 16 / 9; /* Adjust ratio as needed */
 }
 
@@ -54,8 +54,7 @@
   .testimonial-content {
     position: relative;
     z-index: 2;
-    padding: 20px;
-    height: 120px;
+    padding: 10px;
     margin: 15px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;

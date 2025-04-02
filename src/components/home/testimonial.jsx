@@ -41,53 +41,52 @@ const TestimonialSlider = () => {
       }
     };
   }, []);
+// Testimonial data
+const testimonials = [
+  {
+    id: 1,
+    image: require('../../assets/testimonial1.png'),
+    name: 'Sophia Fernandes',
+    position: 'CEO, Global Trade Co.',
+    text: 'Exceptional service and premium rice quality. RSG Exports enhances our supply chain with consistency, reliability, and customer satisfaction in every shipment.'
+  },
+  {
+    id: 2,
+    image: require('../../assets/testimonial2.png'),
+    name: 'Rajiv Malhotra',
+    position: 'Designer, Agro Foods',
+    text: 'Timely deliveries and outstanding rice quality. Their attention to detail and commitment to excellence make them our trusted and preferred supplier always.'
+  },
+  {
+    id: 3,
+    image: require('../../assets/testimonial3.png'),
+    name: 'Priya Nair',
+    position: 'Developer, Harvest India',
+    text: 'From packaging to product freshness, RSG Exports delivers excellence. Their dedication to maintaining high standards ensures complete customer satisfaction every time.'
+  },
+  {
+    id: 4,
+    image: require('../../assets/testimonial4.png'),
+    name: 'Abeba',
+    position: 'Manager, Organic Grains',
+    text: 'A reliable partner focusing on top quality. Their rice varieties stand out in purity, taste, and international standards, making them a top choice.'
+  },
+  {
+    id: 5,
+    image: require('../../assets/testimonial5.png'),
+    name: 'Amit Khanna',
+    position: 'Marketing, Fresh Harvest',
+    text: 'Consistently high-quality rice with excellent support. We value their commitment to delivering outstanding products that meet global expectations efficiently every time.'
+  },
+  {
+    id: 6,
+    image: require('../../assets/testimonial6.png'),
+    name: 'Amaya',
+    position: 'Marketing, Global Foods',
+    text: 'Impressive product range and smooth logistics. RSG Exports ensures we receive premium-grade rice, maintaining trust and excellence in every shipment they provide.'
+  }
+];
 
-  // Testimonial data
-  const testimonials = [
-    {
-      id: 1,
-      image: require('../../assets/testimonial1.png'),
-      name: 'Sophia Fernandes',
-      position: 'CEO, Global Trade Co.',
-      text: 'Exceptional service and top-quality rice. RSG Exports has truly elevated our supply chain, ensuring consistency in every shipment.'
-    },
-    {
-        id: 2,
-        image: require('../../assets/testimonial2.png'),
-        name: 'Rajiv Malhotra',
-      position: 'Designer, Agro Foods',
-      text: 'Timely deliveries and superb quality. Their attention to detail and commitment to excellence make them our preferred supplier.'
-    },
-    {
-      id: 3,
-      image: require('../../assets/testimonial3.png'),
-      name: 'Priya Nair',
-      position: 'Developer, Harvest India',
-      text: 'From packaging to product freshness, RSG Exports never disappoints. Their dedication to customer satisfaction is unmatched.'
-    },
-    {
-        id: 4,
-        image: require('../../assets/testimonial4.png'),
-        name: 'Abeba',
-        position: 'Manager, Organic Grains',
-        text: 'A reliable partner with a keen focus on quality. Their rice varieties stand out in the market for their purity and taste.'
-    },
-    {
-        id: 5,
-        name: 'Amit Khanna',
-      image: require('../../assets/testimonial5.png'),
-      position: 'Marketing, Fresh Harvest',
-      text: 'Consistently high-quality rice and excellent support. We appreciate their commitment to maintaining international standards.'
-    },
-    {
-      id: 6,
-      image: require('../../assets/testimonial6.png'),
-      name: 'Amaya',
-      position: 'Marketing, Global Foods',
-      text: 'Impressive product range and smooth logistics. RSG Exports ensures that we receive top-grade rice on every order.'
-    }
-  ];
-  
 
   return (
     <div className="testimonial-section">
