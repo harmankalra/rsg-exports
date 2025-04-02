@@ -29,15 +29,16 @@
   
   .testimonial-item {
     position: relative;
-
     overflow: hidden;
     border-radius: 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 20px;
-  padding: 25% 0;
-  }
+    padding: 25% 0;
+    aspect-ratio: 16 / 9; /* Adjust ratio as needed */
+}
+
   
   .testimonial-item::before {
     content: '';
