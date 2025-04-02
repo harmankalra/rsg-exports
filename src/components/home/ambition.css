@@ -38,7 +38,7 @@
   /* Text section styles */
   .rsg-text-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 32px;
     margin-bottom: 48px;
 }
@@ -59,7 +59,7 @@
   /* Grid container styles */
   .rsg-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 80px;
   }
   
