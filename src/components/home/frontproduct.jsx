@@ -32,7 +32,7 @@ const ProductShowcase = () => {
   );
 
   return (
-    <div className="bsa-product-showcase-container"  data-aos="zoom-out-up">
+    <div className="bsa-product-showcase-container">
       <div className="bsa-carousel-container">
         <div className="bsa-rice-carousel owl-carousel owl-theme">
           {products.map(product => (

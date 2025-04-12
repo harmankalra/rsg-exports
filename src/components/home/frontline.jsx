@@ -17,7 +17,7 @@ const FrontlineRice = () => {
             <Feature title="Low in Fat" description="A healthy, low-fat food that provides energy without added oils or fats." />
           </div>
 
-          <div className="frontline-visual" data-aos="zoom-in-left" data-aos-offset="300">
+          <div className="frontline-visual" data-aos="zoom-in-up" data-aos-offset="300">
             <div className="rice-field-bg">
               <div className="product-images"></div>
             </div>
