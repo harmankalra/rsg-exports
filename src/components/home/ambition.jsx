@@ -11,7 +11,7 @@ const RSGFoodsGrid = () => {
       title: 'Production Capacity',
       hoverMainText: '50 tons/hour',
       hoverSubText: 'with state of the art facilities.',
-      image: require('../../assets/Component1.png')
+      image: require('../../assets/capacity.png')
     },
     {
       id: 2,
