@@ -18,21 +18,21 @@ const RSGFoodsGrid = () => {
       title: 'Quality Assurance',
       hoverMainText: 'Rigorous quality control',
       hoverSubText: 'at every stage.',
-      image: require('../../assets/Component1.png')
+      image: require('../../assets/quality.png')
     },
     {
       id: 3,
       title: 'Global Reach',
       hoverMainText: 'Serving customers',
       hoverSubText: 'across international markets.',
-      image: require('../../assets/Component1.png')
+      image: require('../../assets/globalreach.png')
     },
     {
       id: 4,
       title: 'Customized Packaging',
       hoverMainText: 'Tailored packaging',
       hoverSubText: 'solutions for diverse needs.',
-      image: require('../../assets/Component1.png')
+      image: require('../../assets/custom.png')
     }
   ];
 
@@ -109,7 +109,7 @@ const GridItem = ({ item, isHovered, onMouseEnter, onMouseLeave }) => {
       
       {/* Title below image */}
       <div className="rsg-title-container">
-        <h3 className="rsg-title">{item.title}</h3>
+        {/* <h3 className="rsg-title">{item.title}</h3> */}
       </div>
     </div>
   );

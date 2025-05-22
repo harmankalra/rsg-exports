@@ -52,7 +52,7 @@
   }
   
   .rsg-feature-card {
-    background-color: white;
+    background-color: #f6f0e2;
     border-radius: 8px;
     padding: 15px;
     display: flex;
@@ -63,7 +63,7 @@
   }
   
   .rsg-feature-icon {
-padding: 19%;
+padding: 32%;
     margin-bottom: 10px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -71,27 +71,27 @@ padding: 19%;
   }
   
   .icon-quality {
-    background-image: url('../../assets/heritage.png');
+    background-image: url('../../assets/why1.png');
   }
   
   .icon-sustainability {
-    background-image: url('../../assets//sustainability.png');
+    background-image: url('../../assets/why2.png');
   }
   
   .icon-innovation {
-    background-image: url('../../assets/idea1.png');
+    background-image: url('../../assets/ino 1.png');
   }
   
   .icon-global {
-    background-image: url('../../assets/earth.png');
+    background-image: url('../../assets/why4.png');
   }
   
   .icon-health {
-    background-image: url('../../assets/better-health.png');
+    background-image: url('../../assets/why5.png');
   }
   
   .icon-culinary {
-    background-image: url('../../assets/culinary.png');
+    background-image: url('../../assets/why6.png');
   }
   
   .rsg-feature-text {

@@ -66,10 +66,10 @@
 .rsg-product-name {
   color: #587944;
   text-align: justify;
-  font-family: "CustomFont1";
+  font-family: "typo";
   font-size:  2.10vw;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 300;
   margin: 0;
   line-height: 1.4;
 }

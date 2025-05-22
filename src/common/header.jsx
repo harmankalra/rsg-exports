@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
-import RSG from "../assets/logo.png";
+import RSG from "../assets/RSG-2.png";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);

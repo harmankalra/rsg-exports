@@ -10,6 +10,12 @@
     font-weight: 600;
     font-style: normal;
   }
+@font-face {
+  font-family: 'typo';
+  src: url('../font/Typoreg.otf') format('opentype');
+
+}
+
 p{
   margin: 0;
   padding: 0;
@@ -45,7 +51,7 @@ h1 h2 h3 h4 h5 h6{
 }
 
 .navbarImg img {
-  width: 85%;
+  width: 100%;
 }
 
 .navbarItems {

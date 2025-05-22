@@ -7,8 +7,8 @@ const FrontlineRice = () => {
       <div className="frontline-card">
         <div className="frontline-content">
           <div className="frontline-text" data-aos="zoom-in-right" data-aos-offset="300">
-            <h1 className="frontline-title">FRONTLINE</h1>
-            <h2 className="frontline-subtitle">PREMIUM BASMATI RICE</h2>
+            <h1 className="frontline-title">Frontline</h1>
+            <h2 className="frontline-subtitle">Premium Basmati Rice</h2>
 
             <Feature title="100% Pure Rice Grains" description="Carefully selected for quality and consistency, ensuring a natural, wholesome taste." />
             <Feature title="No Preservatives" description="Our rice is free from artificial preservatives, ensuring a natural, fresh flavor." />

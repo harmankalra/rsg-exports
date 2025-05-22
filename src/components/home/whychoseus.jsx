@@ -8,40 +8,39 @@ const RSGExports = () => {
       <div className="rsg-header">
         <div className="rsg-title-section">
           <h2 className="rsg-title1" data-aos="zoom-out-right">Why RSG Exports ?</h2>
-          <p className="rsg-description" data-aos="zoom-out-right">
-            The Luxe Grain is a premium blog showcasing RSG Exports' rice as a symbol 
-            of luxury and quality. It highlights heritage, superior craftsmanship, and culinary 
-            excellence through engaging stories, chef interviews, and global success insights.
-          </p>
-          <p className="rsg-description" data-aos="zoom-out-right">
-            With 22 high-quality dryers, we maintain optimal moisture levels, ensuring superior 
-            quality, longer shelf life, and large-scale production efficiency.
-          </p>
+<p className="rsg-description" data-aos="zoom-out-right">
+  The Luxe Grain is a premium editorial blog by RSG Exports that celebrates rice as a true symbol of luxury and excellence. It delves into the brand’s heritage, expert craftsmanship, and international recognition through rich storytelling, exclusive chef interviews, and behind-the-scenes culinary features.
+</p>
+<p className="rsg-description" data-aos="zoom-out-right">
+  With a robust setup of 22 high-performance dryers, we carefully regulate moisture levels to preserve the rice’s superior quality, enhance shelf life, and ensure consistent, large-scale production that meets global benchmarks.
+</p>
+
+
         </div>
         <div className="rsg-features-grid">
           <div className="rsg-feature-card" data-aos="fade-up">
             <div className="rsg-feature-icon icon-quality"></div>
-            <p className="rsg-feature-text">Quality & Heritage</p>
+            {/* <p className="rsg-feature-text">Quality & Heritage</p> */}
           </div>
           <div className="rsg-feature-card" data-aos="fade-up" data-aos-delay="200">
             <div className="rsg-feature-icon icon-sustainability"></div>
-            <p className="rsg-feature-text">Sustainability & Ethics</p>
+            {/* <p className="rsg-feature-text">Sustainability & Ethics</p> */}
           </div>
           <div className="rsg-feature-card" data-aos="fade-up" data-aos-delay="400">
             <div className="rsg-feature-icon icon-innovation"></div>
-            <p className="rsg-feature-text">Innovation & Technology</p>
+            {/* <p className="rsg-feature-text">Innovation & Technology</p> */}
           </div>
           <div className="rsg-feature-card" data-aos="fade-up" data-aos-delay="600">
             <div className="rsg-feature-icon icon-global"></div>
-            <p className="rsg-feature-text">Global Footprint</p>
+            {/* <p className="rsg-feature-text">Global Footprint</p> */}
           </div>
           <div className="rsg-feature-card" data-aos="fade-up" data-aos-delay="800">
             <div className="rsg-feature-icon icon-health"></div>
-            <p className="rsg-feature-text">Health & Wellness</p>
+            {/* <p className="rsg-feature-text">Health & Wellness</p> */}
           </div>
           <div className="rsg-feature-card" data-aos="fade-up" data-aos-delay="1000">
             <div className="rsg-feature-icon icon-culinary"></div>
-            <p className="rsg-feature-text">Culinary Experience</p>
+            {/* <p className="rsg-feature-text">Culinary Experience</p> */}
           </div>
         </div>
       </div>

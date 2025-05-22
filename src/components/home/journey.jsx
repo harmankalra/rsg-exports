@@ -32,28 +32,28 @@ const TimelineCarousel = () => {
     {
       year: "1999",
       description: "With humble beginnings, Our First Rice Production Unit was setup as RSG Foods Pvt. Ltd. and commenced operations under the guidance of our directors.",
-      image: require('../../assets/pexel.png')
+      image: require('../../assets/1999.png')
     },
     {
       year: "2008",
       description: "With support from our customers and our constant efforts, the RSG Group acquired another Production Unit to boost its production capacity to meet the growing demand.",
-      image: require('../../assets/pexel.png')
+      image: require('../../assets/2008.png')
     },
     {
       year: "2009",
       description: "To meet the rising  demand for Basmati Rice in the export markets, the RSG Group began bulk exports of rice to several countries in the Middle East.",
-      image: require('../../assets/pexel.png')
+      image: require('../../assets/2009.png')
     },
     {
       year: "2014",
       description: "Through support from our loyal clientele in the domestic and export markets, the RSG Group setup another export oriented Mega Rice Milling Unit as RSG Exports Pvt. Ltd. and was able to achieve a production milestone of 50 TPH. ",
-      image: require('../../assets/pexel.png')
+      image: require('../../assets/2014.png')
     }
     ,
     {
       year: "Present",
       description: "Today, RSG Exports Pvt. Ltd. is actively exporting rice to several destinations in the Middle East such as the Kingdom of Saudi Arabia, the UAE and is exploring several other markets abroad.",
-      image: require('../../assets/pexel.png')
+      image: require('../../assets/present.png')
     }
   ];
 
