@@ -7,14 +7,15 @@
   @font-face {
     font-family: 'MPLUS1';
     src: url('../../font/MPLUS1.ttf') format('truetype');
-    font-weight: 600;
+    /* font-weight: 600; */
     font-style: normal;
   }
 
 /* Main container styles */
 .rsg-container {
     background:linear-gradient(104deg, #92AA83 22.45%, #587944 93.68%);
-    padding: 40px;
+    padding: 5% 0;
+    /* background-color: #E3DECC; */
     width: 100%;
     box-sizing: border-box;
   }

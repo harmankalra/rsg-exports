@@ -5,7 +5,7 @@ const ContactSection = () => {
   return (
     <div className="contact-container" data-aos="fade-up">
       <div className="contact-header" data-aos="fade-up">
-        <h2>Contact Us</h2>
+        {/* <h2>Contact Us</h2> */}
       </div>
       <div className="contact-content">
         <div className="contact-content1">
