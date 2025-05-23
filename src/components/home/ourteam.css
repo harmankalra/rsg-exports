@@ -1,15 +1,15 @@
 /* Main container styles */
 .team-showcase {
     width: 100%;
-    background: linear-gradient(104deg, #92AA83 22.45%, #587944 93.68%);
-    
+    /* background: linear-gradient(104deg, #92AA83 22.45%, #587944 93.68%); */
+    background-color:#E5DFCD;
     color: white;
     font-family: Arial, sans-serif;
   }
   
   .team-container {
     width: 80%;
-    padding: 5% 0;
+    padding: 1% 0;
     margin: 0 auto;
   }
   .profileflex{
@@ -17,7 +17,7 @@ display: flex;
   }
   
   .team-title {
-    color: #FFF;
+    color: #393610;
     font-family: "MPLUS1";
     font-size: 3.00vw;
     font-style: normal;
@@ -27,7 +27,7 @@ display: flex;
   }
   
   .team-intro {
-    color: #FFF;
+    color: #393610;
     text-align: justify;
     font-family: "CustomFont1";
     font-size: 1.20vw;
@@ -76,7 +76,7 @@ display: flex;
   }
   
   .member-name-main {
-    color: #FFF;
+    color: #393610;
     font-family: "MPLUS1";
     font-size: 3.00vw;
     font-style: normal;
@@ -86,16 +86,16 @@ display: flex;
   }
   
   .member-title-main {
-    color: #FFF;
+    color: #393610;
     font-family: "MPLUS1";
     font-size: 1.00vw;
     font-style: normal;
-    font-weight: 200;
+    font-weight: 400;
     line-height: 144.539%; /* 34.689px */
   }
   
   .member-description-main {
-    color: #FFF;
+    color: #000;
     text-align: justify;
     font-family: "CustomFont1";
     font-size: 1.20vw;

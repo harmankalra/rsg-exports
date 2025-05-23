@@ -13,8 +13,9 @@
 
 /* Main container styles */
 .rsg-container {
-    background:linear-gradient(104deg, #92AA83 22.45%, #587944 93.68%);
-    padding: 5% 0;
+    /* background:linear-gradient(104deg, #92AA83 22.45%, #587944 93.68%); */
+    padding: 1% 0;
+    background-color: #FEF8E5;
     /* background-color: #E3DECC; */
     width: 100%;
     box-sizing: border-box;
@@ -27,7 +28,7 @@
   
   /* Header styles */
   .rsg-header1 {
-    color: #FFF;
+    color: #393610;
     font-family: "MPLUS1";
     font-size: 2.5vw;
     font-style: normal;
@@ -46,7 +47,7 @@
 
   
   .rsg-paragraph {
-    color: #FFF;
+    color: #000;
     text-align: justify;
     font-family: "CustomFont1";
     font-size: 1.2vw;

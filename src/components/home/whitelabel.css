@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 3% 0 4% 0;
-  font-family: 'Arial', sans-serif;
+  /* padding: 3% 0 4% 0; */
+  /* font-family: 'Arial', sans-serif; */
   color: #333;
 }
 
@@ -15,7 +15,7 @@
   justify-content: space-between;
   padding: 30px 0px;
   background-color: #fff;
-  margin-bottom: 4vw;
+  margin-bottom: 1.5vw;
   gap: 1.5vw;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .rice-packaging-section h2 {
-  color: #587944;
+  color: #393610;
   text-align: left;
   font-family: "MPLUS1";
   font-size: 2.25vw;
@@ -37,7 +37,7 @@
 }
 
 .tagline {
-  color: #587944;
+  color: #393610;
   text-align: justify;
   font-family: "CustomFont1";
   font-size: 1.20vw;
@@ -47,7 +47,7 @@
 }
 
 .description1 {
-  color: #587944;
+  color: #000;
   text-align: justify;
   font-family: "Customfont1";
   font-size: 1.25VW;
@@ -57,7 +57,7 @@
 }
 
 .options-list {
-  color: #587944;
+  color: #000;
   text-align: justify;
   font-family: "Customfont1";
   font-size: 1.25VW;
@@ -89,7 +89,7 @@
 
 .main-div {
   width: 100%;
-  background-color: #8ba580;
+  background-color: #D3C859;
 }
 
 @media (min-width: 1257px) {
@@ -101,7 +101,7 @@
     padding: 2vw 0;
   }
   .package-size {
-    color: white;
+    color: #393610;
     font-weight: 600;
     font-size: 20px;
   }
@@ -156,7 +156,7 @@
 }
 
 .package-size {
-  color: white;
+  color: #393610;
   font-weight: 600;
   font-size: 20px;
   margin: 5px 0;

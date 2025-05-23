@@ -2,7 +2,7 @@
 .bsa-product-showcase-container {
     width: 80%;
     margin: 0 auto;
-    padding: 5% 0;
+    padding: 1% 0;
   }
   
   .bsa-carousel-container {
@@ -11,7 +11,7 @@
   }
   
   .bsa-product-card {
-    background: #92aa835c;
+    background: #988a394d;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -38,12 +38,12 @@
   .bsa-product-image {
     max-width: 100%;
     height: auto;
-    margin: 10%;
+    margin: 1%;
     transition: transform 0.3s ease;
   }
   
   .bsa-product-name {
-    color: #587944;
+    color: #393610;
     font-family: "CustomFont1";
     font-size: 1.35vw;
     padding: 3% 0;
@@ -61,9 +61,9 @@
   
   .bsa-view-more-btn {
     background-color: transparent;
-    color: #587944;
+    color: #000;
     font-family: "CustomFont1";
-    border: 2px solid #587944;
+    border: 2px solid #988a394d;
     padding: 12px 40px;
     border-radius: 10px;
     cursor: pointer;
@@ -72,7 +72,7 @@
   }
   
   .bsa-view-more-btn:hover {
-    background-color: #587944;
+    background-color: #988a394d;
     color: #fff;
   }
   

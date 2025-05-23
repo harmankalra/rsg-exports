@@ -63,7 +63,7 @@ const TimelineCarousel = () => {
       <style>
         {`
           .timeline-section {
-            padding: 40px 0;
+            
             width: 80%;
             margin: 0 auto;
           }
@@ -79,7 +79,7 @@ const TimelineCarousel = () => {
           }
           
           .year {
-        color: #587944;
+        color: #393610;
 font-family: "MPLUS1";
 font-size: 2.50vw;
 font-style: normal;
@@ -107,7 +107,7 @@ font-weight: 600;
           }
           
           .description {
-          color: #587944;
+          color: #000;
 text-align: justify;
 font-family: "CustomFont1";
 font-size: 1.00vw;
@@ -144,7 +144,7 @@ font-weight: 500;
           }
           
           .owl-dots .owl-dot.active span {
-            background: #5c8d46 !important;
+            background: #393610 !important;
             width: 50px !important;
           }
           

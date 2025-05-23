@@ -1,7 +1,7 @@
 .frontline-container {
     width: 100%;
     padding:3% 0;
-    background-color: #7d9671;
+    background-color: #D3C859;
 
   }
   
@@ -25,7 +25,7 @@
   }
   
   .frontline-title {
-    color: #587944;
+    color: #393610;
    
     font-family: "typo";
     font-size: 2.5vw;
@@ -36,7 +36,7 @@
   }
   
   .frontline-subtitle {
-    color: #587944;
+    color: #393610;
     margin: 0;
     padding: 1% 0;
     font-family: "MPLUS1";
