@@ -95,7 +95,7 @@ padding: 32%;
   }
   
   .rsg-feature-text {
-    color: #587944;
+    color: #393610;
     font-family: "CustomFont1";
     font-size: 1.0vw;
     font-style: normal;
@@ -109,6 +109,7 @@ padding: 32%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 250px);
     grid-gap: 15px;
+  
   }
   
   .rsg-image {

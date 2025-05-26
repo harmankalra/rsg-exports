@@ -1,7 +1,7 @@
 /* Main container styles */
 .team-showcase {
     width: 100%;
-    /* background: linear-gradient(104deg, #92AA83 22.45%, #587944 93.68%); */
+    /* background: linear-gradient(104deg, #92AA83 22.45%, #393610 93.68%); */
     background-color:#E5DFCD;
     color: white;
     font-family: Arial, sans-serif;
@@ -152,7 +152,7 @@ display: flex;
   }
   
   .thumbnail.active {
-    border: 2px solid white;
+    border: 2px solid #000;
     opacity: 1;
   }
   

@@ -1,15 +1,17 @@
 .infrastructure-container {
     width: 100%;
-    background-color: rgba(106, 142, 106, 0.7);
-    padding: 2% 3%;
+    /* background-color: rgba(106, 142, 106, 0.7);
+     */
+    background-color: #FEF8E5;
+     padding: 2% 3%;
     border-radius: 8px;
     box-sizing: border-box;
   }
   
   .infrastructure-title {
-    color: #FFF;
+    color: #393610;
     font-family: "MPLUS1";
-    font-size: 2.83vw;
+    font-size: 1.80vw;
     margin: 0;
     font-style: normal;
     font-weight: 600;

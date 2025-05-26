@@ -14,6 +14,8 @@ function Header() {
     { path: "/private", label: "Private Labelling", delay: "0.4s" },
     { path: "/gallery", label: "Gallery", delay: "0.5s" },
     { path: "/contact", label: "Contact", delay: "0.6s" },
+    { path: "", label: "", delay: "0.6s" },
+
   ];
 
   useEffect(() => {

@@ -2,15 +2,15 @@
 
   .export-container {
     width: 90%;
-    margin: 4% auto;
+    margin:  auto;
     padding: 20px;
   }
   
   .export-heading {
-    color: #587944;
+    color: #393610;
     text-align: justify;
     font-family: "MPLUS1";
-    font-size: 2.10vw;
+    font-size: 1.80vw;
     font-style: normal;
     font-weight: 500;
     line-height: 40px; /* 100% */
@@ -41,7 +41,7 @@
   }
   
   .destination-name {
-    color: #587944;
+    color: #393610;
     text-align: justify;
     font-family: "CustomFont1";
     font-size: 1.25vw;
@@ -70,7 +70,7 @@ overflow: hidden;
 }
   
   .footer-text1 {
-    color: #587944;
+    color: #393610;
     text-align: justify;
     font-family: "CustomFont1";
     font-size: 1.667vw;

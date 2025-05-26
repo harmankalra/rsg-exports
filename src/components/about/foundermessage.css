@@ -7,9 +7,9 @@
   }
   
   .founders-message-title {
-    color: #587944;
+    color: #393610;
     font-family: "MPLUS1";
-    font-size: 2.10vw;
+    font-size: 1.80vw;
     font-style: normal;
     font-weight: 600;
     line-height: 144.539%; /* 57.816px */
@@ -44,7 +44,7 @@
   }
   
   .founders-quote {
-    color: #587944;
+    color: #393610;
     text-align: justify;
     font-family: "CustomFont1";
     font-size:1.25vw;
@@ -59,7 +59,7 @@
   }
   
   .founders-name {
-    color: #587944;
+    color: #393610;
     font-family: "MPLUS1";
     font-size: 2.10vw;
     font-style: normal;
@@ -69,7 +69,7 @@
   }
   
   .founders-title {
-    color: #587944;
+    color: #393610;
     font-family: "MPLUS1";
     font-size: 1.25vw;
     font-style: normal;
@@ -78,7 +78,7 @@
   }
   
   .founders-bio {
-    color: #587944;
+    color: #393610;
     text-align: justify;
     font-family: "CustomFont1";
     font-size: 1.25vw;

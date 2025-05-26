@@ -7,7 +7,7 @@
   }
   
   .contact-header {
-    background-color: #fff;
+    background-color: #393610;
     /* padding: 20px; */
     width: 80%;
     margin: auto;
@@ -15,7 +15,7 @@
   }
   
   .contact-header h2 {
-    color: #587944;
+    color: #393610;
     font-family: "MPLUS1";
     font-size: 2.5vw;
     font-style: normal;
@@ -27,7 +27,7 @@
   
   .contact-content {
     display: flex;
-    background-color: #7a9e7e;
+    background-color: #FEF8E5;
     /* min-height: 500px; */
   }
   .contact-content1{
@@ -52,7 +52,7 @@
   }
   
   .contact-message h2 {
-    color: #FFF;
+    color: #393610;
     font-family: "MPLUS1";
     font-size: 2.5vw;
     margin: 0;
@@ -63,7 +63,7 @@
   }
   
   .contact-message p {
-    color: #FFF;
+    color: #393610;
     text-align: justify;
     font-family: "CustomFont1";
     font-size: 1.05vw;
@@ -85,7 +85,7 @@
   }
   
   .contact-item label {
-    color: #FFF;
+    color: #393610;
     text-align: justify;
     font-family: "CustomFont1";
     font-size: 1.05vw;
@@ -95,9 +95,9 @@
   }
   
   .contact-value {
-    color: #FFF;
+    color: #393610;
     font-family: "MPLUS1";
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     margin: 0;
     font-style: normal;
     font-weight: 600;

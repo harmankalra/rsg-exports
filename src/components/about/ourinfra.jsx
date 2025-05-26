@@ -5,14 +5,14 @@ const InfrastructureShowcase = () => {
   const infrastructureItems = [
     {
       id: 1,
-      image: require('../../assets/fac2.png'),
+      image: require('../../assets/4.avif'),
       title: "State-of-the-art Milling Facility",
       className: "item mill",
       animation: "fade-up"
     },
     {
       id: 2,
-      image: require('../../assets/fac3.png'),
+      image: require('../../assets/3.avif'),
       title: "22 High-Efficiency Dryers",
       className: "item dryers",
       animation: "fade-down"
