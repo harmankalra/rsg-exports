@@ -44,7 +44,7 @@ h1 h2 h3 h4 h5 h6{
 }
 
 .navbarImg {
-  width: 12%;
+  width: 18%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,12 +58,12 @@ h1 h2 h3 h4 h5 h6{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  width: 55%;
 }
 
 .navbarItems a {
   text-decoration: none;
-  font-size: 1.35vw;
+  font-size: 1.30vw;
   color: #000;
   text-align: center;
   font-family: "CustomFont1";
