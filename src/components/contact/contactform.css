@@ -29,24 +29,29 @@
     margin-bottom: 15px;
   }
   
-  .form-group input,
-  .form-group textarea {
-    width: 95%;
-    font-family: "CustomFont1";
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
+ .form-group input,
+.form-group textarea,
+.form-group select,
+.form-group input[type="file"] {
+  width: 100%;
+  font-family: "CustomFont1", sans-serif;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
 
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #5a7d5a;
-  }
-  
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #5a7d5a;
+}
+
+
   .form-group textarea {
     resize: vertical;
     min-height: 120px;
@@ -98,15 +103,19 @@
     }
     
     .form-group input,
-    .form-group textarea {
+    .form-group textarea,
+    .form-group select,
+.form-group input[type="file"] {
       padding: 8px;
       font-size: 14px;
       width: 95%;
       resize: none;
+      margin: auto;
     }
     
     .submit-button {
       padding: 10px;
+      width: 95%;
       font-size: 14px;
     }
   }

@@ -48,7 +48,7 @@
 .content {
 width: 90%;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
 }
 
 /* Introduction Section */
@@ -134,9 +134,9 @@ width: 90%;
 }
 
 .package-image1 {
-  width: 60%;
+  width: 100%;
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 

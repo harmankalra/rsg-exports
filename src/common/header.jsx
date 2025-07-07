@@ -10,10 +10,12 @@ function Header() {
   const navItems = [
     { path: "/", label: "Home", delay: "0.1s" },
     { path: "/about", label: "About", delay: "0.2s" },
-    { path: "/product", label: "Products", delay: "0.3s" },
-    { path: "/private", label: "Private Labelling", delay: "0.4s" },
-    { path: "/gallery", label: "Gallery", delay: "0.5s" },
-    { path: "/contact", label: "Contact", delay: "0.6s" },
+    { path: "/brand", label: "Brands", delay: "0.3s" },
+    { path: "/range", label: "Range", delay: "0.4s" },
+
+    { path: "/private", label: "Private Labelling", delay: "0.5s" },
+    { path: "/gallery", label: "Gallery", delay: "0.6s" },
+    { path: "/contact", label: "Contact", delay: "0.7s" },
     { path: "", label: "", delay: "0.6s" },
 
   ];
@@ -73,7 +75,7 @@ function Header() {
             </div>
           </div>
 
-          <Link to="/">
+          <Link to="/" className="LogoImg">
             <img loading="lazy" src={RSG || "/placeholder.svg"} alt="Logo" />
           </Link>
         </div>

@@ -13,7 +13,8 @@ import Header from './common/header.jsx';
 import Home from './pages/home.jsx';
 import About from './pages/about.jsx';
 import Contact from './pages/contact.jsx';
-import Product from './pages/product.jsx';
+import Product from './pages/brand.jsx';
+import RiceRange from './pages/range.jsx'
 import Privatelabel from './pages/private.jsx';
 import Gallery from './pages/gallery.jsx'
 
@@ -52,7 +53,9 @@ function AppContent() {
         <Routes location={displayLocation} key={displayLocation.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/brand" element={<Product />} />
+          <Route path="/range" element={<RiceRange />} />
+
           <Route path="/private" element={<Privatelabel />} />
           <Route path="/gallery" element={<Gallery />} />
 

@@ -7,7 +7,7 @@ const ProductShowcase = () => {
   const navigate = useNavigate();
 
   const handleRedirect = () => {
-    navigate("/product");  // Navigate within React Router
+    navigate("/brand");  // Navigate within React Router
     window.scrollTo(0, 0); // Ensure the page opens at the top
   };
   const products = [

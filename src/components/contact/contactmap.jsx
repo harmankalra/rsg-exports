@@ -3,7 +3,7 @@ import './contactmap.css';
 
 const ContactSection = () => {
   return (
-    <div className="contact-container" data-aos="fade-up">
+    <div className="contact-container" data-aos="fade-up" >
       <div className="contact-header" data-aos="fade-up">
         {/* <h2>Contact Us</h2> */}
       </div>

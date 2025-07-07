@@ -81,4 +81,58 @@
         margin-bottom: 1%;
   }
 }
-  
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+ /* Add this at the top of your CSS file */
+
+/* Dark overlay */
+.banner-dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 29%));
+  z-index: 1;
+}
+
+
+/* Text styling with animation */
+.banner-overlay-text {
+  position: absolute;
+  bottom: 20%;  line-height: 1.2;
+  left: 10%;
+  font-size: 4rem; /* Larger font size */
+  font-weight: 700;
+  color: #fff;
+  animation: slideIn 1.2s ease-out forwards;
+  opacity: 0;
+  z-index: 2;
+}
+
+/* Fancy/stylish font (fallback if not loaded via font import) */
+.fancy-font {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner-overlay-text {
+    font-size: 2.2rem;
+    bottom: 15%;
+    left: 8%;
+    padding: 0.8rem 1.5rem;
+  }
+}

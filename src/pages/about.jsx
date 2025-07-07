@@ -5,11 +5,11 @@ import 'aos/dist/aos.css';
 import Banner from '../common/banner';
 import Footer from '../common/footer';
 import Expert from '../components/about/expert';
-import OurMission from '../components/about/ourmission';
+// import OurMission from '../components/about/ourmission';
 import InfrastructureShowcase from '../components/about/ourinfra';
-import Countries from '../components/about/exportcountry';
+// import Countries from '../components/about/exportcountry';
 import FoundersMess from '../components/about/foundermessage';
-
+import KeyStatistics from '../components/about/keystat';
 function About() {
     useEffect(() => {
         AOS.init({ duration: 1500 });
@@ -19,9 +19,10 @@ function About() {
         <div>
             <Banner />
             <Expert />
-            <OurMission />   
+            {/* <OurMission />  */}
+            <KeyStatistics /> 
             <InfrastructureShowcase />
-            <Countries />
+            {/* <Countries /> */}
             <FoundersMess />
             <Footer />
         </div>

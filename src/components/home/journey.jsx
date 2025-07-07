@@ -66,6 +66,7 @@ const TimelineCarousel = () => {
             
             width: 80%;
             margin: 0 auto;
+            margin-bottom: 3%;
           }
           
           .timeline-item {

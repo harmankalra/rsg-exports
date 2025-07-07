@@ -1,0 +1,517 @@
+/* Main Container */
+.rice-showcase-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef7cd 0%, #fef3c7 100%);
+}
+
+.rice-showcase-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3% 1rem;
+}
+
+/* Hero Header */
+.rice-hero-header {
+  position: relative;
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  border-radius: 1.5rem;
+  margin: 2rem 1rem 3rem;
+  overflow: hidden;
+}
+
+.rice-floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.rice-sparkle {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.3);
+  animation: rice-float 6s ease-in-out infinite;
+}
+
+.rice-sparkle-1 {
+  top: 2rem;
+  left: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  animation-delay: 0s;
+}
+
+.rice-sparkle-2 {
+  top: 3rem;
+  right: 3rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  animation-delay: 2s;
+}
+
+.rice-sparkle-3 {
+  bottom: 4rem;
+  left: 4rem;
+  width: 1rem;
+  height: 1rem;
+  animation-delay: 4s;
+}
+
+@keyframes rice-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+.rice-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.rice-hero-title {
+  margin: 0 0 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.rice-title-accent {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #451a03;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.rice-title-main {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #451a03;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rice-hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(69, 26, 3, 0.8);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* Categories Container */
+.rice-categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+/* Category Card */
+.rice-category-card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 1;
+}
+
+.rice-category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Category Header */
+.rice-category-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.rice-category-number {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rice-category-info {
+  text-align: left;
+}
+
+.rice-category-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #451a03;
+  /* margin: 0 0 0.625rem 0; */
+  margin: 0;
+}
+
+.rice-category-description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Mobile Layout */
+.rice-mobile-container {
+  position: relative;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+
+.rice-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.rice-carousel-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.rice-carousel-btn-prev {
+  left: 0.5rem;
+}
+
+.rice-carousel-btn-next {
+  right: 0.5rem;
+}
+
+.rice-carousel-container {
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 0 2rem;
+}
+
+.rice-carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-out;
+}
+
+.rice-carousel-slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.rice-mobile-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin: 0 0.5rem;
+}
+
+.rice-mobile-image-container {
+  position: relative;
+  width: 100%;
+  height: 16rem;
+  background: #f3f4f6;
+}
+
+.rice-mobile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rice-mobile-feature-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.rice-mobile-content {
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rice-mobile-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #451a03;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.rice-mobile-divider {
+  width: 3rem;
+  height: 2px;
+  margin: 0 auto;
+}
+
+.rice-mobile-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Slide Indicators */
+.rice-slide-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.rice-slide-indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rice-slide-indicator.active {
+  width: 1.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Desktop Grid */
+.rice-desktop-grid {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.rice-grid-single {
+  grid-template-columns: 1fr;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+.rice-grid-double {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.rice-grid-triple {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.rice-grid-quad {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Desktop Cards */
+.rice-desktop-card-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.rice-desktop-card-wrapper:hover {
+  transform: translateY(-8px);
+}
+
+.rice-desktop-card {
+  position: relative;
+  height: 24rem;
+  border-radius: 1rem;
+  border: 2px solid;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.rice-desktop-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.rice-card-front,
+.rice-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: opacity 0.5s;
+}
+
+.rice-card-front {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.rice-desktop-card:hover .rice-card-front {
+  opacity: 0;
+}
+
+.rice-card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* padding: 1.5rem; */
+  opacity: 0;
+}
+
+.rice-desktop-card:hover .rice-card-back {
+  opacity: 1;
+}
+
+/* Desktop Image Container */
+.rice-desktop-image-container {
+  position: relative;
+  flex: 1;
+}
+
+.rice-desktop-image {
+  width: 100%;
+  max-height: 330px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rice-desktop-feature-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Desktop Title Section */
+.rice-desktop-title-section {
+  padding: 1rem;
+  text-align: center;
+  background: white;
+}
+
+.rice-desktop-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #451a03;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Card Back Content */
+.rice-card-back-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 0.75rem 0;
+}
+
+.rice-card-back-description {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  padding: 0 0.5rem;
+}
+
+.rice-card-back-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rice-card-back-icon-inner {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rice-title-accent {
+    font-size: 1.5rem;
+  }
+  .rice-showcase-wrapper{
+    width: 90%;
+  }
+
+  .rice-title-main {
+    font-size: 2.5rem;
+  }
+.rice-carousel-container{
+    margin: 0;
+}
+  .rice-category-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .rice-category-number {
+    font-size: 3rem;
+  }
+
+  .rice-category-title {
+    font-size: 2rem;
+  }
+
+  .rice-category-info {
+    text-align: center;
+  }
+
+  .rice-desktop-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .rice-grid-quad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .rice-grid-quad {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

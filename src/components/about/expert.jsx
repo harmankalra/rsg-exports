@@ -15,9 +15,9 @@ const Expert = () => {
             rooted in quality and commitment, we deliver the finest rice from
             Punjab, India, to customers around the world.
           </p>
-          <div className="bsa-view-more-container1">
+          {/* <div className="bsa-view-more-container1">
             <button className="bsa-view-more-btn1">View More</button>
-          </div>
+          </div> */}
         </div>
 
         <div className="expert__image" data-aos="zoom-in"></div>

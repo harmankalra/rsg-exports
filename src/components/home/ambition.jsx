@@ -41,7 +41,7 @@ const RSGFoodsGrid = () => {
       <div className="rsg-container1">
       
         {/* Header Section */}
-        <h1 className="rsg-header1">Sowing The Seeds Of Ambition</h1>
+        {/* <h1 className="rsg-header1">Sowing The Seeds Of Ambition</h1> */}
         
         {/* Two-column text section */}
         <div className="rsg-text-container">

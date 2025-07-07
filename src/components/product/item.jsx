@@ -16,7 +16,7 @@ const riceProducts = [
         ],
       
       
-    image: require('../../assets/thumb1.png'),
+    image: require('../../assets/thumb1.jpg'),
     imageAlt: 'Frontline Premium Basmati Rice Packet'
   },
   {
@@ -33,7 +33,7 @@ const riceProducts = [
       ],
 
     
-    image: require('../../assets/thumb2.png'),
+    image: require('../../assets/thumb2.jpg'),
     imageAlt: 'Frontline Premium Basmati Rice Packet'
   },
   {
@@ -48,7 +48,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image:require('../../assets/thumb3.png'),
+    image:require('../../assets/thumb3.jpg'),
     imageAlt: 'Platinum Premium Basmati Rice Packet'
   },
   {
@@ -63,7 +63,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/thumb4.png'),
+    image: require('../../assets/thumb4.jpg'),
     imageAlt: 'Khushboo Premium Basmati Rice Packet'
   },{
     id: 5,
@@ -77,7 +77,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image:require('../../assets/thumb5.png'),
+    image:require('../../assets/thumb5.jpg'),
     imageAlt: 'Silver Premium Basmati Rice Packet'
   },
   {
@@ -92,7 +92,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/thumb6.png'),
+    image: require('../../assets/thumb6.jpg'),
     imageAlt: 'Mehak Premium Basmati Rice Packet'
   },
   {
@@ -107,7 +107,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/thumb7.png'),
+    image: require('../../assets/thumb7.jpg'),
     imageAlt: 'Kesar Premium Basmati Rice Packet'
   },
   {
@@ -122,7 +122,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/thumb8.png'),
+    image: require('../../assets/thumb8.jpg'),
     imageAlt: 'Sughandh Premium Basmati Rice Packet'
   },
   {
@@ -137,7 +137,7 @@ const riceProducts = [
       '30 kg export pack',
       'Available in 5, 10, 25, and 30 kg packs'
     ],
-    image: require('../../assets/thumb9.png'),
+    image: require('../../assets/thumb9.jpg'),
     imageAlt: 'Premium Basmati Rice Packet'
   }
   
@@ -181,7 +181,7 @@ const RiceProductCard = ({ product, reverseLayout }) => {
 const RiceProductGrid = () => {
   return (
     <div className="rsg-product-grid">
-      <h2 className="itemhead">Our Basmati Rice Range</h2>
+      <h2 className="itemhead"> <span style={{ fontFamily: 'typo' }}>Frontline</span> – Our Signature Basmati Rice Range</h2>
       {riceProducts.map((product, index) => (
         <RiceProductCard 
           key={product.id} 

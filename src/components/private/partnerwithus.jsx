@@ -1,6 +1,6 @@
 import React from "react";
 import "./partnerwithus.css";
-
+import brochurePdf from '../../assets/RSGCATELOGUE.pdf'; // Adjust the path as necessary
 export default function PartnerSection() {
   return (
     <div className="partner-section-container">
@@ -35,19 +35,22 @@ export default function PartnerSection() {
               <p className="cta-description">
                 Contact us to discuss your custom packaging requirements and take your brand to the next level. Our team is ready to help you create a product that stands out in the market.
               </p>
-              <div className="cta-button-group">
-                <button className="cta-primary-button">
-                  <SendIcon /> Contact Us
-                </button>
-                <button className="cta-outline-button">Download Brochure</button>
-              </div>
+            <div className="cta-button-group">
+  <a href="/contact" className="cta-primary-button" style={{ textDecoration: 'none' }}>
+    <SendIcon /> Contact Us
+  </a>
+  <a href={brochurePdf} download className="cta-outline-button" style={{ textDecoration: 'none' }}>
+    Download Brochure
+  </a>
+</div>
+
             </div>
-            <div className="cta-form-container" data-aos="fade-left" data-aos-duration="1200">
+            {/* <div className="cta-form-container" data-aos="fade-left" data-aos-duration="1200">
               <div className="form-card">
                 <h3 className="form-title">Contact Form</h3>
                 <ContactForm />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -65,105 +68,105 @@ function FeatureCard({ icon, title, description, aosDelay }) {
   );
 }
 
-function ContactForm() {
-  const [formData, setFormData] = React.useState({
-    name: "",
-    email: "",
-    company: "",
-    number: "",
-    message: "",
-  });
+// function ContactForm() {
+//   const [formData, setFormData] = React.useState({
+//     name: "",
+//     email: "",
+//     company: "",
+//     number: "",
+//     message: "",
+//   });
   
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [isSubmitted, setIsSubmitted] = React.useState(false);
+//   const [isSubmitting, setIsSubmitting] = React.useState(false);
+//   const [isSubmitted, setIsSubmitted] = React.useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData((prev) => ({ ...prev, [name]: value }));
+//   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setIsSubmitting(true);
 
-    try {
-      const response = await fetch("https://dasmesh-mailer.ritaz.in/RSGExports", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+//     try {
+//       const response = await fetch("https://dasmesh-mailer.ritaz.in/RSGExports", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(formData),
+//       });
 
-      if (response.ok) {
-        setIsSubmitted(true);
-        setFormData({ name: "", email: "", company: "", number: "", message: "" });
-      } else {
-        alert("Failed to submit the form. Please try again.");
-      }
-    } catch (error) {
-      console.error("Submission Error:", error);
-      alert("Something went wrong. Please check your connection.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+//       if (response.ok) {
+//         setIsSubmitted(true);
+//         setFormData({ name: "", email: "", company: "", number: "", message: "" });
+//       } else {
+//         alert("Failed to submit the form. Please try again.");
+//       }
+//     } catch (error) {
+//       console.error("Submission Error:", error);
+//       alert("Something went wrong. Please check your connection.");
+//     } finally {
+//       setIsSubmitting(false);
+//     }
+//   };
 
-  if (isSubmitted) {
-    return (
-      <div className="success-message" data-aos="fade-up" data-aos-duration="1000">
-        <div className="success-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M5 13l4 4L19 7"></path>
-          </svg>
-        </div>
-        <h3 className="success-title">Thank You!</h3>
-        <p className="success-description">Your message has been sent successfully. We'll get back to you shortly.</p>
-      </div>
-    );
-  }
+//   if (isSubmitted) {
+//     return (
+//       <div className="success-message" data-aos="fade-up" data-aos-duration="1000">
+//         <div className="success-icon">
+//           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+//             <path d="M5 13l4 4L19 7"></path>
+//           </svg>
+//         </div>
+//         <h3 className="success-title">Thank You!</h3>
+//         <p className="success-description">Your message has been sent successfully. We'll get back to you shortly.</p>
+//       </div>
+//     );
+//   }
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-group" data-aos="fade-up" data-aos-delay="0">
-        <label htmlFor="name" className="form-label">Name</label>
-        <input id="name" name="name" className="form-input" placeholder="Your name" value={formData.name} onChange={handleChange} required />
-      </div>
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <div className="form-group" data-aos="fade-up" data-aos-delay="0">
+//         <label htmlFor="name" className="form-label">Name</label>
+//         <input id="name" name="name" className="form-input" placeholder="Your name" value={formData.name} onChange={handleChange} required />
+//       </div>
 
-      <div className="form-group" data-aos="fade-up" data-aos-delay="100">
-        <label htmlFor="email" className="form-label">Email</label>
-        <input id="email" name="email" type="email" className="form-input" placeholder="Your email" value={formData.email} onChange={handleChange} required />
-      </div>
+//       <div className="form-group" data-aos="fade-up" data-aos-delay="100">
+//         <label htmlFor="email" className="form-label">Email</label>
+//         <input id="email" name="email" type="email" className="form-input" placeholder="Your email" value={formData.email} onChange={handleChange} required />
+//       </div>
 
-      <div className="form-group" data-aos="fade-up" data-aos-delay="200">
-        <label htmlFor="company" className="form-label">Company</label>
-        <input id="company" name="company" className="form-input" placeholder="Your company" value={formData.company} onChange={handleChange} />
-      </div>
-      <div className="form-group" data-aos="fade-up" data-aos-delay="200">
-  <label htmlFor="number" className="form-label">Phone Number</label>
-  <input
-    id="number"
-    name="number"
-    type="tel"
-    className="form-input"
-    placeholder="Phone Number"
-    value={formData.phone}
-    onChange={handleChange}
-  />
-</div>
+//       <div className="form-group" data-aos="fade-up" data-aos-delay="200">
+//         <label htmlFor="company" className="form-label">Company</label>
+//         <input id="company" name="company" className="form-input" placeholder="Your company" value={formData.company} onChange={handleChange} />
+//       </div>
+//       <div className="form-group" data-aos="fade-up" data-aos-delay="200">
+//   <label htmlFor="number" className="form-label">Phone Number</label>
+//   <input
+//     id="number"
+//     name="number"
+//     type="tel"
+//     className="form-input"
+//     placeholder="Phone Number"
+//     value={formData.phone}
+//     onChange={handleChange}
+//   />
+// </div>
 
 
-      <div className="form-group" data-aos="fade-up" data-aos-delay="300">
-        <label htmlFor="message" className="form-label">Message</label>
-        <textarea id="message" name="message" className="form-input form-textarea" placeholder="Tell us about your private labelling needs" value={formData.message} onChange={handleChange} required></textarea>
-      </div>
+//       <div className="form-group" data-aos="fade-up" data-aos-delay="300">
+//         <label htmlFor="message" className="form-label">Message</label>
+//         <textarea id="message" name="message" className="form-input form-textarea" placeholder="Tell us about your private labelling needs" value={formData.message} onChange={handleChange} required></textarea>
+//       </div>
 
-      <button type="submit" className="submit-button" disabled={isSubmitting} data-aos="fade-up" data-aos-delay="400">
-        {isSubmitting ? "Sending..." : (<><SendIcon /> Send Message</>)}
-      </button>
-    </form>
-  );
-}
+//       <button type="submit" className="submit-button" disabled={isSubmitting} data-aos="fade-up" data-aos-delay="400">
+//         {isSubmitting ? "Sending..." : (<><SendIcon /> Send Message</>)}
+//       </button>
+//     </form>
+//   );
+// }
 
 function AwardIcon() {
   return (

@@ -259,3 +259,34 @@ font-size: 4.50vw;
     font-size: 4.50vw;
   }
 }
+.floating-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1000;
+}
+
+.floating-icon {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.floating-icon:hover {
+  transform: scale(1.1);
+}
+
+.floating-icon img {
+  width: 40px;
+  height: 40px;
+}

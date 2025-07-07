@@ -5,6 +5,7 @@ import Banner from '../common/banner';
 import Footer from '../common/footer';
 import ContactSection from '../components/contact/contactmap';
 import ContactForm from '../components/contact/contactform';
+import ContactView from "../components/contact/contactview";
 
 function Contact() {
     useEffect(() => {
@@ -16,6 +17,7 @@ function Contact() {
             <Banner />
             <ContactSection />
             <ContactForm />
+            <ContactView />
             <Footer />
         </div>
     );

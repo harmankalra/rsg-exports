@@ -8,6 +8,8 @@ import homeDesktop2 from '../assets/home3.jpg';
 import aboutDesktop from '../assets/AboutUS.jpg';
 import contactDesktop from '../assets/ContactUs.jpg';
 import productDesktop1 from '../assets/Productbannner.jpg';
+import productDesktop12 from '../assets/rangebanner.jpg';
+
 import privateDesktop1 from '../assets/PrivateLabling.jpg';
 import GalleryDesktop1 from '../assets/Galery.jpg';
 
@@ -18,6 +20,8 @@ import homeMobile2 from '../assets/Mobhome2.png';
 import aboutMobile from '../assets/mobAboutUs.jpg';
 import contactMobile from '../assets/MobContactUs.jpg';
 import productMobile1 from '../assets/MobProductRange.jpg';
+import productMobile12 from '../assets/rangebannermob.jpg';
+
 import privateMobile1 from '../assets/MobPrivateLabeling.jpg';
 import galleryMobile1 from '../assets/MobGallery.jpg';
 
@@ -48,9 +52,15 @@ function Banner() {
             isSingleImage: true,
             mobileClass: 'mobile-contact'
         },
-        '/product': {
+        '/brand': {
             desktopBackgrounds: [productDesktop1],
             mobileBackgrounds: [productMobile1],
+            isSingleImage: true,
+            mobileClass: 'mobile-products'
+        },
+           '/range': {
+            desktopBackgrounds: [productDesktop12],
+            mobileBackgrounds: [productMobile12],
             isSingleImage: true,
             mobileClass: 'mobile-products'
         },
@@ -91,21 +101,25 @@ function Banner() {
         }
     }, []);
 
-    const handleMouseMove = useCallback((e) => {
-        if (bannerConfig.isSingleImage) return;
+const handleMouseMove = useCallback((e) => {
+    if (bannerConfig.isSingleImage) {
+        setCursorStyle('default');
+        return;
+    }
 
-        const container = e.currentTarget;
-        const containerWidth = container.offsetWidth;
-        const mouseX = e.clientX - container.getBoundingClientRect().left;
+    const container = e.currentTarget;
+    const containerWidth = container.offsetWidth;
+    const mouseX = e.clientX - container.getBoundingClientRect().left;
 
-        if (mouseX < containerWidth * 0.25) {
-            setCursorStyle('left-arrow-cursor');
-        } else if (mouseX > containerWidth * 0.75) {
-            setCursorStyle('right-arrow-cursor');
-        } else {
-            setCursorStyle('default');
-        }
-    }, [bannerConfig.isSingleImage]);
+    if (mouseX < containerWidth * 0.25) {
+        setCursorStyle('left-arrow-cursor');
+    } else if (mouseX > containerWidth * 0.75) {
+        setCursorStyle('right-arrow-cursor');
+    } else {
+        setCursorStyle('default');
+    }
+}, [bannerConfig.isSingleImage]);
+
 
     const handleClick = useCallback((e) => {
         if (bannerConfig.isSingleImage) return;
@@ -173,8 +187,8 @@ function Banner() {
                             nav: false,
                             dots: false,
                             autoplay: true,
-                            autoplayTimeout: 5000,
-                            smartSpeed: 1000,
+                            autoplayTimeout: 8000,
+                            smartSpeed: 2000,
                             onTranslate: resetAutoplay
                         });
                     }
@@ -183,17 +197,33 @@ function Banner() {
         }
     }, [location.pathname, isMobile, pageBannerConfigs, resetAutoplay]);
 
-    useEffect(() => {
-        const bannerWrapper = bannerWrapperRef.current;
-        if (bannerWrapper && !bannerConfig.isSingleImage) {
-            bannerWrapper.addEventListener('mousemove', handleMouseMove);
-            bannerWrapper.addEventListener('click', handleClick);
-            return () => {
-                bannerWrapper.removeEventListener('mousemove', handleMouseMove);
-                bannerWrapper.removeEventListener('click', handleClick);
-            };
+useEffect(() => {
+    const bannerWrapper = bannerWrapperRef.current;
+
+    // Remove existing cursor style when switching to single image
+    setCursorStyle('default');
+
+    // Attach only if it's multi-image
+    if (bannerWrapper && !bannerConfig.isSingleImage) {
+        bannerWrapper.addEventListener('mousemove', handleMouseMove);
+        bannerWrapper.addEventListener('click', handleClick);
+        return () => {
+            bannerWrapper.removeEventListener('mousemove', handleMouseMove);
+            bannerWrapper.removeEventListener('click', handleClick);
+            setCursorStyle('default'); // Ensure reset
+        };
+    }
+
+    // Cleanup on unmount or if banner becomes single-image
+    return () => {
+        if (bannerWrapper) {
+            bannerWrapper.removeEventListener('mousemove', handleMouseMove);
+            bannerWrapper.removeEventListener('click', handleClick);
+            setCursorStyle('default');
         }
-    }, [bannerConfig.isSingleImage, handleMouseMove, handleClick]);
+    };
+}, [bannerConfig.isSingleImage, handleMouseMove, handleClick]);
+
 
     const renderBanner = () => {
         const additionalClass = isMobile ? `${bannerConfig.mobileClass} mobile-banner` : bannerConfig.mobileClass;
@@ -213,27 +243,40 @@ function Banner() {
             );
         }
 
-        return (
-            <div
-              ref={bannerWrapperRef}
-              className={`banner-wrapper multi-image ${additionalClass} ${cursorStyle}`}
-            >
-              <div className="banner-owl-carousel owl-carousel">
-                {bannerConfig.backgrounds.map((bg, index) => (
-                  <div
-                    key={index}
-                    className={`banner-container ${isMobile ? 'mobile-banner' : ''}`}
-                    style={{
-                      backgroundImage: `url(${bg})`,
-                      backgroundColor: '#eee',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
-          );
+return (
+  <div
+    ref={bannerWrapperRef}
+    className={`banner-wrapper multi-image ${additionalClass} ${cursorStyle}`}
+  >
+    <div className="banner-owl-carousel owl-carousel">
+      {bannerConfig.backgrounds.map((bg, index) => (
+        <div
+          key={index}
+          className={`banner-container ${isMobile ? 'mobile-banner' : ''}`}
+          style={{
+            backgroundImage: `url(${bg})`,
+            backgroundColor: '#eee',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'relative',
+          }}
+        >
+   {location.pathname === '/' && bg === homeDesktop1 && !isMobile && (
+  <>
+    <div className="banner-dark-overlay" />
+<div className="banner-overlay-text fancy-font">
+  Sowing The Seeds<br />of Ambition
+</div>
+
+  </>
+)}
+
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
           
     };
 
