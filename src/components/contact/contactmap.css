@@ -102,7 +102,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: 144.539%; /* 57.816px */
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
   }
   
   .contact-hours {

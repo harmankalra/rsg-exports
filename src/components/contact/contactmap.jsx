@@ -22,7 +22,8 @@ const ContactSection = () => {
             <div className="contact-details" data-aos="fade-up">
               <div className="contact-item">
                 <label>Email</label>
-                <div className="contact-value">Rsgexportsfzr@Gmail.Com</div>
+                <div className="contact-value">rsgexportsfzr@gmail.Com</div>
+                 <div className="contact-value">contact@rsgexports.com</div>
               </div>
 
               <div className="contact-item">

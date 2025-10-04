@@ -40,10 +40,11 @@
   overflow-x: hidden; /* Hides horizontal scrolling */
   /* scrollbar-width: none; Hides scrollbar in Firefox */
 }
-
+/* 
 ::-webkit-scrollbar {
-  display: none; /* Hides scrollbar in Chrome/Safari */
-}
+  display: none; 
+} */
+
 .page-transition {
   transition: opacity 0.3s ease-in-out;
 }

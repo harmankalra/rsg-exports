@@ -237,6 +237,29 @@
   background: #f3f4f6;
 }
 
+.rice-mobile-image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  user-drag: none;
+  user-select: none;
+  pointer-events: none; /* Prevent copy */
+}
+
+/* Watermark text overlay */
+.rice-mobile-image-container::after {
+  content: "RSG EXPORTS";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.35);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
 .rice-mobile-image {
   width: 100%;
   height: 100%;

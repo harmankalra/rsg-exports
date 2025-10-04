@@ -14,7 +14,7 @@ function Header() {
     { path: "/range", label: "Range", delay: "0.4s" },
 
     { path: "/private", label: "Private Labelling", delay: "0.5s" },
-    { path: "/gallery", label: "Gallery", delay: "0.6s" },
+    // { path: "/gallery", label: "Gallery", delay: "0.6s" },
     { path: "/contact", label: "Contact", delay: "0.7s" },
     { path: "", label: "", delay: "0.6s" },
 

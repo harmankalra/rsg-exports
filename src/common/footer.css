@@ -290,3 +290,37 @@ font-size: 4.50vw;
   width: 40px;
   height: 40px;
 }
+
+
+/* Copyright section */
+.copyright-bar {
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: space-between; /* left + right */
+  align-items: center;
+  padding: 1% 5%;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.copyright-bar p {
+  color: #FFF;
+  font-family: "CustomFont1";
+  font-size: 1.00vw;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.48px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .copyright-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .copyright-bar p {
+    font-size: 2.5vw;
+  }
+}

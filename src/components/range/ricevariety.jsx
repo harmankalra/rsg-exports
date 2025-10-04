@@ -48,17 +48,6 @@ const RiceRange = () => {
       ],
     },
     {
-      category: "PR11",
-      title: "Classic Choice",
-      description: "Traditional favorite",
-      color: "#978930",
-      varieties: [
-        { name: "Creamy Sella", image: "https://res.cloudinary.com/dlcd3jyyu/image/upload/v1751693686/pr11creamy_tzeffb.png", feature: "Classic" },
-        { name: "Golden Sella", image: "https://res.cloudinary.com/dlcd3jyyu/image/upload/v1751693687/pr11golden_tdp3da.png", feature: "Golden" },
-        { name: "Steam Rice", image: "https://res.cloudinary.com/dlcd3jyyu/image/upload/v1751693687/pr11steam_xf6fu2.png", feature: "Steam" },
-      ],
-    },
-    {
       category: "1718",
       title: "1718 Basmati",
       description: "High-yield basmati rice",
@@ -67,6 +56,17 @@ const RiceRange = () => {
         { name: "Steam Rice", image: "https://res.cloudinary.com/dlcd3jyyu/image/upload/v1751693686/1718_dehffq.png", feature: "Aromatic Steam Rice" },
         { name: "Golden Sella", image: "https://res.cloudinary.com/dlcd3jyyu/image/upload/v1751693686/1718golden_kktomm.png", feature: "Parboiled Rice" },
         { name: "Creamy Sella", image: "https://res.cloudinary.com/dlcd3jyyu/image/upload/v1751693686/1718creamy_x4kzld.png", feature: "Parboiled Rice" },
+      ],
+    },
+     {
+      category: "PR11",
+      title: "Classic Choice",
+      description: "Traditional favorite",
+      color: "#978930",
+      varieties: [
+        { name: "Creamy Sella", image: "https://res.cloudinary.com/dlcd3jyyu/image/upload/v1751693686/pr11creamy_tzeffb.png", feature: "Classic" },
+        { name: "Golden Sella", image: "https://res.cloudinary.com/dlcd3jyyu/image/upload/v1751693687/pr11golden_tdp3da.png", feature: "Golden" },
+        { name: "Steam Rice", image: "https://res.cloudinary.com/dlcd3jyyu/image/upload/v1751693687/pr11steam_xf6fu2.png", feature: "Steam" },
       ],
     },
 {
@@ -154,7 +154,10 @@ const RiceRange = () => {
   }
 
   return (
-    <div className="rice-showcase-container">
+    <div className="rice-showcase-container"
+     onContextMenu={(e) => e.preventDefault()} // disables right click
+  onDragStart={(e) => e.preventDefault()}   // disables drag save
+    >
       <div className="rice-showcase-wrapper">
         {/* Hero Header */}
         {/* <div className="rice-hero-header">
