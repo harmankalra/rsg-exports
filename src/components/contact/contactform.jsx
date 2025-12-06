@@ -54,6 +54,8 @@ const ContactForm = () => {
       }
 
       const response = await fetch("https://dasmesh-mailer.ritaz.in/RSGExportsContact", {
+      // const response = await fetch(" http://localhost:4008/RSGExportsContact", {
+
         method: "POST",
         body: submissionData
       });
