@@ -1,36 +1,37 @@
-
-
 /* === BASE STYLES === */
 .banner-wrapper {
     width: 100%;
-    height: 70dvh;
-
+    height: 70dvh;          /* responsive dynamic viewport height */
+    max-height: 700px;      /* 🔥 NEW: prevents banner from exceeding desktop design height */
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-  body.menu-open .banner-wrapper {
-  pointer-events: none;
 }
 
-  .banner-wrapper.multi-image {
-    /* margin-bottom: 15%; */
+body.menu-open .banner-wrapper {
+    pointer-events: none;
+}
+
+.banner-wrapper.multi-image {
     height: 70vh;
-  }
-  
-  .banner-owl-carousel {
+    max-height: 700px;      /* 🔥 NEW */
+}
+
+.banner-owl-carousel {
     width: 100%;
     height: 100%;
-  }
-  
-  .banner-container {
+}
+
+.banner-container {
     height: 70dvh;
+    max-height: 700px;      /* 🔥 NEW */
     width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
+}
+
   
   /* === CUSTOM CURSORS & OVERLAYS === */
   .banner-wrapper::before,

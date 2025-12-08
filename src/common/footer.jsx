@@ -19,7 +19,7 @@ const Footer = () => {
             <li><a href="/brand">Brands</a></li>
             <li><a href="/range">Range</a></li>
             <li><a href="/private">Private Labelling</a></li>
-            <li><a href="/gallery">Gallery</a></li>
+            {/* <li><a href="/gallery">Gallery</a></li> */}
             <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
