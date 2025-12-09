@@ -38,7 +38,7 @@ function About() {
                     property="og:description"
                     content="Learn about RSG Exports — a leading rice exporter from Ferozepur, Punjab specializing in 1121 Basmati, 1509 Basmati, IR64 and long-grain Non-Basmati rice for global markets including Saudi Arabia, UAE and the Middle East."
                 />
-                <meta property="og:image" content="%PUBLIC_URL%/Group13.png" />
+                <meta property="og:image" content="%PUBLIC_URL%/home3.jpg" />
                 <meta property="og:type" content="website" />
 
                 {/* Optional: page-specific canonical */}

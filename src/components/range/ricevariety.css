@@ -58,6 +58,13 @@
   height: 1rem;
   animation-delay: 4s;
 }
+.rice-showcase-container,
+.rice-categories-container,
+.rice-category-card,
+.rice-carousel-btn {
+  position: relative;
+  z-index: 1 !important;
+}
 
 @keyframes rice-float {
   0%,

@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.css';
-import logoImg from '../assets/logo.png'; 
+import logoImg from '../assets/RSG _Logo2.png'; 
 import brochurePdf1 from '../assets/RSGCATELOGUE.pdf';
 import pdfIcon from '../assets/download-pdf.png';       
 

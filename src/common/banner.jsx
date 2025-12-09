@@ -4,7 +4,7 @@ import './banner.css';
 
 // Desktop Backgrounds
 import homeDesktop1 from '../assets/Group13.png';
-import homeDesktop2 from '../assets/home3.jpg';
+import homeDesktop2 from '../assets/BANNER03.jpg';
 import aboutDesktop from '../assets/AboutUS.jpg';
 import contactDesktop from '../assets/ContactUs.jpg';
 import productDesktop1 from '../assets/Productbannner.jpg';

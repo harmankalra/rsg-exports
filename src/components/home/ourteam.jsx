@@ -19,7 +19,7 @@ const TeamShowcase = () => {
     },
     {
       id: 3,
-      name: "Pankaj Garg",
+      name: "Rahul Garg",
       title: "Purchase & International Sales Head",
       description: "Pankaj oversees international sales and procurement, ensuring smooth global trade operations. His strong negotiation skills and deep understanding of market trends have helped RSG Exports expand its presence across multiple international markets.",
       image: require('../../assets/team4.png')
@@ -40,7 +40,7 @@ const TeamShowcase = () => {
     },
     {
       id: 6,
-      name: "Rahul Garg",
+      name: "Pankaj Garg",
       title: "Production & Quality Management",
       description: "Rahul ensures that production processes adhere to the highest quality standards. His expertise in quality assurance and production efficiency guarantees that RSG Exports consistently delivers premium rice products to its customers.",
       image: require('../../assets/team2.png')
