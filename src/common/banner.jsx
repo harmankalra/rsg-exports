@@ -5,7 +5,7 @@ import './banner.css';
 // Desktop Backgrounds
 import homeDesktop1 from '../assets/Group13.png';
 import homeDesktop2 from '../assets/BANNER03.jpg';
-import aboutDesktop from '../assets/AboutUS.jpg';
+import aboutDesktop from '../assets/BANNER04.jpg';
 import contactDesktop from '../assets/ContactUs.jpg';
 import productDesktop1 from '../assets/Productbannner.jpg';
 import productDesktop12 from '../assets/rangebanner.jpg';
@@ -17,7 +17,7 @@ import GalleryDesktop1 from '../assets/Galery.jpg';
 // Mobile Backgrounds
 import homeMobile1 from '../assets/MobFront.jpg';
 import homeMobile2 from '../assets/Mobhome2.png';
-import aboutMobile from '../assets/mobAboutUs.jpg';
+import aboutMobile from '../assets/Phone_Banner.png';
 import contactMobile from '../assets/MobContactUs.jpg';
 import productMobile1 from '../assets/MobProductRange.jpg';
 import productMobile12 from '../assets/rangebannermob.jpg';
