@@ -34,7 +34,7 @@ function Product() {
                     property="og:description"
                     content="Discover Frontline, RSG Exports’ premium rice brand featuring 1121 Basmati, 1509 Basmati, IR64 and long-grain Non-Basmati varieties for international markets."
                 />
-                <meta property="og:image" content="%PUBLIC_URL%/Group13.png" />
+                <meta property="og:image" content="%PUBLIC_URL%/home3.jpg" />
                 <meta property="og:type" content="website" />
 
                 {/* Canonical URL */}
