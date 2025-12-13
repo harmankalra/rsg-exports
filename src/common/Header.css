@@ -191,7 +191,7 @@ h1 h2 h3 h4 h5 h6{
   }
 
   .navbarImg img {
-      width: 70%;
+      width: 60%;
   }
 
   body.menu-open {
@@ -206,6 +206,9 @@ h1 h2 h3 h4 h5 h6{
   .bar {
       width: 7vw;
       height: 0.3vh;
+  }
+    .navbarImg img {
+      width: 55%;
   }
 
   .mobileNavItems a {
