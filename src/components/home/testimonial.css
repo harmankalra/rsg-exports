@@ -17,12 +17,11 @@
   .testimonial-title {
     color: #393610;
     font-family: "MPLUS1";
-    font-size: 2.10vw;
-    padding: 1% 0 1% 0;
+    font-size: 3.00vw;
     font-style: normal;
-    font-weight: 600;
-    line-height: 144.539%; /* 57.816px */
     margin: 0;
+    font-weight: 600;
+    line-height: 144.539%;;
   }
   
   .testimonial-carousel {
@@ -130,7 +129,8 @@
   @media (max-width: 768px) {
     .testimonial-title {
       font-size: 28px;
-      text-align: center;
+      text-align: left;
+      padding-top: 10px;
     }
     .testimonial-content {
       position: absolute;
@@ -191,8 +191,7 @@ font-size: 3.90vw;
     transition: none;
   }
     .testimonial-title {
-      font-size: 24px;
-      margin-bottom: 30px;
+     font-size: 4.50vw;
     }
     .testimonial-item:hover .testimonial-content {
       transform: translateY(0);

@@ -83,7 +83,7 @@ const TestimonialSlider = () => {
       <div className="testimonial-section-inner">
         <h2
           className="testimonial-title"
-          // style={{ fontSize: '30px', fontWeight: 'bold', marginBottom: '25px', textAlign: 'Lect' }}
+          style={{ marginBottom: '25px' }}
         >
           TESTIMONIAL
         </h2>
