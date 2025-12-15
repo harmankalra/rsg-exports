@@ -198,6 +198,9 @@ max-width: 200px;
     background-image: none;
     background: linear-gradient(104deg, #92AA83 22.45%, #393610 93.68%);
   }
+  .logo img{
+    max-width: 140px;
+  }
 
   .navigation a{
     font-size: 4.50vw;

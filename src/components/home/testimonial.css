@@ -128,9 +128,10 @@
   /* Responsive Styles */
   @media (max-width: 768px) {
     .testimonial-title {
+      
       font-size: 28px;
       text-align: left;
-      padding-top: 10px;
+      padding:5% 0;
     }
     .testimonial-content {
       position: absolute;
