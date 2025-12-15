@@ -327,3 +327,27 @@ padding: 2% 0;
       font-size: 1.25rem;
     }
   }
+  @media (max-width: 768px) {
+  .cta-button-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-button-group a {
+    width: 100%;
+    max-width: 280px;     /* keeps it neat, not too wide */
+    height: 48px;
+    font-size: 14px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;           /* height controlled manually */
+  }
+
+  .cta-button-group a svg {
+    width: 18px;
+    height: 18px;
+  }
+}
