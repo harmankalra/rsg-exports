@@ -252,6 +252,27 @@
   user-select: none;
   pointer-events: none; /* Prevent copy */
 }
+/* Disable text selection */
+.rice-showcase-container,
+.rice-showcase-container * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.rice-desktop-image-container::after {
+  content: "RSG EXPORTS";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.25);
+  white-space: nowrap;
+  pointer-events: none;
+}
 
 /* Watermark text overlay */
 .rice-mobile-image-container::after {

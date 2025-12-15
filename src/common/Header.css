@@ -29,7 +29,7 @@ h1 h2 h3 h4 h5 h6{
   background-color: white;
   position: sticky;
   top: 0;
-  z-index: 4;
+  z-index: 12;
 }
 
 
@@ -73,7 +73,9 @@ h1 h2 h3 h4 h5 h6{
 .hamburger {
   display: none;
   cursor: pointer;
-  z-index: 100;
+
+  z-index: 10000; /* 🔥 higher than everything */
+  position: relative;
 }
 
 .bar {

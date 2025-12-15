@@ -137,3 +137,13 @@ body.menu-open .banner-wrapper {
     padding: 0.8rem 1.5rem;
   }
 }
+@media (max-width: 768px) {
+  .banner-wrapper::before,
+  .banner-wrapper::after {
+    pointer-events: none; /* 🔥 allow clicks to pass */
+  }
+}@media (max-width: 768px) {
+  .banner-wrapper {
+    z-index: 1;
+  }
+}
