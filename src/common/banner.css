@@ -1,57 +1,48 @@
-/* === BASE STYLES === */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+
+/* === BASE === */
 .banner-wrapper {
-    width: 100%;
-    height: 70dvh;          /* responsive dynamic viewport height */
-    max-height: 700px;      /* 🔥 NEW: prevents banner from exceeding desktop design height */
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-body.menu-open .banner-wrapper {
-    pointer-events: none;
-}
-
-.banner-wrapper.multi-image {
-    height: 70vh;
-    max-height: 700px;      /* 🔥 NEW */
-}
-
-.banner-owl-carousel {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 70vh;
+  max-height: 700px;
+  position: relative;
+  overflow: hidden;
 }
 
 .banner-container {
-    height: 70dvh;
-    max-height: 700px;      /* 🔥 NEW */
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  max-height: 700px;
+  overflow: hidden;
 }
 
-  
-  /* === CUSTOM CURSORS & OVERLAYS === */
-  .banner-wrapper::before,
-  .banner-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 25%;
-    z-index: 10;
-  }
-  
-  .banner-wrapper::before {
-    left: 0;
-  }
-  
-  .banner-wrapper::after {
-    right: 0;
-  }
-  
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === CURSOR ZONES === */
+.banner-zone {
+  position: absolute;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  z-index: 20;
+  background: transparent;
+}
+
+.banner-zone-left {
+  left: 0;
+}
+
+.banner-zone-right {
+  right: 0;
+}
+
+/* === CUSTOM CURSORS === */
   .banner-wrapper.left-arrow-cursor {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 1080 1080" fill="none"><path d="M101.25 540C101.25 423.636 147.475 312.038 229.757 229.757C312.038 147.475 423.636 101.25 540 101.25C656.364 101.25 767.962 147.475 850.243 229.757C932.525 312.038 978.75 423.636 978.75 540C978.75 656.364 932.525 767.962 850.243 850.243C767.962 932.525 656.364 978.75 540 978.75C423.636 978.75 312.038 932.525 229.757 850.243C147.475 767.962 101.25 656.364 101.25 540ZM1080 540C1080 396.783 1023.11 259.432 921.838 158.162C820.568 56.8927 683.217 0 540 0C396.783 0 259.432 56.8927 158.162 158.162C56.8927 259.432 0 396.783 0 540C0 683.217 56.8927 820.568 158.162 921.838C259.432 1023.11 396.783 1080 540 1080C683.217 1080 820.568 1023.11 921.838 921.838C1023.11 820.568 1080 683.217 1080 540ZM458.578 795.023C467.437 804.516 479.883 810 492.961 810C518.906 810 540 788.906 540 762.961V641.25H742.5C779.836 641.25 810 611.086 810 573.75V506.25C810 468.914 779.836 438.75 742.5 438.75H540V317.039C540 291.094 518.906 270 492.961 270C479.883 270 467.437 275.484 458.578 284.977L247.852 510.891C240.469 518.906 236.25 529.242 236.25 540C236.25 550.758 240.469 561.305 247.852 569.109L458.578 795.023Z" fill="%23339C00"/></svg>') 32 32, pointer;
 }
@@ -59,65 +50,32 @@ body.menu-open .banner-wrapper {
 .banner-wrapper.right-arrow-cursor {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 1080 1080" fill="none"><path d="M978.75 540C978.75 656.364 932.525 767.962 850.243 850.243C767.962 932.525 656.364 978.75 540 978.75C423.636 978.75 312.038 932.525 229.757 850.243C147.475 767.962 101.25 656.364 101.25 540C101.25 423.636 147.475 312.038 229.757 229.757C312.038 147.475 423.636 101.25 540 101.25C656.364 101.25 767.962 147.475 850.243 229.757C932.525 312.038 978.75 423.636 978.75 540ZM0 540C0 683.217 56.8927 820.568 158.162 921.838C259.432 1023.11 396.783 1080 540 1080C683.217 1080 820.568 1023.11 921.838 921.838C1023.11 820.568 1080 683.217 1080 540C1080 396.783 1023.11 259.432 921.838 158.162C820.568 56.8927 683.217 0 540 0C396.783 0 259.432 56.8927 158.162 158.162C56.8927 259.432 0 396.783 0 540ZM621.422 318.937C612.563 309.234 600.117 303.75 586.828 303.75C561.094 303.75 540 324.844 540 350.789V438.75H337.5C300.164 438.75 270 468.914 270 506.25V573.75C270 611.086 300.164 641.25 337.5 641.25H540V729.211C540 755.156 561.094 776.25 587.039 776.25C600.117 776.25 612.563 770.766 621.633 761.062L798.82 569.109C806.203 561.094 810.211 550.758 810.211 539.789C810.211 528.82 806.203 518.484 798.82 510.469L621.633 318.516L621.422 318.937Z" fill="%23339C00"/></svg>') 32 32, pointer;
 }
-  
-  /* === RESPONSIVE FIXES === */
-  @media screen and (max-width: 768px) {
-    .banner-wrapper,
-    .banner-container {
-      height: 70vh;
-      padding: 0; /* Remove padding */
-    }
-    .banner-wrapper.multi-image {
-        margin-bottom: 4%;
-  }
-}
-  
-  @media screen and (max-width: 480px) {
-    .banner-wrapper,
-    .banner-container {
-      height: 70vh;
-      padding: 0; /* Remove padding */
-    }
-    .banner-wrapper.multi-image {
-        margin-bottom: 1%;
-  }
-}
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
- /* Add this at the top of your CSS file */
 
-/* Dark overlay */
+/* === OVERLAY === */
 .banner-dark-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 29%));
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35));
   z-index: 1;
 }
 
-
-/* Text styling with animation */
 .banner-overlay-text {
   position: absolute;
-  bottom: 20%;  line-height: 1.2;
+  bottom: 20%;
   left: 10%;
-  font-size: 4rem; /* Larger font size */
-  font-weight: 700;
   color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  z-index: 2;
   animation: slideIn 1.2s ease-out forwards;
   opacity: 0;
-  z-index: 2;
 }
 
-/* Fancy/stylish font (fallback if not loaded via font import) */
 .fancy-font {
-  font-family: 'Playfair Display', 'Georgia', serif;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  font-family: "Playfair Display", Georgia, serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* Slide-in animation */
 @keyframes slideIn {
   from {
     transform: translateX(-50%);
@@ -129,21 +87,20 @@ body.menu-open .banner-wrapper {
   }
 }
 
-@media (max-width: 991px) {
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .banner-wrapper,
+  .banner-container {
+    height: 70vh;
+  }
+
   .banner-overlay-text {
     font-size: 2.2rem;
     bottom: 15%;
     left: 8%;
-    padding: 0.8rem 1.5rem;
   }
-}
-@media (max-width: 768px) {
-  .banner-wrapper::before,
-  .banner-wrapper::after {
-    pointer-events: none; /* 🔥 allow clicks to pass */
-  }
-}@media (max-width: 768px) {
-  .banner-wrapper {
-    z-index: 1;
+
+  .banner-zone {
+    pointer-events: none;
   }
 }

@@ -1,286 +1,229 @@
-import React, { useEffect, useState, useRef, useCallback, useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
-import './banner.css';
+import React, { useEffect, useState, useRef, useCallback, useMemo } from "react";
+import { useLocation } from "react-router-dom";
+import "./banner.css";
 
-// Desktop Backgrounds
-import homeDesktop1 from '../assets/Group13.png';
-import homeDesktop2 from '../assets/BANNER03.jpg';
-import aboutDesktop from '../assets/BANNER04.jpg';
-import contactDesktop from '../assets/ContactUs.jpg';
-import productDesktop1 from '../assets/Productbannner.jpg';
-import productDesktop12 from '../assets/rangebanner.jpg';
+// Desktop Images
+import homeDesktop1 from "../assets/Group13.png";
+import homeDesktop2 from "../assets/BANNER03.jpg";
+import aboutDesktop from "../assets/BANNER04.jpg";
+import contactDesktop from "../assets/ContactUs.jpg";
+import productDesktop1 from "../assets/Productbannner.jpg";
+import productDesktop12 from "../assets/rangebanner.jpg";
+import privateDesktop1 from "../assets/PrivateLabling.jpg";
+import GalleryDesktop1 from "../assets/Galery.jpg";
 
-import privateDesktop1 from '../assets/PrivateLabling.jpg';
-import GalleryDesktop1 from '../assets/Galery.jpg';
-
-
-// Mobile Backgrounds
-import homeMobile1 from '../assets/MobFront.jpg';
-import homeMobile2 from '../assets/Mobhome2.png';
-import aboutMobile from '../assets/Phone_Banner.png';
-import contactMobile from '../assets/MobContactUs.jpg';
-import productMobile1 from '../assets/MobProductRange.jpg';
-import productMobile12 from '../assets/rangebannermob.jpg';
-
-import privateMobile1 from '../assets/MobPrivateLabeling.jpg';
-import galleryMobile1 from '../assets/MobGallery.jpg';
-
+// Mobile Images
+import homeMobile1 from "../assets/MobFront.jpg";
+import homeMobile2 from "../assets/Mobhome2.png";
+import aboutMobile from "../assets/Phone_Banner.png";
+import contactMobile from "../assets/MobContactUs.jpg";
+import productMobile1 from "../assets/MobProductRange.jpg";
+import productMobile12 from "../assets/rangebannermob.jpg";
+import privateMobile1 from "../assets/MobPrivateLabeling.jpg";
+import galleryMobile1 from "../assets/MobGallery.jpg";
 
 function Banner() {
-    const location = useLocation();
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-    const [cursorStyle, setCursorStyle] = useState('default');
-    const bannerWrapperRef = useRef(null);
-    const carouselRef = useRef(null);
+  const location = useLocation();
+  const bannerWrapperRef = useRef(null);
+  const carouselRef = useRef(null);
 
-    const pageBannerConfigs = useMemo(() => ({
-        '/': {
-            desktopBackgrounds: [homeDesktop1, homeDesktop2],
-            mobileBackgrounds: [homeMobile1, homeMobile2],
-            isSingleImage: false,
-            mobileClass: 'mobile-home'
-        },
-        '/about': {
-            desktopBackgrounds: [aboutDesktop],
-            mobileBackgrounds: [aboutMobile],
-            isSingleImage: true,
-            mobileClass: 'mobile-about'
-        },
-        '/contact': {
-            desktopBackgrounds: [contactDesktop],
-            mobileBackgrounds: [contactMobile],
-            isSingleImage: true,
-            mobileClass: 'mobile-contact'
-        },
-        '/brand': {
-            desktopBackgrounds: [productDesktop1],
-            mobileBackgrounds: [productMobile1],
-            isSingleImage: true,
-            mobileClass: 'mobile-products'
-        },
-           '/range': {
-            desktopBackgrounds: [productDesktop12],
-            mobileBackgrounds: [productMobile12],
-            isSingleImage: true,
-            mobileClass: 'mobile-products'
-        },
-        '/private': {
-            desktopBackgrounds: [privateDesktop1],
-            mobileBackgrounds: [privateMobile1],
-            isSingleImage: true,
-            mobileClass: 'mobile-private'
-        }
-        ,
-        '/gallery': {
-            desktopBackgrounds: [GalleryDesktop1],
-            mobileBackgrounds: [galleryMobile1],
-            isSingleImage: true,
-            mobileClass: 'mobile-gallery'
-        }
-    }), []);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [cursorStyle, setCursorStyle] = useState("default");
+  const [heroLoaded, setHeroLoaded] = useState(false);
 
-    const [bannerConfig, setBannerConfig] = useState({
-        backgrounds: [],
-        isSingleImage: false,
-        mobileClass: ''
-    });
+  const pageBannerConfigs = useMemo(
+    () => ({
+      "/": {
+        desktop: [homeDesktop1, homeDesktop2],
+        mobile: [homeMobile1, homeMobile2],
+        single: false,
+        mobileClass: "mobile-home",
+      },
+      "/about": {
+        desktop: [aboutDesktop],
+        mobile: [aboutMobile],
+        single: true,
+        mobileClass: "mobile-about",
+      },
+      "/brand": {
+        desktop: [productDesktop1],
+        mobile: [productMobile1],
+        single: true,
+        mobileClass: "mobile-products",
+      },
+      "/range": {
+        desktop: [productDesktop12],
+        mobile: [productMobile12],
+        single: true,
+        mobileClass: "mobile-products",
+      },
+      "/private": {
+        desktop: [privateDesktop1],
+        mobile: [privateMobile1],
+        single: true,
+        mobileClass: "mobile-private",
+      },
+      "/gallery": {
+        desktop: [GalleryDesktop1],
+        mobile: [galleryMobile1],
+        single: true,
+        mobileClass: "mobile-gallery",
+      },
+      "/contact": {
+        desktop: [contactDesktop],
+        mobile: [contactMobile],
+        single: true,
+        mobileClass: "mobile-contact",
+      },
+    }),
+    []
+  );
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+  const [bannerConfig, setBannerConfig] = useState({
+    images: [],
+    single: false,
+    mobileClass: "",
+  });
 
-    const resetAutoplay = useCallback(() => {
-        if (window.jQuery && carouselRef.current) {
-            const $carousel = window.jQuery(carouselRef.current);
-            $carousel.trigger('stop.owl.autoplay');
-            $carousel.trigger('play.owl.autoplay');
-        }
-    }, []);
+  /* -------- Resize -------- */
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
-const handleMouseMove = useCallback((e) => {
-    if (bannerConfig.isSingleImage) {
-        setCursorStyle('default');
+  /* -------- Cursor -------- */
+  const handleMouseMove = useCallback(
+    (e) => {
+      if (bannerConfig.single) {
+        setCursorStyle("default");
         return;
+      }
+
+      const width = e.currentTarget.offsetWidth;
+      const x = e.clientX - e.currentTarget.getBoundingClientRect().left;
+
+      if (x < width * 0.25) setCursorStyle("left-arrow-cursor");
+      else if (x > width * 0.75) setCursorStyle("right-arrow-cursor");
+      else setCursorStyle("default");
+    },
+    [bannerConfig.single]
+  );
+
+  const handleClick = useCallback(
+    (e) => {
+      if (bannerConfig.single || !window.jQuery || !carouselRef.current) return;
+
+      const width = e.currentTarget.offsetWidth;
+      const x = e.clientX - e.currentTarget.getBoundingClientRect().left;
+      const $carousel = window.jQuery(carouselRef.current);
+
+      if (x < width * 0.25) $carousel.trigger("prev.owl.carousel");
+      else if (x > width * 0.75) $carousel.trigger("next.owl.carousel");
+    },
+    [bannerConfig.single]
+  );
+
+  /* -------- Route Change (FIXED LOGIC) -------- */
+  useEffect(() => {
+    setHeroLoaded(false);
+
+    const match = pageBannerConfigs[location.pathname]
+      ? location.pathname
+      : Object.keys(pageBannerConfigs).find(
+          (p) => p !== "/" && location.pathname.startsWith(p)
+        ) || "/";
+
+    const config = pageBannerConfigs[match];
+
+    setBannerConfig({
+      images: isMobile ? config.mobile : config.desktop,
+      single: config.single,
+      mobileClass: config.mobileClass,
+    });
+  }, [location.pathname, isMobile, pageBannerConfigs]);
+
+  /* -------- Owl Init AFTER image -------- */
+  useEffect(() => {
+    if (
+      heroLoaded &&
+      !bannerConfig.single &&
+      window.jQuery &&
+      window.jQuery.fn.owlCarousel
+    ) {
+      const $carousel = window.jQuery(".banner-owl-carousel");
+      carouselRef.current = $carousel[0];
+
+      if ($carousel.hasClass("owl-loaded")) {
+        $carousel.trigger("destroy.owl.carousel");
+      }
+
+      $carousel.owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 8000,
+        smartSpeed: 1500,
+      });
     }
+  }, [heroLoaded, bannerConfig.single]);
 
-    const container = e.currentTarget;
-    const containerWidth = container.offsetWidth;
-    const mouseX = e.clientX - container.getBoundingClientRect().left;
+  return (
+    <div
+      ref={bannerWrapperRef}
+      className={`banner-wrapper ${cursorStyle} ${bannerConfig.mobileClass}`}
+      onMouseMove={handleMouseMove}
+      onClick={handleClick}
+    >
+      {!bannerConfig.single && (
+        <>
+          <div className="banner-zone banner-zone-left" />
+          <div className="banner-zone banner-zone-right" />
+        </>
+      )}
 
-    if (mouseX < containerWidth * 0.25) {
-        setCursorStyle('left-arrow-cursor');
-    } else if (mouseX > containerWidth * 0.75) {
-        setCursorStyle('right-arrow-cursor');
-    } else {
-        setCursorStyle('default');
-    }
-}, [bannerConfig.isSingleImage]);
+      {bannerConfig.single ? (
+        <img
+          src={bannerConfig.images[0]}
+          alt="RSG Exports Banner"
+          className="banner-img"
+          loading="eager"
+          fetchpriority="high"
+        />
+      ) : (
+        <div className="banner-owl-carousel owl-carousel">
+          {bannerConfig.images.map((img, index) => (
+            <div className="banner-container" key={index}>
+              <img
+                src={img}
+                alt="RSG Exports Premium Rice"
+                className="banner-img"
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchpriority={index === 0 ? "high" : "auto"}
+                decoding="async"
+                onLoad={() => index === 0 && setHeroLoaded(true)}
+              />
 
-
-    const handleClick = useCallback((e) => {
-        if (bannerConfig.isSingleImage) return;
-
-        const container = e.currentTarget;
-        const containerWidth = container.offsetWidth;
-        const mouseX = e.clientX - container.getBoundingClientRect().left;
-
-        const carousel = container.querySelector('.owl-carousel');
-        if (carousel && window.jQuery) {
-            const $carousel = window.jQuery(carousel);
-            if (mouseX < containerWidth * 0.25) {
-                $carousel.trigger('prev.owl.carousel');
-                resetAutoplay();
-            } else if (mouseX > containerWidth * 0.75) {
-                $carousel.trigger('next.owl.carousel');
-                resetAutoplay();
-            }
-        }
-    }, [bannerConfig.isSingleImage, resetAutoplay]);
-
-    const preloadImages = (images) => {
-        return Promise.all(images.map(src => {
-            return new Promise(resolve => {
-                const img = new Image();
-                img.src = src;
-                img.onload = resolve;
-                img.onerror = resolve;
-            });
-        }));
-    };
-
-    useEffect(() => {
-        let matchedPath = Object.keys(pageBannerConfigs).find(path =>
-            location.pathname === path
-        ) || Object.keys(pageBannerConfigs).find(path =>
-            location.pathname.startsWith(path)
-        );
-
-        const currentPageConfig = pageBannerConfigs[matchedPath] || pageBannerConfigs['/'];
-        const backgrounds = isMobile
-            ? currentPageConfig.mobileBackgrounds
-            : currentPageConfig.desktopBackgrounds;
-
-        setBannerConfig({
-            backgrounds,
-            isSingleImage: currentPageConfig.isSingleImage,
-            mobileClass: currentPageConfig.mobileClass
-        });
-
-        if (!currentPageConfig.isSingleImage && window.jQuery && window.jQuery.fn.owlCarousel) {
-            preloadImages(backgrounds).then(() => {
-                requestAnimationFrame(() => {
-                    const $carousel = window.jQuery('.banner-owl-carousel');
-                    if ($carousel && $carousel.length > 0) {
-                        carouselRef.current = $carousel[0];
-
-                        if ($carousel.hasClass('owl-loaded')) {
-                            $carousel.trigger('destroy.owl.carousel');
-                        }
-
-                        $carousel.owlCarousel({
-                            items: 1,
-                            loop: true,
-                            nav: false,
-                            dots: false,
-                            autoplay: true,
-                            autoplayTimeout: 8000,
-                            smartSpeed: 2000,
-                            onTranslate: resetAutoplay
-                        });
-                    }
-                });
-            });
-        }
-    }, [location.pathname, isMobile, pageBannerConfigs, resetAutoplay]);
-
-useEffect(() => {
-    const bannerWrapper = bannerWrapperRef.current;
-
-    // Remove existing cursor style when switching to single image
-    setCursorStyle('default');
-
-    // Attach only if it's multi-image
-    if (bannerWrapper && !bannerConfig.isSingleImage) {
-        bannerWrapper.addEventListener('mousemove', handleMouseMove);
-        bannerWrapper.addEventListener('click', handleClick);
-        return () => {
-            bannerWrapper.removeEventListener('mousemove', handleMouseMove);
-            bannerWrapper.removeEventListener('click', handleClick);
-            setCursorStyle('default'); // Ensure reset
-        };
-    }
-
-    // Cleanup on unmount or if banner becomes single-image
-    return () => {
-        if (bannerWrapper) {
-            bannerWrapper.removeEventListener('mousemove', handleMouseMove);
-            bannerWrapper.removeEventListener('click', handleClick);
-            setCursorStyle('default');
-        }
-    };
-}, [bannerConfig.isSingleImage, handleMouseMove, handleClick]);
-
-
-    const renderBanner = () => {
-        const additionalClass = isMobile ? `${bannerConfig.mobileClass} mobile-banner` : bannerConfig.mobileClass;
-
-        if (bannerConfig.isSingleImage) {
-            return (
-                <div
-                    ref={bannerWrapperRef}
-                    className={`banner-wrapper single-image ${additionalClass} ${cursorStyle}`}
-                    style={{
-                        backgroundImage: `url(${bannerConfig.backgrounds[0]})`,
-                        backgroundColor: '#eee',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
-                />
-            );
-        }
-
-return (
-  <div
-    ref={bannerWrapperRef}
-    className={`banner-wrapper multi-image ${additionalClass} ${cursorStyle}`}
-  >
-    <div className="banner-owl-carousel owl-carousel">
-      {bannerConfig.backgrounds.map((bg, index) => (
-        <div
-          key={index}
-          className={`banner-container ${isMobile ? 'mobile-banner' : ''}`}
-          style={{
-            backgroundImage: `url(${bg})`,
-            backgroundColor: '#eee',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            position: 'relative',
-          }}
-        >
-   {location.pathname === '/' && bg === homeDesktop1 && !isMobile && (
-  <>
-    <div className="banner-dark-overlay" />
-<div className="banner-overlay-text fancy-font">
-  Sowing The Seeds<br />of Ambition
-</div>
-
-  </>
-)}
-
+              {location.pathname === "/" &&
+                img === homeDesktop1 &&
+                !isMobile && (
+                  <>
+                    <div className="banner-dark-overlay" />
+                    <div className="banner-overlay-text fancy-font">
+                      Sowing The Seeds
+                      <br />
+                      of Ambition
+                    </div>
+                  </>
+                )}
+            </div>
+          ))}
         </div>
-      ))}
+      )}
     </div>
-  </div>
-);
-
-          
-    };
-
-    return renderBanner();
+  );
 }
 
 export default Banner;
