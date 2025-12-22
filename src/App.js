@@ -17,6 +17,9 @@ import Product from './pages/brand.jsx';
 import RiceRange from './pages/range.jsx'
 import Privatelabel from './pages/private.jsx';
 import Gallery from './pages/gallery.jsx'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   return (

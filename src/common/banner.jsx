@@ -6,6 +6,7 @@ import React, {
   useMemo,
 } from "react";
 import { useLocation } from "react-router-dom";
+import Slider from "react-slick";
 import "./banner.css";
 
 /* ================= IMAGES ================= */
@@ -32,12 +33,10 @@ import galleryMobile1 from "../assets/MobGallery.jpg";
 
 function Banner() {
   const location = useLocation();
-  const bannerWrapperRef = useRef(null);
-  const carouselRef = useRef(null);
+  const sliderRef = useRef(null);
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [cursorStyle, setCursorStyle] = useState("default");
-  const [heroLoaded, setHeroLoaded] = useState(false);
 
   /* ================= CONFIG ================= */
   const pageBannerConfigs = useMemo(
@@ -101,48 +100,10 @@ function Banner() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  /* ================= HOME HERO PRELOAD ================= */
-  useEffect(() => {
-    if (location.pathname === "/" && !isMobile) {
-      const link = document.createElement("link");
-      link.rel = "preload";
-      link.as = "image";
-      link.href = homeDesktop1;
-      link.fetchPriority = "high";
-      document.head.appendChild(link);
-
-      return () => document.head.removeChild(link);
-    }
-  }, [location.pathname, isMobile]);
-
-  /* ================= PREFETCH OTHER ROUTES (KEY FIX) ================= */
-  useEffect(() => {
-    const prefetch = (imgs) => {
-      imgs.forEach((src) => {
-        const img = new Image();
-        img.src = src;
-      });
-    };
-
-    Object.keys(pageBannerConfigs).forEach((path) => {
-      if (path !== location.pathname) {
-        const cfg = pageBannerConfigs[path];
-        prefetch(isMobile ? cfg.mobile : cfg.desktop);
-      }
-    });
-  }, [location.pathname, isMobile, pageBannerConfigs]);
-
   /* ================= ROUTE CHANGE ================= */
   useEffect(() => {
-    setHeroLoaded(false);
-
     const match =
       pageBannerConfigs[location.pathname] ||
-      pageBannerConfigs[
-        Object.keys(pageBannerConfigs).find(
-          (p) => p !== "/" && location.pathname.startsWith(p)
-        )
-      ] ||
       pageBannerConfigs["/"];
 
     setBannerConfig({
@@ -150,9 +111,14 @@ function Banner() {
       single: match.single,
       mobileClass: match.mobileClass,
     });
+
+    // reset slider on route change
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(0, true);
+    }
   }, [location.pathname, isMobile, pageBannerConfigs]);
 
-  /* ================= CURSOR ================= */
+  /* ================= CURSOR (SAME BEHAVIOUR) ================= */
   const handleMouseMove = useCallback(
     (e) => {
       if (bannerConfig.single) {
@@ -172,50 +138,34 @@ function Banner() {
 
   const handleClick = useCallback(
     (e) => {
-      if (bannerConfig.single || !window.jQuery || !carouselRef.current) return;
+      if (bannerConfig.single || !sliderRef.current) return;
 
       const w = e.currentTarget.offsetWidth;
       const x = e.clientX - e.currentTarget.getBoundingClientRect().left;
-      const $carousel = window.jQuery(carouselRef.current);
 
-      if (x < w * 0.25) $carousel.trigger("prev.owl.carousel");
-      else if (x > w * 0.75) $carousel.trigger("next.owl.carousel");
+      if (x < w * 0.25) sliderRef.current.slickPrev();
+      else if (x > w * 0.75) sliderRef.current.slickNext();
     },
     [bannerConfig.single]
   );
 
-  /* ================= OWL INIT (NO RE-INIT JANK) ================= */
-  useEffect(() => {
-    if (
-      heroLoaded &&
-      !bannerConfig.single &&
-      window.jQuery &&
-      window.jQuery.fn.owlCarousel
-    ) {
-      const $carousel = window.jQuery(".banner-owl-carousel");
-
-      if ($carousel.hasClass("owl-loaded")) return;
-
-      carouselRef.current = $carousel[0];
-
-      requestAnimationFrame(() => {
-        $carousel.owlCarousel({
-          items: 1,
-          loop: true,
-          nav: false,
-          dots: false,
-          autoplay: true,
-          autoplayTimeout: 8000,
-          smartSpeed: 1500,
-        });
-      });
-    }
-  }, [heroLoaded, bannerConfig.single]);
+  /* ================= SLIDER SETTINGS ================= */
+  const sliderSettings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    speed: 1200,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+  };
 
   /* ================= RENDER ================= */
   return (
     <div
-      ref={bannerWrapperRef}
       className={`banner-wrapper ${cursorStyle} ${bannerConfig.mobileClass}`}
       onMouseMove={handleMouseMove}
       onClick={handleClick}
@@ -227,10 +177,9 @@ function Banner() {
           className="banner-img"
           loading="eager"
           fetchpriority="high"
-          decoding="async"
         />
       ) : (
-        <div className="banner-owl-carousel owl-carousel">
+        <Slider ref={sliderRef} {...sliderSettings}>
           {bannerConfig.images.map((img, index) => (
             <div className="banner-container" key={index}>
               <img
@@ -240,7 +189,6 @@ function Banner() {
                 loading={index === 0 ? "eager" : "lazy"}
                 fetchpriority={index === 0 ? "high" : "auto"}
                 decoding="async"
-                onLoad={() => index === 0 && setHeroLoaded(true)}
               />
 
               {location.pathname === "/" &&
@@ -257,7 +205,7 @@ function Banner() {
                 )}
             </div>
           ))}
-        </div>
+        </Slider>
       )}
     </div>
   );
