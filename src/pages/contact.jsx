@@ -37,7 +37,7 @@ function Contact() {
                     property="og:description"
                     content="Reach out to RSG Exports for Basmati & Non-Basmati rice export enquiries, bulk orders, pricing, private label requests and global supply partnerships."
                 />
-                <meta property="og:image" content="%PUBLIC_URL%/Group13.png" />
+                <meta property="og:image" content="%PUBLIC_URL%/Group13.webp" />
                 <meta property="og:type" content="website" />
 
                 {/* Canonical URL */}

@@ -76,7 +76,14 @@ function Header() {
           </div>
 
           <Link to="/" className="LogoImg">
-            <img loading="lazy" src={RSG || "/placeholder.svg"} alt="Logo" />
+        <img
+  src={RSG}
+  alt="RSG Exports"
+  width="180"
+  height="60"
+  fetchpriority="high"
+/>
+
           </Link>
         </div>
 

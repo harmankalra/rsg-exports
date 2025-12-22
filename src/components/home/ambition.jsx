@@ -11,28 +11,28 @@ const RSGFoodsGrid = () => {
       title: 'Production Capacity',
       hoverMainText: '50 tons/hour',
       hoverSubText: 'with state of the art facilities.',
-      image: require('../../assets/capacity.png')
+      image: require('../../assets/capacity.webp')
     },
     {
       id: 2,
       title: 'Quality Assurance',
       hoverMainText: 'Rigorous quality control',
       hoverSubText: 'at every stage.',
-      image: require('../../assets/quality.png')
+      image: require('../../assets/quality.webp')
     },
     {
       id: 3,
       title: 'Global Reach',
       hoverMainText: 'Serving customers',
       hoverSubText: 'across international markets.',
-      image: require('../../assets/globalreach.png')
+      image: require('../../assets/globalreach.webp')
     },
     {
       id: 4,
       title: 'Customized Packaging',
       hoverMainText: 'Tailored packaging',
       hoverSubText: 'solutions for diverse needs.',
-      image: require('../../assets/custom.png')
+      image: require('../../assets/custom.webp')
     }
   ];
 

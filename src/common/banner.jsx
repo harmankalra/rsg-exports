@@ -3,23 +3,23 @@ import { useLocation } from "react-router-dom";
 import "./banner.css";
 
 // Desktop Images
-import homeDesktop1 from "../assets/Group13.png";
-import homeDesktop2 from "../assets/BANNER03.jpg";
-import aboutDesktop from "../assets/BANNER04.jpg";
-import contactDesktop from "../assets/ContactUs.jpg";
-import productDesktop1 from "../assets/Productbannner.jpg";
-import productDesktop12 from "../assets/rangebanner.jpg";
-import privateDesktop1 from "../assets/PrivateLabling.jpg";
+import homeDesktop1 from "../assets/Group13.webp";
+import homeDesktop2 from "../assets/BANNER03.webp";
+import aboutDesktop from "../assets/BANNER04.webp";
+import contactDesktop from "../assets/ContactUs.webp";
+import productDesktop1 from "../assets/Productbannner.webp";
+import productDesktop12 from "../assets/rangebanner.webp";
+import privateDesktop1 from "../assets/PrivateLabling.webp";
 import GalleryDesktop1 from "../assets/Galery.jpg";
 
 // Mobile Images
-import homeMobile1 from "../assets/MobFront.jpg";
-import homeMobile2 from "../assets/Mobhome2.png";
-import aboutMobile from "../assets/Phone_Banner.png";
-import contactMobile from "../assets/MobContactUs.jpg";
-import productMobile1 from "../assets/MobProductRange.jpg";
-import productMobile12 from "../assets/rangebannermob.jpg";
-import privateMobile1 from "../assets/MobPrivateLabeling.jpg";
+import homeMobile1 from "../assets/MobFront.webp";
+import homeMobile2 from "../assets/Mobhome2.webp";
+import aboutMobile from "../assets/Phone_Banner.webp";
+import contactMobile from "../assets/MobContactUs.webp";
+import productMobile1 from "../assets/MobProductRange.webp";
+import productMobile12 from "../assets/rangebannermob.webp";
+import privateMobile1 from "../assets/MobPrivateLabeling.webp";
 import galleryMobile1 from "../assets/MobGallery.jpg";
 
 function Banner() {

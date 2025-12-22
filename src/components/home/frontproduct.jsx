@@ -11,15 +11,15 @@ const ProductShowcase = () => {
     window.scrollTo(0, 0); // Ensure the page opens at the top
   };
   const products = [
-    { id: 1, name: 'Sughandh', image: require('../../assets/08.png'), color: 'red' },
-    { id: 2, name: 'Kesar', image: require('../../assets/07.png'), color: 'purple' },
-    { id: 3, name: 'Silver', image: require('../../assets/05.png'), color: 'green' },
-    { id: 4, name: 'Platinum', image: require('../../assets/03.png'), color: 'black' },
-    { id: 5, name: 'Khushboo', image: require('../../assets/04.png'), color: 'red' },
-    { id: 6, name: 'Mehak', image: require('../../assets/06.png'), color: 'red' },
-    { id: 7, name: 'Diamond', image: require('../../assets/02.png'), color: 'red' },
-    { id: 8, name: 'Premium', image: require('../../assets/09.png'), color: 'red' },
-    { id: 9, name: 'Gold', image: require('../../assets/01.png'), color: 'red' }
+    { id: 1, name: 'Sughandh', image: require('../../assets/08.webp'), color: 'red' },
+    { id: 2, name: 'Kesar', image: require('../../assets/07.webp'), color: 'purple' },
+    { id: 3, name: 'Silver', image: require('../../assets/05.webp'), color: 'green' },
+    { id: 4, name: 'Platinum', image: require('../../assets/03.webp'), color: 'black' },
+    { id: 5, name: 'Khushboo', image: require('../../assets/04.webp'), color: 'red' },
+    { id: 6, name: 'Mehak', image: require('../../assets/06.webp'), color: 'red' },
+    { id: 7, name: 'Diamond', image: require('../../assets/02.webp'), color: 'red' },
+    { id: 8, name: 'Premium', image: require('../../assets/09.webp'), color: 'red' },
+    { id: 9, name: 'Gold', image: require('../../assets/01.webp'), color: 'red' }
   ];
 
   const ProductCard = ({ product }) => (
