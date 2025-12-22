@@ -1,4 +1,10 @@
-import React, { useEffect, useState, useRef, useCallback, useMemo } from "react";
+import React, {
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+  useMemo,
+} from "react";
 import { useLocation } from "react-router-dom";
 import "./banner.css";
 
@@ -30,6 +36,22 @@ function Banner() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [cursorStyle, setCursorStyle] = useState("default");
   const [heroLoaded, setHeroLoaded] = useState(false);
+
+  /* 🔥 PRELOAD HOME HERO IMAGE (FIXES WHITE SCREEN) */
+  useEffect(() => {
+    if (location.pathname === "/" && !isMobile) {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = homeDesktop1;
+      link.fetchPriority = "high";
+      document.head.appendChild(link);
+
+      return () => {
+        document.head.removeChild(link);
+      };
+    }
+  }, [location.pathname, isMobile]);
 
   const pageBannerConfigs = useMemo(
     () => ({
@@ -85,14 +107,14 @@ function Banner() {
     mobileClass: "",
   });
 
-  /* -------- Resize -------- */
+  /* Resize */
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  /* -------- Cursor -------- */
+  /* Cursor logic */
   const handleMouseMove = useCallback(
     (e) => {
       if (bannerConfig.single) {
@@ -124,26 +146,27 @@ function Banner() {
     [bannerConfig.single]
   );
 
-  /* -------- Route Change (FIXED LOGIC) -------- */
+  /* Route change */
   useEffect(() => {
     setHeroLoaded(false);
 
-    const match = pageBannerConfigs[location.pathname]
-      ? location.pathname
-      : Object.keys(pageBannerConfigs).find(
+    const match =
+      pageBannerConfigs[location.pathname] ||
+      pageBannerConfigs[
+        Object.keys(pageBannerConfigs).find(
           (p) => p !== "/" && location.pathname.startsWith(p)
-        ) || "/";
-
-    const config = pageBannerConfigs[match];
+        )
+      ] ||
+      pageBannerConfigs["/"];
 
     setBannerConfig({
-      images: isMobile ? config.mobile : config.desktop,
-      single: config.single,
-      mobileClass: config.mobileClass,
+      images: isMobile ? match.mobile : match.desktop,
+      single: match.single,
+      mobileClass: match.mobileClass,
     });
   }, [location.pathname, isMobile, pageBannerConfigs]);
 
-  /* -------- Owl Init AFTER image -------- */
+  /* Owl init AFTER first image */
   useEffect(() => {
     if (
       heroLoaded &&
@@ -177,13 +200,6 @@ function Banner() {
       onMouseMove={handleMouseMove}
       onClick={handleClick}
     >
-      {!bannerConfig.single && (
-        <>
-          <div className="banner-zone banner-zone-left" />
-          <div className="banner-zone banner-zone-right" />
-        </>
-      )}
-
       {bannerConfig.single ? (
         <img
           src={bannerConfig.images[0]}
@@ -198,8 +214,8 @@ function Banner() {
             <div className="banner-container" key={index}>
               <img
                 src={img}
-                alt="RSG Exports Premium Rice"
                 className="banner-img"
+                alt="RSG Exports Premium Rice"
                 loading={index === 0 ? "eager" : "lazy"}
                 fetchpriority={index === 0 ? "high" : "auto"}
                 decoding="async"
