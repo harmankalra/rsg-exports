@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
-import RSG from "../assets/RSG-2.png";
+const RSG = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766735763/RSG-2_yhdj5z.webp";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,16 +75,18 @@ function Header() {
             </div>
           </div>
 
-          <Link to="/" className="LogoImg">
-        <img
-  src={RSG}
-  alt="RSG Exports"
-  width="180"
-  height="60"
-  fetchpriority="high"
-/>
+    <Link to="/" className="LogoImg">
+  <img
+    src={RSG}
+    alt="RSG Exports"
+    width="180"
+    height="60"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+  />
+</Link>
 
-          </Link>
         </div>
 
         <div className="navbarItems">
