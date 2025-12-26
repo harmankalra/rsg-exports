@@ -11,25 +11,28 @@ import "./banner.css";
 
 /* ================= IMAGES ================= */
 
+import  GalleryDesktop1 from "../assets/Galery.jpg";
+import  galleryMobile1 from "../assets/MobGallery.jpg";
 // Desktop
-import homeDesktop1 from "../assets/Group13.webp";
-import homeDesktop2 from "../assets/BANNER03.webp";
-import aboutDesktop from "../assets/BANNER04.webp";
-import contactDesktop from "../assets/ContactUs.webp";
-import productDesktop1 from "../assets/Productbannner.webp";
-import productDesktop12 from "../assets/rangebanner.webp";
-import privateDesktop1 from "../assets/PrivateLabling.webp";
-import GalleryDesktop1 from "../assets/Galery.jpg";
+const homeDesktop1 = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733372/Group13_biabhv.webp";
+const  homeDesktop2 = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733393/BANNER03_ob9uso.webp";
+const  aboutDesktop = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733428/BANNER04_yxetul.webp";
+const  contactDesktop = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733455/ContactUs_jcy9a3.webp";
+const  productDesktop1 = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733496/Productbannner_em1jb7.webp";
+const  productDesktop12 = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733519/rangebanner_vfotcy.webp";
+const  privateDesktop1 = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733548/PrivateLabling_l5cbvp.webp";
+
+
 
 // Mobile
-import homeMobile1 from "../assets/MobFront.webp";
-import homeMobile2 from "../assets/Mobhome2.webp";
-import aboutMobile from "../assets/Phone_Banner.webp";
-import contactMobile from "../assets/MobContactUs.webp";
-import productMobile1 from "../assets/MobProductRange.webp";
-import productMobile12 from "../assets/rangebannermob.webp";
-import privateMobile1 from "../assets/MobPrivateLabeling.webp";
-import galleryMobile1 from "../assets/MobGallery.jpg";
+const  homeMobile1 = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733631/MobFront_j5zzek.webp";
+const  homeMobile2 = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733646/Mobhome2_xmquby.webp";
+const  aboutMobile = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733659/Phone_Banner_cpwx1v.webp";
+const  contactMobile = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733674/MobContactUs_eugust.webp";
+const  productMobile1 = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733689/MobProductRange_dkygqp.webp";
+const  productMobile12 = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733701/rangebannermob_bavj4p.webp";
+const  privateMobile1 = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766733718/MobPrivateLabeling_u3bsa5.webp";
+
 
 function Banner() {
   const location = useLocation();
