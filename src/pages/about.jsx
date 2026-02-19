@@ -32,17 +32,66 @@ function About() {
                     content="About RSG Exports, RSG Exports Pvt Ltd, basmati rice exporters India, non basmati rice export Punjab, 1121 steam rice exporter, 1509 sella rice, rice mill Ferozepur, rice supplier to Saudi Arabia, Indian rice exporters"
                 />
 
-                {/* 🔥 Social Sharing (OG Tags) */}
+                {/* 🔥 Open Graph */}
                 <meta property="og:title" content="About RSG Exports | Trusted Basmati & Non-Basmati Rice Exporters from India" />
                 <meta
                     property="og:description"
                     content="Learn about RSG Exports — a leading rice exporter from Ferozepur, Punjab specializing in 1121 Basmati, 1509 Basmati, IR64 and long-grain Non-Basmati rice for global markets including Saudi Arabia, UAE and the Middle East."
                 />
-                <meta property="og:image" content="%PUBLIC_URL%/home3.jpg" />
+                <meta property="og:image" content="https://www.rsgexports.com/home3.jpg" />
                 <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.rsgexports.com/about" />
 
-                {/* Optional: page-specific canonical */}
+                {/* Canonical */}
                 <link rel="canonical" href="https://www.rsgexports.com/about" />
+
+                {/* 🔥 Structured Data - About Page */}
+                <script type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.rsgexports.com/about#aboutpage",
+      "url": "https://www.rsgexports.com/about",
+      "name": "About RSG Exports Pvt. Ltd.",
+      "description": "Learn about RSG Exports Pvt. Ltd., a leading manufacturer and exporter of premium Basmati and Non-Basmati rice from Punjab, India.",
+      "isPartOf": {
+        "@id": "https://www.rsgexports.com/#website"
+      },
+      "about": {
+        "@id": "https://www.rsgexports.com/#organization"
+      }
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.rsgexports.com/#organization",
+      "name": "RSG Exports Pvt. Ltd.",
+      "url": "https://www.rsgexports.com/",
+      "foundingDate": "1999",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ferozepur",
+        "addressRegion": "Punjab",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        "Saudi Arabia",
+        "UAE",
+        "Middle East",
+        "Europe",
+        "Asia"
+      ]
+    }
+
+  ]
+}
+`}
+                </script>
+
             </Helmet>
 
             {/* 🔥 PAGE CONTENT */}
@@ -52,6 +101,7 @@ function About() {
             <InfrastructureShowcase />
             <FoundersMess />
             <Footer />
+
         </div>
     );
 }

@@ -26,25 +26,105 @@ function Privatelabel() {
 
                 <meta
                     name="keywords"
-                    content="1121 basmati rice, 1509 rice, IR64 rice exporters, non basmati rice varieties, long grain rice India, basmati rice manufacturer Punjab, rice supplier for Middle East, Indian rice export range, RSG Exports rice types"
+                    content="1121 basmati rice, 1509 rice, IR64 rice exporters, non basmati rice varieties, long grain rice India, basmati rice manufacturer Punjab, rice supplier for Middle East, Indian rice export range"
                 />
 
-                {/* Social Sharing */}
+                {/* Open Graph */}
                 <meta property="og:title" content="RSG Exports | Complete Range of Basmati & Non-Basmati Rice" />
                 <meta
                     property="og:description"
                     content="Discover RSG Exports’ full variety of premium Indian rice — from 1121 and 1509 Basmati to IR64 and Sona Masoori. Export-grade quality trusted worldwide."
                 />
-                <meta property="og:image" content="%PUBLIC_URL%/home3.jpg" />
+                <meta property="og:image" content="https://www.rsgexports.com/home3.jpg" />
                 <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.rsgexports.com/range" />
 
-                {/* Canonical URL */}
+                {/* Canonical */}
                 <link rel="canonical" href="https://www.rsgexports.com/range" />
+
+                {/* 🔥 Structured Data - Collection Page */}
+                <script type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.rsgexports.com/range#collection",
+      "url": "https://www.rsgexports.com/range",
+      "name": "RSG Exports Rice Product Range",
+      "description": "Complete export-quality rice range including 1121 Basmati, 1509 Basmati, IR64, Sona Masoori and Non-Basmati varieties.",
+      "isPartOf": {
+        "@id": "https://www.rsgexports.com/#website"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+
+          {
+            "@type": "Product",
+            "name": "1121 Basmati Rice",
+            "brand": {
+              "@type": "Brand",
+              "name": "RSG Exports"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "1509 Basmati Rice",
+            "brand": {
+              "@type": "Brand",
+              "name": "RSG Exports"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "Traditional Basmati Rice",
+            "brand": {
+              "@type": "Brand",
+              "name": "RSG Exports"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "IR64 Non-Basmati Rice",
+            "brand": {
+              "@type": "Brand",
+              "name": "RSG Exports"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "Sona Masoori Rice",
+            "brand": {
+              "@type": "Brand",
+              "name": "RSG Exports"
+            }
+          }
+
+        ]
+      }
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.rsgexports.com/#organization",
+      "name": "RSG Exports Pvt. Ltd.",
+      "url": "https://www.rsgexports.com/"
+    }
+
+  ]
+}
+`}
+                </script>
+
             </Helmet>
 
             <Banner />
             <RiceRange />
             <Footer />
+
         </div>
     );
 }

@@ -14,31 +14,71 @@ function Product() {
 
     return (
         <div>
-            {/* 🔥 SEO for Brands Page (Frontline Rice Brand) */}
+            {/* 🔥 SEO for Brand Page */}
             <Helmet>
-                <title>Our Brands | Frontline Premium Basmati & Non-Basmati Rice by RSG Exports</title>
+                <title>Our Brand | Frontline Premium Basmati & Non-Basmati Rice by RSG Exports</title>
 
                 <meta
                     name="description"
-                    content="Explore Frontline — the flagship brand of RSG Exports, offering premium Basmati and Non-Basmati rice varieties including 1121, 1509, Steam, Sella and IR64. Export-ready packaging, long-grain quality, and consistent taste trusted across Middle East markets."
+                    content="Explore Frontline — the flagship rice brand of RSG Exports, offering premium 1121 Basmati, 1509 Basmati, Steam, Sella and IR64 varieties. Export-grade packaging and long-grain excellence trusted across Middle East markets."
                 />
 
                 <meta
                     name="keywords"
-                    content="Frontline rice brand, RSG Exports brands, premium basmati rice, 1121 basmati export brand, 1509 rice packaging, IR64 rice brand, rice brands in India, export rice brands, frontline rice"
+                    content="Frontline rice brand, RSG Exports brand, premium basmati rice brand India, 1121 basmati export brand, 1509 rice packaging brand, IR64 rice brand, rice export brands India"
                 />
 
-                {/* Social Sharing */}
+                {/* Open Graph */}
                 <meta property="og:title" content="Frontline – Premium Rice Brand by RSG Exports" />
                 <meta
                     property="og:description"
-                    content="Discover Frontline, RSG Exports’ premium rice brand featuring 1121 Basmati, 1509 Basmati, IR64 and long-grain Non-Basmati varieties for international markets."
+                    content="Discover Frontline, the premium rice brand by RSG Exports featuring 1121 Basmati, 1509 Basmati and IR64 rice for international markets."
                 />
-                <meta property="og:image" content="%PUBLIC_URL%/home3.jpg" />
+                <meta property="og:image" content="https://www.rsgexports.com/home3.jpg" />
                 <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.rsgexports.com/brand" />
 
-                {/* Canonical URL */}
-                <link rel="canonical" href="https://www.rsgexports.com/brands" />
+                {/* Canonical */}
+                <link rel="canonical" href="https://www.rsgexports.com/brand" />
+
+                {/* 🔥 Structured Data - Brand Page */}
+                <script type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Brand",
+      "@id": "https://www.rsgexports.com/brand#brand",
+      "name": "Frontline",
+      "description": "Frontline is the flagship premium rice brand by RSG Exports offering export-quality Basmati and Non-Basmati rice varieties.",
+      "url": "https://www.rsgexports.com/brand",
+      "logo": "https://www.rsgexports.com/logo192.png",
+      "isPartOf": {
+        "@id": "https://www.rsgexports.com/#organization"
+      }
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.rsgexports.com/#organization",
+      "name": "RSG Exports Pvt. Ltd.",
+      "url": "https://www.rsgexports.com/",
+      "foundingDate": "1999",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ferozepur",
+        "addressRegion": "Punjab",
+        "addressCountry": "IN"
+      }
+    }
+
+  ]
+}
+`}
+                </script>
+
             </Helmet>
 
             <Banner />

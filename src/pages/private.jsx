@@ -16,37 +16,88 @@ function Privatelabel() {
     return (
         <div>
 
-            {/* 🔥 PRIVATE LABELING PAGE — FULL SEO OPTIMIZATION */}
+            {/* 🔥 PRIVATE LABEL PAGE — FULL SEO OPTIMIZATION */}
             <Helmet>
                 <title>Private Labelling | Custom Basmati & Non-Basmati Rice Packaging – RSG Exports</title>
 
                 <meta
                     name="description"
-                    content="RSG Exports Pvt. Ltd. offers world-class private labelling and OEM services for Basmati and Non-Basmati rice. Create your own rice brand with custom packaging in 1kg to 40kg bags, export-grade printing, and premium rice varieties like 1121, 1509, IR64 and long-grain Non-Basmati. Ideal for importers across Saudi Arabia, UAE, Middle East and Africa."
+                    content="RSG Exports Pvt. Ltd. offers world-class private labelling and OEM services for Basmati and Non-Basmati rice. Create your own rice brand with custom packaging from 1kg to 40kg bags with export-grade quality."
                 />
 
                 <meta
                     name="keywords"
-                    content="private label rice, white label rice packaging, OEM rice supplier, custom rice packaging India, 1121 basmati private label, IR64 white label supplier, rice exporters private labeling, RSG Exports private label"
+                    content="private label rice India, OEM rice supplier, custom rice packaging India, 1121 basmati private label, IR64 white label supplier, rice exporters private labeling"
                 />
 
-                {/* Social Sharing */}
+                {/* Open Graph */}
                 <meta property="og:title" content="Private Labelling | Create Your Own Premium Rice Brand with RSG Exports" />
                 <meta
                     property="og:description"
-                    content="Launch your own rice brand with RSG Exports’ private labelling service. Custom packaging, OEM printing, and export-ready Basmati & Non-Basmati rice trusted in global markets."
+                    content="Launch your own rice brand with RSG Exports’ private labelling service. Custom packaging, OEM printing, and export-ready Basmati & Non-Basmati rice."
                 />
-                <meta property="og:image" content="%PUBLIC_URL%/home3.jpg" />
+                <meta property="og:image" content="https://www.rsgexports.com/home3.jpg" />
                 <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.rsgexports.com/private" />
 
-                {/* Canonical URL */}
-                <link rel="canonical" href="https://www.rsgexports.com/private-labelling" />
+                {/* Canonical */}
+                <link rel="canonical" href="https://www.rsgexports.com/private" />
+
+                {/* 🔥 Structured Data - Service Schema */}
+                <script type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Service",
+      "@id": "https://www.rsgexports.com/private#service",
+      "name": "Private Labelling & OEM Rice Packaging",
+      "description": "Custom private labelling and OEM rice packaging services for Basmati and Non-Basmati rice varieties including 1121, 1509 and IR64.",
+      "provider": {
+        "@id": "https://www.rsgexports.com/#organization"
+      },
+      "areaServed": [
+        "Saudi Arabia",
+        "UAE",
+        "Middle East",
+        "Africa",
+        "Europe"
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ferozepur",
+            "addressRegion": "Punjab",
+            "addressCountry": "IN"
+          }
+        }
+      }
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.rsgexports.com/#organization",
+      "name": "RSG Exports Pvt. Ltd.",
+      "url": "https://www.rsgexports.com/"
+    }
+
+  ]
+}
+`}
+                </script>
+
             </Helmet>
 
             <Banner />
             <WhiteLabelingPage />
             <PartnerSection />
             <Footer />
+
         </div>
     );
 }
