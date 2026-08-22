@@ -23,72 +23,25 @@ function Contact() {
 
                 <meta
                     name="description"
-                    content="Get in touch with RSG Exports Pvt. Ltd., Ferozepur, Punjab — a leading exporter of 1121 Basmati, 1509 Basmati, IR64 and long-grain Non-Basmati rice to Saudi Arabia, UAE and global markets."
+                    content="Get in touch with RSG Exports Pvt. Ltd., Ferozepur, Punjab — a leading exporter of 1121 Basmati, 1509 Basmati, IR64 and long-grain Non-Basmati rice to Saudi Arabia, UAE and global markets. Contact us for bulk rice orders, export pricing, private labelling and OEM services."
                 />
 
                 <meta
                     name="keywords"
-                    content="contact RSG Exports, rice exporter contact India, basmati rice supplier enquiry, IR64 rice exporter Punjab, rice export company contact"
+                    content="contact RSG Exports, rice exporter contact, basmati rice suppliers India, rice export enquiries, rice mill in Ferozepur, IR64 supplier Punjab, Saudi Arabia rice exporters, UAE rice import"
                 />
 
-                {/* Open Graph */}
+                {/* Social Sharing */}
                 <meta property="og:title" content="Contact RSG Exports | Premium Rice Exporters from India" />
                 <meta
                     property="og:description"
-                    content="Reach out to RSG Exports for Basmati & Non-Basmati rice export enquiries, bulk orders, pricing and private label services."
+                    content="Reach out to RSG Exports for Basmati & Non-Basmati rice export enquiries, bulk orders, pricing, private label requests and global supply partnerships."
                 />
-                <meta property="og:image" content="https://www.rsgexports.com/Group13.webp" />
+                <meta property="og:image" content="%PUBLIC_URL%/Group13.webp" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.rsgexports.com/contact" />
 
-                {/* Canonical */}
+                {/* Canonical URL */}
                 <link rel="canonical" href="https://www.rsgexports.com/contact" />
-
-                {/* 🔥 Structured Data - Contact Page */}
-                <script type="application/ld+json">
-{`
-{
-  "@context": "https://schema.org",
-  "@graph": [
-
-    {
-      "@type": "ContactPage",
-      "@id": "https://www.rsgexports.com/contact#contactpage",
-      "url": "https://www.rsgexports.com/contact",
-      "name": "Contact RSG Exports Pvt. Ltd.",
-      "isPartOf": {
-        "@id": "https://www.rsgexports.com/#website"
-      },
-      "about": {
-        "@id": "https://www.rsgexports.com/#organization"
-      }
-    },
-
-    {
-      "@type": "Organization",
-      "@id": "https://www.rsgexports.com/#organization",
-      "name": "RSG Exports Pvt. Ltd.",
-      "url": "https://www.rsgexports.com/",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-9056022232",
-        "contactType": "Sales",
-        "areaServed": "Worldwide",
-        "availableLanguage": ["English", "Hindi"]
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Ferozepur",
-        "addressRegion": "Punjab",
-        "addressCountry": "IN"
-      }
-    }
-
-  ]
-}
-`}
-                </script>
-
             </Helmet>
 
             <Banner />
@@ -96,7 +49,6 @@ function Contact() {
             <ContactForm />
             <ContactView />
             <Footer />
-
         </div>
     );
 }
