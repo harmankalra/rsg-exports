@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Banner from '../common/banner';
+import InviteModal from '../common/InviteModal';
 import RSGFoodsGrid from '../components/home/ambition';
 import TimelineCarousel from '../components/home/journey';
 import FrontlineRice from '../components/home/frontline';
@@ -88,6 +89,7 @@ function Home() {
 
             {/* PAGE CONTENT */}
             <Banner />
+            <InviteModal />
             <RSGFoodsGrid />
             <TimelineCarousel />
             <FrontlineRice />
