@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
-const RSG = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766735763/RSG-2_yhdj5z.webp";
+const RSG = "https://res.cloudinary.com/dlcd3jyyu/image/upload/v1789371298/rsgexportsbiglogo_s2kdpq.webp";
+
+// const RSG = "https://res.cloudinary.com/dtiehwcoh/image/upload/v1766735763/RSG-2_yhdj5z.webp";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,17 +77,17 @@ function Header() {
             </div>
           </div>
 
-    <Link to="/" className="LogoImg">
-  <img
-    src={RSG}
-    alt="RSG Exports"
-    width="180"
-    height="60"
-    loading="eager"
-    fetchpriority="high"
-    decoding="async"
-  />
-</Link>
+          <Link to="/" className="LogoImg">
+            <img
+              src={RSG}
+              alt="RSG Exports"
+              width="180"
+              height="60"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </Link>
 
         </div>
 

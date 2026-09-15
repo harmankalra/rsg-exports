@@ -1,8 +1,8 @@
 import React from 'react';
 import './footer.css';
-import logoImg from '../assets/RSG _Logo2.png'; 
+import logoImg from '../assets/rsglogonew.png';
 import brochurePdf1 from '../assets/RSGCATELOGUE.pdf';
-import pdfIcon from '../assets/download-pdf.png';       
+import pdfIcon from '../assets/download-pdf.png';
 
 const Footer = () => {
   return (
@@ -24,7 +24,7 @@ const Footer = () => {
           </ul>
         </nav>
       </div>
-      
+
       {/* Center - Address and Email */}
       <div className="center-section">
         <div className="address-block">
@@ -32,16 +32,16 @@ const Footer = () => {
           <p>Near Patel Nagar, Faridkot</p>
           <p>Road, Ferozepur, Punjab, 152004</p>
         </div>
-        
+
         <div className="email-block">
-  <h3>Email</h3>
-  <a href="mailto:rsgexportsfzr@gmail.com">rsgexportsfzr@gmail.com</a>
-  <br />
-  <a href="mailto:contact@rsgexports.com">contact@rsgexports.com</a>
-</div>
+          <h3>Email</h3>
+          <a href="mailto:rsgexportsfzr@gmail.com">rsgexportsfzr@gmail.com</a>
+          <br />
+          <a href="mailto:contact@rsgexports.com">contact@rsgexports.com</a>
+        </div>
 
       </div>
-      
+
       {/* Right - Phone and Social Media */}
       <div className="right-section">
         <div className="phone-block">
